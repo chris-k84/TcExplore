@@ -6,7 +6,7 @@
 2. [The Goal](#the-goal)
 3. [Background](#background)
 4. [Description](#description)
-3. [System Design](#System-Design)
+3. [Repository Design](#repository-design)
 4. [Tests](#Tests)
 5. [Support](#Support)
 6. [Requirements](#Requirements)
@@ -43,11 +43,27 @@ These encompas everything from Test Driven Development, CI/CD practices, to meth
 ## Description
 
 
-## System Design
+## Repository Design
 
+The repository will be split into many different projects, I will create these or they can be created by PR. Each will have its own readme describing the intent behind the project. Mostly I was thinking about a modular structure, so an IO project for actual HW classes, Fieldbus project for each fieldbus, a Motion project, an EventLogger project etc.
+
+As/if this idea grows we can add a readme with a schematic for the composition.
+
+Within each project, create a local readme and gitignore if required, this readme must layout which principals you are working on.
+
+For example, "I am working on a Axis class using TDD", "I want to look at observer design pattern with MQTT connections", "I want to look at the mediator pattern for IO handling", "I want to explore the SOLID principals for a PackML implementation".
+
+After that good luck, feel free to look at each others work, code review is important and I certainly dont do it enough. One I intend to look at is pair programming.
 
 ## Tests
 
+Unit testing is a major part of these IT disciplines. There exists currently 3 open source options for those wanting to practice TDD with a Test Framework, these are:
+
+1. **[TCUnit](https://github.com/tcunit)**
+2. **[TC3_UnitTest](https://github.com/PeterZerlauth/Tc3_UnitTest)**
+3. **[tcl_TwinCAT_UnitTestLibrary](https://github.com/RedRockControls/tcl_TwinCAT_UnitTestLibrary)**
+
+I have no objections to which ever you choose to you, please simply make a not of it, so those working with you can follow along. These authors have gone to a lot of effort with these frameworks and have documented examples, so it will help others along to have them.
 
 ## Support
 
