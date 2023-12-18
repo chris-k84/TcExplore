@@ -67,10 +67,20 @@ I have no objections to which ever you choose to you, please simply make a not o
 
 ## Support
 
+LOL, little old me now, all by myself :-)
+
 
 ## Requirements: 
 
+Please include important requirements in the local readme files.
+
+Currently nothing more than:
+
+TwinCAT 4024.54
+
 
 ## Document List
+
+When you create a project or add some code to one, please list it locally in the readme, here i want links to the project readmes so we can easily link the elements together and navigate around but topics of interest.
 
 
