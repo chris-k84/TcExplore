@@ -12,4 +12,3 @@ This zone is set out for people to recommend/take ideas for code katas. Programm
 ## The Goal
 
 The Goal of this repository is to accumulate a series of code Katas that we as Automation Software Developers can use to improve skills. I want to assemble a library so those new to the industry have a repository of exercises to help them make the jump from learning the basics of how-to in industrial automation, to being a useful team member.
-
