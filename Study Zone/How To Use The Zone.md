@@ -9,7 +9,7 @@
 So you've read the README, you know what this zone is for. This area is for curating a list of resources for those leanring to use.
 These lists can be very specific.
 
-The Resources.md file will hold the list.
+The **[Resources.md](/Study%20Zone/Resources.md)** file will hold the list.
 
 I prefer to split by topic rather than media, so we will create sections for TDD, OOP, Design Patterns, PackML etc
 
