@@ -12,4 +12,4 @@ This zone is a place where I hope people can exchange ideas on the Design Patter
 
 ## The Goal
 
-The Goal of this repository is to accumulate a series of Design Pattern implementations using IEC 61131-3. 
+The Goal of this repository is to accumulate a series of Design Pattern implementations using IEC 61131-3. So not only can the theory be explained, but people can see a real world application. It shoudl also promote discussion, after all did you choose the right pattern for the task :-)
