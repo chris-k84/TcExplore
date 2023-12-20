@@ -6,6 +6,8 @@ Here is the list of resources identified to help those learning software develop
 
 ## Object Oriented Programming
 
+
+
 ## Programming Professionalism
 
 ## Code Archetecture
