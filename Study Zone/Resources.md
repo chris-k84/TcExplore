@@ -6,6 +6,8 @@ Here is the list of resources identified to help those learning software develop
 
 1. **[Clean Code](https://www.amazon.co.uk/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)**
 
+2. **[The Pragmatic Programmer](https://www.amazon.co.uk/Pragmatic-Programmer-Andrew-Hunt/dp/020161622X)**
+
 ## Test Driven Development
 
 ## Object Oriented Programming
@@ -14,9 +16,18 @@ Here is the list of resources identified to help those learning software develop
 
 2. **[Design patterns : elements of reusable object-oriented software](https://www.amazon.co.uk/Design-patterns-elements-reusable-object-oriented/dp/0201633612)**
 
-## Programming Professionalism
+## Professionalism
+
+1. **[Clean Coder](https://www.amazon.co.uk/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073)**
 
 ## Code Architecture
 
 1. **[Clean Architecture](https://www.amazon.co.uk/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164)**
 
+## Software Project Management
+
+1. **[Peopleware](https://www.amazon.co.uk/Peopleware-Productive-Projects-Teams-3rd/dp/0321934113)**
+
+2. **[Clean Agile](https://www.amazon.co.uk/Clean-Agile-Basics-Robert-Martin/dp/0135781868)**
+
+3. **[Modern Software Engineering](https://www.amazon.co.uk/Modern-Software-Engineering-Really-Better/dp/0137314914)**
