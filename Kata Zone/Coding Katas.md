@@ -25,3 +25,9 @@ What we want to do here is create a sinewave generator that is tied to the task 
 So sometimes we have nifty little HMIs that can show exactly what we want, other times we have to work with simpler interfaces. In an application I had to program a 7 segment display.
 
 The challenge then is to take 0..9 as an INT and convert to an collection of booleans to define the ON/OFF state the 7 segments of the display.
+
+## FizzBuzz
+
+Never had to use this in an application, it was a drinking game I played at university. I found it mentioned in some other websites presenting it as a Kata and I could not resist. :-)
+
+The challenge is to output numbers from 0..x, you can define x, every multiple of 3 is replaced with "Fizz", every multiple of 5 is "Buzz" and multiples of 3 and 5 become "FizzBuzz".
