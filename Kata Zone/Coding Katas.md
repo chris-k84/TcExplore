@@ -31,3 +31,11 @@ The challenge then is to take 0..9 as an INT and convert to an collection of boo
 Never had to use this in an application, it was a drinking game I played at university. I found it mentioned in some other websites presenting it as a Kata and I could not resist. :-)
 
 The challenge is to output numbers from 0..x, you can define x, every multiple of 3 is replaced with "Fizz", every multiple of 5 is "Buzz" and multiples of 3 and 5 become "FizzBuzz".
+
+## What did you learn?
+
+So this one is tricky, its not a programming task, its a critical analysis, self reflection task. As professional programmers we need to be able to critically review our own work, to improve and teach others.
+
+The challenge then is to find some old code you wrote 1+ years ago. Open it and then perform a review. To give you a level of analysis to work to assume you have been told there is a bug in the code and the end user is angry. 
+
+what did you find? what could be causing issues and do you code the same way now?
