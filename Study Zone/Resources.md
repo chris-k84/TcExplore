@@ -10,6 +10,8 @@ Here is the list of resources identified to help those learning software develop
 
 ## Test Driven Development
 
+1. **[Jakob Sagatowski](https://alltwincat.com/2017/11/02/test-driven-development-in-twincat-part-1/)**
+
 ## Object Oriented Programming
 
 1. **[Head First Design Patterns](https://www.amazon.co.uk/Head-First-Design-Patterns-Freeman/dp/0596007124)**
