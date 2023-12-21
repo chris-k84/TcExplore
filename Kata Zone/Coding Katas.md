@@ -19,3 +19,9 @@ The Challenge is simple iterate through an array and find the largest number
 There are a number of application where you are required to output a very specific analogue signal, verying the amplitude and frequency as time goes on. 
 
 What we want to do here is create a sinewave generator that is tied to the task cycle rate. You should be able to vary the frequency and amplitude and pass the signal as an array.
+
+## 7 Segment Display
+
+So sometimes we have nifty little HMIs that can show exactly what we want, other times we have to work with simpler interfaces. In an application I had to program a 7 segment display.
+
+The challenge then is to take 0..9 as an INT and convert to an collection of booleans to define the ON/OFF state the 7 segments of the display.
