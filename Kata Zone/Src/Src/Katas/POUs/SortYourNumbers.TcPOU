@@ -4,46 +4,47 @@
     <Declaration><![CDATA[PROGRAM SortYourNumbers
 VAR
 	TestArray : ARRAY[0..9] OF INT := [1,3,8,5,2,9,4,7,6,10];
-	Sorted: BOOL;
-	i: INT;
-	temp : INT;
-	Switched : BOOL;
+	SortFinished : BOOL;
+	Loop: UINT;
+	Temp: INT;
+	SwapHappened: BOOL;
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[WHILE NOT Sorted DO
-	IF i < 9 THEN
-		IF TestArray[i] > TestArray[i + 1] THEN
-			temp := TestArray[i];
-			TestArray[i] := TestArray[i + 1];
-			TestArray[i + 1] := temp;
-			Switched := TRUE;
+      <ST><![CDATA[WHILE NOT SortFinished DO
+	IF Loop < ((SIZEOF(TestArray)/2)-1) THEN
+		IF TestArray[Loop] > TestArray[Loop + 1] THEN
+			Temp := TestArray[Loop];
+			TestArray[Loop] := TestArray[Loop + 1];
+			TestArray[Loop + 1] := Temp;
+			SwapHappened := TRUE;
 		END_IF
-		i := i + 1;
+		Loop := Loop + 1;
 	ELSE
-		i := 0;
-		IF Switched THEN
-			Switched := FALSE;
+		IF SwapHappened THEN
+			SwapHappened := FALSE;
+			Loop := 0;
 		ELSE
-			Sorted := true;
+			SortFinished := TRUE;
 		END_IF
 	END_IF
 END_WHILE]]></ST>
     </Implementation>
     <LineIds Name="SortYourNumbers">
-      <LineId Id="5" Count="0" />
-      <LineId Id="7" Count="0" />
-      <LineId Id="10" Count="0" />
-      <LineId Id="18" Count="0" />
-      <LineId Id="21" Count="1" />
-      <LineId Id="25" Count="0" />
-      <LineId Id="19" Count="0" />
-      <LineId Id="23" Count="0" />
-      <LineId Id="16" Count="1" />
-      <LineId Id="27" Count="1" />
-      <LineId Id="30" Count="1" />
-      <LineId Id="29" Count="0" />
-      <LineId Id="11" Count="0" />
       <LineId Id="8" Count="0" />
+      <LineId Id="40" Count="0" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="47" Count="0" />
+      <LineId Id="49" Count="0" />
+      <LineId Id="51" Count="1" />
+      <LineId Id="48" Count="0" />
+      <LineId Id="56" Count="0" />
+      <LineId Id="45" Count="1" />
+      <LineId Id="54" Count="0" />
+      <LineId Id="60" Count="0" />
+      <LineId Id="58" Count="1" />
+      <LineId Id="55" Count="0" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="41" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
