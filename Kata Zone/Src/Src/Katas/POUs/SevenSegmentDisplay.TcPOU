@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="SevenSegmentDisplay" Id="{8f9e204f-6405-4eea-b758-3a07a26e9b59}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM SevenSegmentDisplay
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <LineIds Name="SevenSegmentDisplay">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
