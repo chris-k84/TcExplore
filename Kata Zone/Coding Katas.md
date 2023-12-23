@@ -8,6 +8,10 @@ There are times when we need to organise arrays, not having access to higher lev
 
 Simply put take an array of INT, of any size and sort the elements by size, smallest to largest.
 
+To add some help with this I found a cool page of GeekforGeeks which shows you the sorting algos and how to implement them in a few languages. 
+
+**[Sorting Alogrithms](https://www.geeksforgeeks.org/sorting-algorithms/?ref=lbp)**
+
 ## Find the Largest
 
 On a project I once needed to find the highest pressure in a data set. The data was returne as an array of LREALS, the array size was dependant on the application, typically an array of 20.
