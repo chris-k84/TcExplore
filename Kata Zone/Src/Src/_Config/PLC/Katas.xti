@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.54" ClassName="CNestedPlcProjDef">
 	<Project GUID="{28DB5410-1587-43D2-9ACE-7DF2D3CD812D}" Name="Katas" PrjFilePath="..\..\Katas\Katas.plcproj" TmcFilePath="..\..\Katas\Katas.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Katas\Katas.tmc" TmcHash="{D684D864-D4BC-8B37-0726-E23D0140D0AB}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Katas\Katas.tmc" TmcHash="{D1AB5B23-EA42-C4BA-D2CF-FC7273D23085}">
 			<Name>Katas Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Contexts>

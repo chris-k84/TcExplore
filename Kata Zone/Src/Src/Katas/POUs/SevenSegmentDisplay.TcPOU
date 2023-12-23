@@ -3,13 +3,77 @@
   <POU Name="SevenSegmentDisplay" Id="{8f9e204f-6405-4eea-b758-3a07a26e9b59}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM SevenSegmentDisplay
 VAR
+//					0
+//				------
+//			   1|	  | 5
+//				---6---
+//			   2|     | 4
+//				------
+//				   3
+	SevenSegmentOut : ARRAY[0..6] OF BOOL;
+	SevenSegmentConversion : BYTE;
+	SevenSegmentDisplay : INT;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[IF SevenSegmentDisplay >= 0 AND SevenSegmentDisplay <= 9 THEN
+	CASE SevenSegmentDisplay OF
+		0:
+			SevenSegmentConversion := 126;
+		1:
+			SevenSegmentConversion := 6;
+		2:
+			SevenSegmentConversion := 91;
+		3:
+			SevenSegmentConversion := 79;
+		4:
+			SevenSegmentConversion := 39;
+		5:
+			SevenSegmentConversion := 109;
+		6:
+			SevenSegmentConversion := 125;
+		7:
+			SevenSegmentConversion := 70;
+		8:
+			SevenSegmentConversion := 127;
+		9:
+			SevenSegmentConversion := 103;
+	END_CASE
+	SevenSegmentOut[0] := SevenSegmentConversion.6;
+	SevenSegmentOut[1] := SevenSegmentConversion.5;
+	SevenSegmentOut[2] := SevenSegmentConversion.4;
+	SevenSegmentOut[3] := SevenSegmentConversion.3;
+	SevenSegmentOut[4] := SevenSegmentConversion.2;
+	SevenSegmentOut[5] := SevenSegmentConversion.1;
+	SevenSegmentOut[6] := SevenSegmentConversion.0;
+END_IF]]></ST>
     </Implementation>
     <LineIds Name="SevenSegmentDisplay">
       <LineId Id="5" Count="0" />
+      <LineId Id="8" Count="0" />
+      <LineId Id="10" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="32" Count="0" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="40" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="42" Count="6" />
+      <LineId Id="9" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
