@@ -16,7 +16,13 @@ To add some help with this I found a cool page of GeekforGeeks which shows you t
 
 On a project I once needed to find the highest pressure in a data set. The data was returne as an array of LREALS, the array size was dependant on the application, typically an array of 20.
 
-The Challenge is simple iterate through an array and find the largest number
+The Challenge is simple iterate through an array and find the largest number.
+
+This is easy with a sorted array of course, so as a modification to the Kata, if you assume a sorted array, then change the challenge to find a value crossing point. I.e at what point did the signal cross the threshold.
+
+You can find some explanations for search algorithms here:
+
+**[Search Algorithms](https://www.geeksforgeeks.org/searching-algorithms/?ref=lbp)**
 
 ## Whats my signal?
 
