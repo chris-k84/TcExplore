@@ -12,6 +12,10 @@ To add some help with this I found a cool page of GeekforGeeks which shows you t
 
 **[Sorting Alogrithms](https://www.geeksforgeeks.org/sorting-algorithms/?ref=lbp)**
 
+### Extensions
+
+Make your solution generic by taking an ARRAY[*] as input to the sorting algorithm.
+
 ## Find the Largest
 
 On a project I once needed to find the highest pressure in a data set. The data was returne as an array of LREALS, the array size was dependant on the application, typically an array of 20.
