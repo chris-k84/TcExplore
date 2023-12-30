@@ -44,6 +44,9 @@
       <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc3_Module</Namespace>
     </PlaceholderReference>
+    <PlaceholderReference Include="tcl_UnitTestLibrary">
+      <DefaultResolution>tcl_UnitTestLibrary, * (Red Rock Controls Limited)</DefaultResolution>
+    </PlaceholderReference>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
