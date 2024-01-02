@@ -27,6 +27,9 @@
     <Compile Include="POUs\SevenSegmentDisplay.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\SortYourNumbers\AscendingBubbleSort.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\SortYourNumbers\SortYourNumbers.TcPOU">
       <SubType>Code</SubType>
     </Compile>

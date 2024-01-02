@@ -10,24 +10,26 @@ VAR
 	SwapHappened: BOOL;
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[WHILE NOT SortFinished DO
-	IF Loop < ((SIZEOF(TestArray)/2)-1) THEN
-		IF TestArray[Loop] > TestArray[Loop + 1] THEN
-			Temp := TestArray[Loop];
-			TestArray[Loop] := TestArray[Loop + 1];
-			TestArray[Loop + 1] := Temp;
-			SwapHappened := TRUE;
-		END_IF
-		Loop := Loop + 1;
-	ELSE
-		IF SwapHappened THEN
-			SwapHappened := FALSE;
-			Loop := 0;
-		ELSE
-			SortFinished := TRUE;
-		END_IF
-	END_IF
-END_WHILE]]></ST>
+      <ST><![CDATA[//WHILE NOT SortFinished DO
+//	IF Loop < ((SIZEOF(TestArray)/2)-1) THEN
+//		IF TestArray[Loop] > TestArray[Loop + 1] THEN
+//			Temp := TestArray[Loop];
+//			TestArray[Loop] := TestArray[Loop + 1];
+//			TestArray[Loop + 1] := Temp;
+//			SwapHappened := TRUE;
+//		END_IF
+//		Loop := Loop + 1;
+//	ELSE
+//		IF SwapHappened THEN
+//			SwapHappened := FALSE;
+//			Loop := 0;
+//		ELSE
+//			SortFinished := TRUE;
+//		END_IF
+//	END_IF
+//END_WHILE
+
+AscendingBubbleSort(ArrayToSort := TestArray);]]></ST>
     </Implementation>
     <LineIds Name="SortYourNumbers">
       <LineId Id="8" Count="0" />
@@ -45,6 +47,8 @@ END_WHILE]]></ST>
       <LineId Id="55" Count="0" />
       <LineId Id="43" Count="0" />
       <LineId Id="41" Count="0" />
+      <LineId Id="69" Count="0" />
+      <LineId Id="68" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
