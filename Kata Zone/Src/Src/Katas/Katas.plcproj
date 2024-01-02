@@ -27,13 +27,14 @@
     <Compile Include="POUs\SevenSegmentDisplay.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\SortYourNumbers.TcPOU">
+    <Compile Include="POUs\SortYourNumbers\SortYourNumbers.TcPOU">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DUTs" />
     <Folder Include="GVLs" />
+    <Folder Include="POUs\SortYourNumbers" />
     <Folder Include="VISUs" />
     <Folder Include="POUs" />
   </ItemGroup>
