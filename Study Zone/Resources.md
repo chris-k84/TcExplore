@@ -8,6 +8,8 @@ Here is the list of resources identified to help those learning software develop
 
 2. **[The Pragmatic Programmer](https://www.amazon.co.uk/Pragmatic-Programmer-Andrew-Hunt/dp/020161622X)** - book
 
+3. **[Software Engineering At Google](https://www.amazon.co.uk/Software-Engineering-Google-Lessons-Programming/dp/1492082791)**
+
 ## Test Driven Development
 
 1. **[Jakob Sagatowski](https://alltwincat.com/2017/11/02/test-driven-development-in-twincat-part-1/)** - blog
