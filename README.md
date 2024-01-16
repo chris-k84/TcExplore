@@ -83,4 +83,13 @@ TwinCAT 4024.54
 
 When you create a project or add some code to one, please list it locally in the readme, here i want links to the project readmes so we can easily link the elements together and navigate around but topics of interest.
 
+**[Design Patterns](./Design%20Pattern%20Zone//README.md)**
+
+**[Katas](./Kata%20Zone//README.md)**
+
+**[Study Zone](./Study%20Zone//README.md)**
+
+**[TDD](./TDD%20Zone//README.md)**
+
+
 
