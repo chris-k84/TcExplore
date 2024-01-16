@@ -14,6 +14,8 @@ Here is the list of resources identified to help those learning software develop
 
 1. **[Jakob Sagatowski](https://alltwincat.com/2017/11/02/test-driven-development-in-twincat-part-1/)** - blog
 
+2. **[Software Engineering at Google](https://www.amazon.co.uk/Software-Engineering-Google-Lessons-Programming/dp/1492082791)** - book
+
 ## Object Oriented Programming
 
 1. **[Head First Design Patterns](https://www.amazon.co.uk/Head-First-Design-Patterns-Freeman/dp/0596007124)** - book
