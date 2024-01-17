@@ -37,3 +37,6 @@ Each has its own documentation and samples.
 
 You will need to download and install the libraries that let you use these tools.
 
+## Tc3_Testing Project
+
+A sample for the Tc3_Testing framework has been added to the TC3_UnitTest_Learning PLC project. The sample is a simple calculator class with a single divide method, a simple 2 test sample has been created which can be built on. The sample is currently working, but if you remove the code from the Divide method you can go through the process of creating code to pass the tests.
