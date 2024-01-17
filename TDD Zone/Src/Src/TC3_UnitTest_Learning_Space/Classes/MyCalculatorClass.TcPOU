@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MyCalculatorClass" Id="{e4bd4153-2e3b-4816-9317-28aa7cb3f8b8}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK MyCalculatorClass
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Divide" Id="{bc7e5332-51ef-40d3-92e0-2f2f2eba9f96}">
+      <Declaration><![CDATA[METHOD Divide : INT
+VAR_INPUT
+	x : INT;
+	y : INT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF y <> 0 THEN
+	Divide := x/y;
+ELSE
+	Divide := -1;
+END_IF
+]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="MyCalculatorClass">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="MyCalculatorClass.Divide">
+      <LineId Id="9" Count="1" />
+      <LineId Id="12" Count="1" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -18,6 +18,9 @@
     <LibraryReferences>{aed43fc8-b742-4f45-8c85-d36cac5773f6}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Classes\MyCalculatorClass.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -26,9 +29,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DUTs" />
-    <Folder Include="GVLs" />
-    <Folder Include="VISUs" />
+    <Folder Include="Classes" />
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
@@ -46,7 +47,13 @@
     </PlaceholderReference>
     <PlaceholderReference Include="Tc3_UnitTest">
       <DefaultResolution>Tc3_UnitTest, * (Zerlauth)</DefaultResolution>
+      <Namespace>Tc3_UnitTest</Namespace>
     </PlaceholderReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TC3_UnitTest_Learning_Space.tmc">
+      <SubType>Content</SubType>
+    </None>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
