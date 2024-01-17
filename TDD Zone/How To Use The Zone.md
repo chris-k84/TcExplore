@@ -7,7 +7,7 @@
 
 ## How To Use the Zone
 
-So you've read the README, you know what this zone is for. This area is for practicing and developing skills with TDD. So what we want to achieve here is a set of projects hwere people can practice the techniques.
+So you've read the README, you know what this zone is for. This area is for practicing and developing skills with TDD. So what we want to achieve here is a set of projects here people can practice the techniques.
 
 Simply put we will run 3 projects, a project for each UT Framework currently available.
 
