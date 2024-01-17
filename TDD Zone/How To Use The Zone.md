@@ -9,21 +9,23 @@
 
 So you've read the README, you know what this zone is for. This area is for practicing and developing skills with TDD. So what we want to achieve here is a set of projects here people can practice the techniques.
 
-Simply put we will run 3 projects, a project for each UT Framework currently available.
+1. Feel free to review the **[Unit Testion Guidance and Advice](./Unit%20Testing%20Guidance%20and%20Advice.md)** file, with some thoughts, tips and advice from contributors on UT and TDD.
 
-In each project create a folder within the PLC project, you can name it after yourself or by the topic of the code you are going to write.
+2. Simply put we will run 3 projects, a project for each UT Framework currently available.
 
-Create a program within that folder from which you run the framework.
+    In each project create a folder within the PLC project, you can name it after yourself or by the topic of the code you are going to write.
 
-Add the code as you need. 
+    Create a program within that folder from which you run the framework.
 
-Call your program from MAIN.
+    Add the code as you need. 
 
-I dont know if this will work, feel free to shout if you think of a better way.
+    Call your program from MAIN.
 
-You can then share the link to the code with your partners to code review/pair program etc.
+    I dont know if this will work, feel free to shout if you think of a better way.
 
-I will create a small sample for each, not a complete test suite, but just the basics to show how each is used.
+    You can then share the link to the code with your partners to code review/pair program etc.
+
+    I will create a small sample for each, not a complete test suite, but just the basics to show how each is used.
 
 ## TDD Framework Links
 
