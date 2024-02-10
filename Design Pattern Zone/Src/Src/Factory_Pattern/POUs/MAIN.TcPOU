@@ -6,12 +6,19 @@ VAR
 	EtherCATIOFactory : EtherCATFactory;
 	GetEtherCATDevice: BOOL;
 	myDevcie : I_EtherCATDevice;
+	CheckMyDevice: BOOL;
+	value: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF GetEtherCATDevice THEN
 	GetEtherCATDevice := FALSE;
 	myDevcie := EtherCATIOFactory.CreateEtherCATDevice();
+END_IF
+
+IF CheckMyDevice THEN
+	CheckMyDevice := false;
+	value := myDevcie.IsDeviceOK();
 END_IF]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
@@ -19,6 +26,10 @@ END_IF]]></ST>
       <LineId Id="7" Count="0" />
       <LineId Id="10" Count="0" />
       <LineId Id="8" Count="0" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="14" Count="1" />
     </LineIds>
   </POU>
 </TcPlcObject>

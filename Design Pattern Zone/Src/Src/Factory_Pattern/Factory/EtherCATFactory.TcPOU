@@ -14,12 +14,15 @@ END_VAR
     </Implementation>
     <Method Name="CreateEtherCATDevice" Id="{76de9ec2-3bf9-4c3c-bb39-afd82b7c6d29}">
       <Declaration><![CDATA[METHOD PUBLIC CreateEtherCATDevice : I_EtherCATDevice
-VAR_INPUT
+VAR
+	EtherCATDeviceTemp : POINTER TO EtherCATDevice;
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[CreateEtherCATDevice := DynamicMemoryManager.Alloc(nSize := SIZEOF(EtherCATDevice),
-													bReset := false);]]></ST>
+        <ST><![CDATA[EtherCATDeviceTemp := DynamicMemoryManager.Alloc(nSize := SIZEOF(EtherCATDevice),
+													bReset := FALSE);
+													
+CreateEtherCATDevice := EtherCATDeviceTemp^;]]></ST>
       </Implementation>
     </Method>
     <LineIds Name="EtherCATFactory">
@@ -29,6 +32,8 @@ END_VAR
     <LineIds Name="EtherCATFactory.CreateEtherCATDevice">
       <LineId Id="5" Count="0" />
       <LineId Id="9" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="11" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
