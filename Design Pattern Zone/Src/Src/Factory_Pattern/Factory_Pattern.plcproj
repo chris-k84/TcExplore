@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FileVersion>1.0.0.0</FileVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9059c700-cd8d-49a4-acf3-29bbc3586ed9}</ProjectGuid>
+    <SubObjectsSortedByName>True</SubObjectsSortedByName>
+    <DownloadApplicationInfo>true</DownloadApplicationInfo>
+    <WriteProductVersion>true</WriteProductVersion>
+    <GenerateTpy>false</GenerateTpy>
+    <Name>Factory_Pattern</Name>
+    <ProgramVersion>3.1.4024.0</ProgramVersion>
+    <Application>{2c2c4180-8f5f-45f5-b165-774c6fd631e0}</Application>
+    <TypeSystem>{0af8e6a5-e30f-4c68-9178-ce175eeeac51}</TypeSystem>
+    <Implicit_Task_Info>{034ab09d-9b95-44a3-8222-b39114867a6c}</Implicit_Task_Info>
+    <Implicit_KindOfTask>{eacafe1e-2e57-4a0e-ab9c-27c6c8771dbb}</Implicit_KindOfTask>
+    <Implicit_Jitter_Distribution>{c9684016-9c1d-4f8b-8027-26bb3c1fe56c}</Implicit_Jitter_Distribution>
+    <LibraryReferences>{fe43b230-f469-48cf-83ee-974700027e99}</LibraryReferences>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Class\EtherCATDevice.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Factory\EtherCATFactory.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PlcTask.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\MAIN.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Class" />
+    <Folder Include="Factory" />
+    <Folder Include="POUs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PlaceholderReference Include="Tc2_Standard">
+      <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_Standard</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_System">
+      <DefaultResolution>Tc2_System, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_System</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc3_DynamicMemory">
+      <DefaultResolution>Tc3_DynamicMemory, * (Beckhoff Automation GmbH)</DefaultResolution>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc3_Module">
+      <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc3_Module</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc3_UnitTest">
+      <DefaultResolution>Tc3_UnitTest, * (Zerlauth)</DefaultResolution>
+      <Namespace>Tc3_UnitTest</Namespace>
+    </PlaceholderReference>
+  </ItemGroup>
+  <ProjectExtensions>
+    <PlcProjectOptions>
+      <XmlArchive>
+  <Data>
+    <o xml:space="preserve" t="OptionKey">
+      <v n="Name">"&lt;ProjectRoot&gt;"</v>
+      <d n="SubKeys" t="Hashtable" />
+      <d n="Values" t="Hashtable" />
+    </o>
+  </Data>
+  <TypeList>
+    <Type n="Hashtable">System.Collections.Hashtable</Type>
+    <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+    <Type n="String">System.String</Type>
+  </TypeList>
+</XmlArchive>
+    </PlcProjectOptions>
+  </ProjectExtensions>
+</Project>
