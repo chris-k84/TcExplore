@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="EtherCATDevice" Id="{af8f1906-b637-4799-829a-dc8018136702}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK EtherCATDevice IMPLEMENTS I_EtherCATDevice
+    <Declaration><![CDATA[{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK EtherCATDevice IMPLEMENTS I_EtherCATDevice
 VAR_INPUT
 END_VAR
 VAR_OUTPUT
