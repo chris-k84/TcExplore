@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="I_EtherCATDevice" Id="{f234e03e-fdb2-43fa-b3d9-a8e372931485}">
+    <Declaration><![CDATA[INTERFACE I_EtherCATDevice
+]]></Declaration>
+    <Method Name="IsDeviceOK" Id="{c799f040-fc1d-4517-bebc-2e881256725b}">
+      <Declaration><![CDATA[METHOD IsDeviceOK : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

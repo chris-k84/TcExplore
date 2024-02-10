@@ -21,6 +21,9 @@
     <Compile Include="Class\EtherCATDevice.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Class\I_EtherCATDevice.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Factory\EtherCATFactory.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -56,6 +59,11 @@
       <DefaultResolution>Tc3_UnitTest, * (Zerlauth)</DefaultResolution>
       <Namespace>Tc3_UnitTest</Namespace>
     </PlaceholderReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Factory_Pattern.tmc">
+      <SubType>Content</SubType>
+    </None>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
