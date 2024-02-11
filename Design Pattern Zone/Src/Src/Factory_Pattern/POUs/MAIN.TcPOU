@@ -18,7 +18,7 @@ END_IF
 
 IF CheckMyDevice THEN
 	CheckMyDevice := false;
-	value := myDevcie.IsDeviceOK();
+    value := myDevcie.IsDeviceOK();
 END_IF]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
