@@ -8,6 +8,7 @@ VAR
 	myDevcie : I_EtherCATDevice;
 	CheckMyDevice: BOOL;
 	value: BOOL;
+	deleteDevice: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -19,6 +20,11 @@ END_IF
 IF CheckMyDevice THEN
 	CheckMyDevice := false;
     value := myDevcie.IsDeviceOK();
+END_IF
+
+IF deleteDevice THEN
+	EtherCATIOFactory.RemoveEtherCATDevice(myDevcie);
+	deleteDevice := FALSE;
 END_IF]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
@@ -30,6 +36,11 @@ END_IF]]></ST>
       <LineId Id="12" Count="0" />
       <LineId Id="19" Count="0" />
       <LineId Id="14" Count="1" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="31" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

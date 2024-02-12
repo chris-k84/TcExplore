@@ -4,23 +4,33 @@
     <Declaration><![CDATA[FUNCTION_BLOCK EtherCATFactory
 VAR
 	DynamicMemoryManager : FB_DynMem_Manager2;
-	UsedMemoryInBytes: ULINT;
+	DynamicBuffer : FB_DynMem_Buffer(DynamicMemoryManager);
+	ptrs : ARRAY[0..9] OF POINTER TO EtherCATDevice;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
     <Method Name="CreateEtherCATDevice" Id="{76de9ec2-3bf9-4c3c-bb39-afd82b7c6d29}">
-      <Declaration><![CDATA[METHOD PUBLIC CreateEtherCATDevice : POINTER TO EtherCATDevice
-VAR
-	EtherCATDeviceTemp : POINTER TO EtherCATDevice;
+      <Declaration><![CDATA[METHOD PUBLIC CreateEtherCATDevice : I_EtherCATDevice
+VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[EtherCATDeviceTemp := DynamicMemoryManager.Alloc(nSize := SIZEOF(EtherCATDevice),
-													bReset := FALSE);
-CreateEtherCATDevice := EtherCATDeviceTemp^;													
+        <ST><![CDATA[ptrs[0] := __NEW(EtherCATDevice);
+CreateEtherCATDevice := ptrs[0]^;											
 													
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="RemoveEtherCATDevice" Id="{c76c952a-b875-4ee6-9fc1-4a0638af14f3}">
+      <Declaration><![CDATA[METHOD RemoveEtherCATDevice : BOOL
+VAR_INPUT
+	EtherCATDevice : I_EtherCATDevice;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[__DELETE(ptrs[0]);
+RemoveEtherCATDevice := TRUE;
 ]]></ST>
       </Implementation>
     </Method>
@@ -28,11 +38,15 @@ CreateEtherCATDevice := EtherCATDeviceTemp^;
       <LineId Id="15" Count="0" />
     </LineIds>
     <LineIds Name="EtherCATFactory.CreateEtherCATDevice">
-      <LineId Id="5" Count="0" />
-      <LineId Id="9" Count="0" />
       <LineId Id="17" Count="0" />
+      <LineId Id="22" Count="0" />
       <LineId Id="12" Count="0" />
       <LineId Id="11" Count="0" />
+    </LineIds>
+    <LineIds Name="EtherCATFactory.RemoveEtherCATDevice">
+      <LineId Id="5" Count="0" />
+      <LineId Id="8" Count="0" />
+      <LineId Id="7" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
