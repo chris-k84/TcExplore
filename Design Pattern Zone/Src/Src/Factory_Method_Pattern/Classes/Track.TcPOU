@@ -1,19 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="Track" Id="{85367b14-735c-4b56-a6a4-1e4f0d6b84de}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK Track EXTENDS ITF_Cyclic
-VAR_INPUT
-END_VAR
-VAR_OUTPUT
-END_VAR
+    <Declaration><![CDATA[{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK Track IMPLEMENTS ITF_Cyclic, ITF_Track
 VAR
+	MyTrackLength : LREAL;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
+    <Method Name="Cycle" Id="{143b5232-be14-4dd2-a974-cabdb0e0e60e}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD Cycle : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Length" Id="{c9f58fce-3361-4d24-95f8-0006eb3175ad}">
+      <Declaration><![CDATA[METHOD Length : bool
+VAR_INPUT
+	TrackLength : LREAL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[MyTrackLength := TrackLength;]]></ST>
+      </Implementation>
+    </Method>
     <LineIds Name="Track">
       <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="Track.Cycle">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Track.Length">
+      <LineId Id="5" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

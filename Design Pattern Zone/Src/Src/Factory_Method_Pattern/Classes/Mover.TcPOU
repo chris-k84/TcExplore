@@ -1,19 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="Mover" Id="{5bd059eb-f1f0-4601-a642-acba93ef29cd}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK Mover EXTENDS ITF_Cyclic
-VAR_INPUT
-END_VAR
-VAR_OUTPUT
-END_VAR
+    <Declaration><![CDATA[{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK Mover IMPLEMENTS ITF_Cyclic, ITF_Mover
 VAR
+	myMaxVelo : LREAL;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
+    <Method Name="Cycle" Id="{7f2a9182-cb07-43c8-be8a-bfdb4121e6df}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD Cycle : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="MaxVelo" Id="{c3aef0a4-5c00-4d00-8076-ae1edf60ff9a}">
+      <Declaration><![CDATA[METHOD MaxVelo : BOOL
+VAR_INPUT
+	MaxVelocity : LREAL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
     <LineIds Name="Mover">
       <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="Mover.Cycle">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Mover.MaxVelo">
+      <LineId Id="5" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

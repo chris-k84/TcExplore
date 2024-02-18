@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_Track" Id="{0d5dfb01-5a03-4dd3-bd30-13a53a2b2ab7}">
+    <Declaration><![CDATA[INTERFACE ITF_Track
+]]></Declaration>
+    <Method Name="Length" Id="{7c053470-ceb2-4749-a111-e04234b1d614}">
+      <Declaration><![CDATA[METHOD Length : BOOL
+VAR_INPUT
+	TrackLength : LREAL;
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

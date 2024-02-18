@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MoverFactory" Id="{5a1d286c-95ba-40eb-905b-4af4e4af9a92}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK MoverFactory EXTENDS Factory
+VAR
+	ptrMover : POINTER TO Mover;
+	itfMover : ITF_Mover;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Create" Id="{f5906e45-4f49-4852-a7ca-34487231f730}">
+      <Declaration><![CDATA[METHOD Create : ITF_Cyclic
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[PtrMover := __NEW(Mover);
+Create := ptrMover^;
+IF __QUERYINTERFACE(Create,itfMover) THEN
+	itfMover.MaxVelo(MaxVelocity := 4000.0);
+END_IF
+]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="MoverFactory">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="MoverFactory.Create">
+      <LineId Id="6" Count="0" />
+      <LineId Id="10" Count="0" />
+      <LineId Id="8" Count="1" />
+      <LineId Id="7" Count="0" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

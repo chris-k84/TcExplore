@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_Mover" Id="{32d35547-7ce1-48b8-89d6-1e503b2efd40}">
+    <Declaration><![CDATA[INTERFACE ITF_Mover
+]]></Declaration>
+    <Method Name="MaxVelo" Id="{4d4c8ec2-564a-4e49-9412-d89887fcf940}">
+      <Declaration><![CDATA[METHOD MaxVelo : BOOL
+VAR_INPUT
+	MaxVelocity : LREAL;
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

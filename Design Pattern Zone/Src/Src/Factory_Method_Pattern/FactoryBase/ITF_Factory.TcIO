@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_Factory" Id="{0c572baf-718a-40cb-be57-a4faab9984f5}">
+    <Declaration><![CDATA[INTERFACE ITF_Factory
+]]></Declaration>
+    <Method Name="Create" Id="{07025c56-0565-495b-8006-364c8a17b066}">
+      <Declaration><![CDATA[METHOD Create : ITF_Cyclic
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

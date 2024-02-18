@@ -1,19 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="Station" Id="{3a164f31-1435-4c24-a4b9-f33358c56274}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK Station EXTENDS ITF_Cyclic
-VAR_INPUT
-END_VAR
-VAR_OUTPUT
-END_VAR
+    <Declaration><![CDATA[{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK Station IMPLEMENTS ITF_Cyclic, ITF_Station
 VAR
+	MyTrackPosition : LREAL;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
+    <Method Name="Cycle" Id="{4d5d8ab9-24a7-46b5-9b8b-8d304d0099b1}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD Cycle : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Position" Id="{6213e8a0-7312-49ca-b711-7cdb926089fa}">
+      <Declaration><![CDATA[METHOD Position : BOOL
+VAR_INPUT
+	StationPosition	: LREAL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[MyTrackPosition := StationPosition;]]></ST>
+      </Implementation>
+    </Method>
     <LineIds Name="Station">
       <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="Station.Cycle">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Station.Position">
+      <LineId Id="7" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

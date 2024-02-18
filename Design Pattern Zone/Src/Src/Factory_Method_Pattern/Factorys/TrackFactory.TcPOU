@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="TrackFactory" Id="{ec46e399-6229-4d9f-9958-4db80a70545f}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK TrackFactory EXTENDS Factory
+VAR
+	ptrTrack : POINTER TO Track;
+	itfTrack : ITF_Track;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Create" Id="{821dd5c5-4056-4ccc-a667-62f25eca92dd}">
+      <Declaration><![CDATA[METHOD Create : ITF_Cyclic
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[ptrTrack := __NEW(Track);
+Create := ptrTrack^;
+IF __QUERYINTERFACE(Create,itfTrack) THEN
+	itfTrack.Length(TrackLength := 2500.0);
+END_IF
+]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="TrackFactory">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="TrackFactory.Create">
+      <LineId Id="6" Count="4" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

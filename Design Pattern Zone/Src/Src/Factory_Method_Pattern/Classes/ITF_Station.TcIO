@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_Station" Id="{5735bd12-3f2c-49f1-b99c-0a2f3f2ae752}">
+    <Declaration><![CDATA[INTERFACE ITF_Station
+]]></Declaration>
+    <Method Name="Position" Id="{9cb9dbff-ce5c-4992-88fa-bb4fd8909281}">
+      <Declaration><![CDATA[METHOD Position : BOOL;
+VAR_INPUT
+	StationPosition : LREAL;
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

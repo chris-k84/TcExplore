@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="Factory" Id="{ce0d4dba-2a11-4e3f-b0cc-8cd3d42ab19b}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK Factory
+    <Declaration><![CDATA[FUNCTION_BLOCK Factory IMPLEMENTS ITF_Factory
 VAR
 	ObjPtr : POINTER TO BasicObject;
 END_VAR

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="StationFactory" Id="{ec7bc97c-7694-4de4-87d3-7cdc42a01c44}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK StationFactory EXTENDS Factory
+VAR
+	prtStation : POINTER TO Station;
+	itfStation : ITF_Station;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Create" Id="{19cdbfb2-061f-48cf-890b-7bc2c6665293}">
+      <Declaration><![CDATA[METHOD Create : ITF_Cyclic
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[prtStation := __NEW(Station);
+Create := prtStation^;
+IF __QUERYINTERFACE(Create,itfStation) THEN
+	itfStation.Position(StationPosition := 1250.0);
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="StationFactory">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="StationFactory.Create">
+      <LineId Id="5" Count="1" />
+      <LineId Id="8" Count="1" />
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
