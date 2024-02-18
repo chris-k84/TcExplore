@@ -9,6 +9,10 @@ VAR
 	XtsTrackFactory : TrackFactory;
 	iFactory : ITF_Factory := XtsMoverFactory;
 	XtsElements : ARRAY[0..8] OF ITF_Cyclic;
+	
+	iMover : ITF_Mover;
+	MaxVelo : LREAL;
+	xTest: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -17,7 +21,14 @@ END_VAR
 		IF Initialise() THEN
 			State := 1;
 		END_IF
-END_CASE]]></ST>
+END_CASE
+
+IF xTest THEN
+	xTest := FALSE;
+	IF __QUERYINTERFACE(XtsElements[1],iMover) THEN
+		MaxVelo := iMover.GetMaxVelo();
+	END_IF
+END_IF]]></ST>
     </Implementation>
     <Method Name="Initialise" Id="{97f2d371-0746-4166-ae23-b80a4f13a3c7}">
       <Declaration><![CDATA[METHOD Initialise : BOOL
@@ -46,6 +57,12 @@ Initialise := TRUE;]]></ST>
       <LineId Id="7" Count="1" />
       <LineId Id="11" Count="2" />
       <LineId Id="9" Count="0" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="32" Count="1" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="29" Count="0" />
     </LineIds>
     <LineIds Name="MAIN.Initialise">
       <LineId Id="5" Count="2" />
