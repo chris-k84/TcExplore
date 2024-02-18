@@ -8,7 +8,7 @@
     <DownloadApplicationInfo>true</DownloadApplicationInfo>
     <WriteProductVersion>true</WriteProductVersion>
     <GenerateTpy>false</GenerateTpy>
-    <Name>Factory_Pattern</Name>
+    <Name>Simple_Factory_Pattern</Name>
     <ProgramVersion>3.1.4024.0</ProgramVersion>
     <Application>{2c2c4180-8f5f-45f5-b165-774c6fd631e0}</Application>
     <TypeSystem>{0af8e6a5-e30f-4c68-9178-ce175eeeac51}</TypeSystem>
@@ -24,7 +24,7 @@
     <Compile Include="Class\I_EtherCATDevice.TcIO">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Factory\EtherCATFactory.TcPOU">
+    <Compile Include="Simple Factory\EtherCATFactory.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="PlcTask.TcTTO">
@@ -36,7 +36,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Class" />
-    <Folder Include="Factory" />
+    <Folder Include="Simple Factory" />
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,26 +61,26 @@
     </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Factory_Pattern.tmc">
+    <None Include="Simple_Factory_Pattern.tmc">
       <SubType>Content</SubType>
     </None>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
       <XmlArchive>
-  <Data>
-    <o xml:space="preserve" t="OptionKey">
+        <Data>
+          <o xml:space="preserve" t="OptionKey">
       <v n="Name">"&lt;ProjectRoot&gt;"</v>
       <d n="SubKeys" t="Hashtable" />
       <d n="Values" t="Hashtable" />
     </o>
-  </Data>
-  <TypeList>
-    <Type n="Hashtable">System.Collections.Hashtable</Type>
-    <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
-    <Type n="String">System.String</Type>
-  </TypeList>
-</XmlArchive>
+        </Data>
+        <TypeList>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+          <Type n="String">System.String</Type>
+        </TypeList>
+      </XmlArchive>
     </PlcProjectOptions>
   </ProjectExtensions>
 </Project>

@@ -9,7 +9,7 @@
 			</Tasks>
 		</System>
 		<Plc>
-			<Project File="Factory_Pattern.xti"/>
+			<Project File="Simple_Factory_Pattern.xti"/>
 		</Plc>
 	</Project>
 </TcSmProject>

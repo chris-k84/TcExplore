@@ -3,9 +3,7 @@
   <POU Name="EtherCATFactory" Id="{068d6bf7-c72d-464f-947f-295d84e58383}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK EtherCATFactory
 VAR
-	DynamicMemoryManager : FB_DynMem_Manager2;
-	DynamicBuffer : FB_DynMem_Buffer(DynamicMemoryManager);
-	ptrs : ARRAY[0..9] OF POINTER TO EtherCATDevice;
+
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -15,22 +13,15 @@ END_VAR
       <Declaration><![CDATA[METHOD PUBLIC CreateEtherCATDevice : I_EtherCATDevice
 VAR_INPUT
 END_VAR
-]]></Declaration>
-      <Implementation>
-        <ST><![CDATA[ptrs[0] := __NEW(EtherCATDevice);
-CreateEtherCATDevice := ptrs[0]^;											
-													
-]]></ST>
-      </Implementation>
-    </Method>
-    <Method Name="RemoveEtherCATDevice" Id="{c76c952a-b875-4ee6-9fc1-4a0638af14f3}">
-      <Declaration><![CDATA[METHOD RemoveEtherCATDevice : BOOL
-VAR_INPUT
-	EtherCATDevice : I_EtherCATDevice;
+
+VAR
+	devicePtr: POINTER TO EtherCATDevice;
 END_VAR]]></Declaration>
       <Implementation>
-        <ST><![CDATA[__DELETE(ptrs[0]);
-RemoveEtherCATDevice := TRUE;
+        <ST><![CDATA[devicePtr := __NEW(EtherCATDevice);
+CreateEtherCATDevice := devicePtr^;
+										
+													
 ]]></ST>
       </Implementation>
     </Method>
@@ -39,14 +30,10 @@ RemoveEtherCATDevice := TRUE;
     </LineIds>
     <LineIds Name="EtherCATFactory.CreateEtherCATDevice">
       <LineId Id="17" Count="0" />
+      <LineId Id="26" Count="0" />
       <LineId Id="22" Count="0" />
       <LineId Id="12" Count="0" />
       <LineId Id="11" Count="0" />
-    </LineIds>
-    <LineIds Name="EtherCATFactory.RemoveEtherCATDevice">
-      <LineId Id="5" Count="0" />
-      <LineId Id="8" Count="0" />
-      <LineId Id="7" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
