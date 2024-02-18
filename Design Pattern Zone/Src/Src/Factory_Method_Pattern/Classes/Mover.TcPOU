@@ -18,36 +18,36 @@ METHOD Cycle : BOOL
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
-    <Method Name="GetMaxVelo" Id="{6a230b50-c628-4192-a6ea-ba13ae0f49d7}">
-      <Declaration><![CDATA[METHOD GetMaxVelo : LREAL
-VAR_INPUT
+    <Property Name="Velocity" Id="{0815c89a-30e6-4473-a172-d2cdba7ed99a}">
+      <Declaration><![CDATA[PROPERTY Velocity : LREAL]]></Declaration>
+      <Get Name="Get" Id="{eaa753c1-2f95-44fd-9d79-dc090c36f2c7}">
+        <Declaration><![CDATA[VAR
 END_VAR
 ]]></Declaration>
-      <Implementation>
-        <ST><![CDATA[GetMaxVelo := myMaxVelo;]]></ST>
-      </Implementation>
-    </Method>
-    <Method Name="SetMaxVelo" Id="{c3aef0a4-5c00-4d00-8076-ae1edf60ff9a}">
-      <Declaration><![CDATA[METHOD SetMaxVelo : BOOL
-VAR_INPUT
-	MaxVelocity : LREAL;
+        <Implementation>
+          <ST><![CDATA[Velocity := myMaxVelo;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{e3233391-a918-4bc8-a737-e80c5f7da7d3}">
+        <Declaration><![CDATA[VAR
 END_VAR
 ]]></Declaration>
-      <Implementation>
-        <ST><![CDATA[myMaxVelo := MaxVelocity;]]></ST>
-      </Implementation>
-    </Method>
+        <Implementation>
+          <ST><![CDATA[myMaxVelo := Velocity;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
     <LineIds Name="Mover">
       <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="Mover.Cycle">
       <LineId Id="4" Count="0" />
     </LineIds>
-    <LineIds Name="Mover.GetMaxVelo">
-      <LineId Id="5" Count="0" />
+    <LineIds Name="Mover.Velocity.Get">
+      <LineId Id="2" Count="0" />
     </LineIds>
-    <LineIds Name="Mover.SetMaxVelo">
-      <LineId Id="5" Count="0" />
+    <LineIds Name="Mover.Velocity.Set">
+      <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

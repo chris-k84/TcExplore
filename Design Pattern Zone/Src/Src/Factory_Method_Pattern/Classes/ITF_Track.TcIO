@@ -3,12 +3,14 @@
   <Itf Name="ITF_Track" Id="{0d5dfb01-5a03-4dd3-bd30-13a53a2b2ab7}">
     <Declaration><![CDATA[INTERFACE ITF_Track
 ]]></Declaration>
-    <Method Name="Length" Id="{7c053470-ceb2-4749-a111-e04234b1d614}">
-      <Declaration><![CDATA[METHOD Length : BOOL
-VAR_INPUT
-	TrackLength : LREAL;
-END_VAR
-]]></Declaration>
-    </Method>
+    <Property Name="Length" Id="{13472377-55c8-49d9-a155-542f2fe93014}">
+      <Declaration><![CDATA[PROPERTY Length : LREAL]]></Declaration>
+      <Get Name="Get" Id="{1c8c8e06-3b55-4c8e-9316-70024955f4a4}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{575fe15a-a4b8-49f8-848f-c7116dcfdcc8}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
   </Itf>
 </TcPlcObject>

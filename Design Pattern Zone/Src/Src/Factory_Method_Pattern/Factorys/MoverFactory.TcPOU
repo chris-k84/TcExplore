@@ -19,7 +19,7 @@ END_VAR
         <ST><![CDATA[PtrMover := __NEW(Mover);
 Create := ptrMover^;
 IF __QUERYINTERFACE(Create,itfMover) THEN
-	itfMover.SetMaxVelo(MaxVelocity := 4000.0);
+	itfMover.Velocity := 4000.0;
 END_IF
 ]]></ST>
       </Implementation>

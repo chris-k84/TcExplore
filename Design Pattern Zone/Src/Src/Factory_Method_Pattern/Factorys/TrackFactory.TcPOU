@@ -19,7 +19,7 @@ END_VAR
         <ST><![CDATA[ptrTrack := __NEW(Track);
 Create := ptrTrack^;
 IF __QUERYINTERFACE(Create,itfTrack) THEN
-	itfTrack.Length(TrackLength := 2500.0);
+	itfTrack.Length := 2500.0;
 END_IF
 ]]></ST>
       </Implementation>

@@ -3,12 +3,14 @@
   <Itf Name="ITF_Station" Id="{5735bd12-3f2c-49f1-b99c-0a2f3f2ae752}">
     <Declaration><![CDATA[INTERFACE ITF_Station
 ]]></Declaration>
-    <Method Name="Position" Id="{9cb9dbff-ce5c-4992-88fa-bb4fd8909281}">
-      <Declaration><![CDATA[METHOD Position : BOOL;
-VAR_INPUT
-	StationPosition : LREAL;
-END_VAR
-]]></Declaration>
-    </Method>
+    <Property Name="Position" Id="{b0000baf-e3eb-4e60-95a5-20455af46f17}">
+      <Declaration><![CDATA[PROPERTY Position : LREAL]]></Declaration>
+      <Get Name="Get" Id="{30c2f254-0be9-40c3-bb04-3b4dfe737dd7}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{0e81e5b4-9c08-4c10-8daa-bad3a3c6a141}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
   </Itf>
 </TcPlcObject>

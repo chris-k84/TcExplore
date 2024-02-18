@@ -18,24 +18,36 @@ METHOD Cycle : BOOL
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
-    <Method Name="Position" Id="{6213e8a0-7312-49ca-b711-7cdb926089fa}">
-      <Declaration><![CDATA[METHOD Position : BOOL
-VAR_INPUT
-	StationPosition	: LREAL;
+    <Property Name="Position" Id="{fb36e890-449c-4d47-b4cb-eb49a6408d7a}">
+      <Declaration><![CDATA[PROPERTY Position : LREAL]]></Declaration>
+      <Get Name="Get" Id="{0df87081-8cf8-43c3-9327-5e9d6dbdd976}">
+        <Declaration><![CDATA[VAR
 END_VAR
 ]]></Declaration>
-      <Implementation>
-        <ST><![CDATA[MyTrackPosition := StationPosition;]]></ST>
-      </Implementation>
-    </Method>
+        <Implementation>
+          <ST><![CDATA[Position := MyTrackPosition;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{bac9dc6f-2656-4cd4-aa2c-503f999d8434}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[MyTrackPosition := Position;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
     <LineIds Name="Station">
       <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="Station.Cycle">
       <LineId Id="4" Count="0" />
     </LineIds>
-    <LineIds Name="Station.Position">
-      <LineId Id="7" Count="0" />
+    <LineIds Name="Station.Position.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="Station.Position.Set">
+      <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

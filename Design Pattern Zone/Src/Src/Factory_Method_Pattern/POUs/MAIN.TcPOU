@@ -26,7 +26,7 @@ END_CASE
 IF xTest THEN
 	xTest := FALSE;
 	IF __QUERYINTERFACE(XtsElements[1],iMover) THEN
-		MaxVelo := iMover.GetMaxVelo();
+		MaxVelo := iMover.Velocity;
 	END_IF
 END_IF]]></ST>
     </Implementation>

@@ -18,24 +18,36 @@ METHOD Cycle : BOOL
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
-    <Method Name="Length" Id="{c9f58fce-3361-4d24-95f8-0006eb3175ad}">
-      <Declaration><![CDATA[METHOD Length : bool
-VAR_INPUT
-	TrackLength : LREAL;
+    <Property Name="Length" Id="{4a8205ad-4c25-4843-adb0-8b1b2dc7e73d}">
+      <Declaration><![CDATA[PROPERTY Length : LREAL]]></Declaration>
+      <Get Name="Get" Id="{064eca0f-bf2e-47ee-ad00-7c5bb401c560}">
+        <Declaration><![CDATA[VAR
 END_VAR
 ]]></Declaration>
-      <Implementation>
-        <ST><![CDATA[MyTrackLength := TrackLength;]]></ST>
-      </Implementation>
-    </Method>
+        <Implementation>
+          <ST><![CDATA[Length := MyTrackLength;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{93dcff8d-af9f-4da1-91ad-0a9b1b507a0c}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[MyTrackLength := Length;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
     <LineIds Name="Track">
       <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="Track.Cycle">
       <LineId Id="4" Count="0" />
     </LineIds>
-    <LineIds Name="Track.Length">
-      <LineId Id="5" Count="0" />
+    <LineIds Name="Track.Length.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="Track.Length.Set">
+      <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

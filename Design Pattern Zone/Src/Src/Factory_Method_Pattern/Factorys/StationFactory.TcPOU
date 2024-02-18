@@ -19,7 +19,7 @@ END_VAR
         <ST><![CDATA[prtStation := __NEW(Station);
 Create := prtStation^;
 IF __QUERYINTERFACE(Create,itfStation) THEN
-	itfStation.Position(StationPosition := 1250.0);
+	itfStation.Position := 1250.0;
 END_IF]]></ST>
       </Implementation>
     </Method>
