@@ -13,3 +13,15 @@ You can find an explanation of the pattern here:
 and a very good tutorial here:
 
 *[Chris O - Factory Method]()*
+
+You can see the super factory has a create method, this returns a cyclic interface which all elements obey.
+
+SubClass factorys MoverFactory, TrackFactory and StationFactory, then override the implementation to create the specific objects, but also modify the data passed to the class on creation.
+
+This is demonstrated in the MAIN with a simoke example casting the cyclic to a mover interface and checking the set value of the maximum velocity.
+
+### NOTE
+
+You need to set the class with the dynamic creation attribute
+
+{attribute 'enable_dynamic_creation'}
