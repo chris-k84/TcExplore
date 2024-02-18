@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Factory" Id="{ce0d4dba-2a11-4e3f-b0cc-8cd3d42ab19b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Factory
+VAR
+	ObjPtr : POINTER TO BasicObject;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Create" Id="{849a93e0-0589-496e-8750-c8238abd2149}">
+      <Declaration><![CDATA[METHOD Create : ITF_Cyclic
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[ObjPtr := __NEW(BasicObject);
+Create := ObjPtr^;
+										
+				]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="Factory">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="Factory.Create">
+      <LineId Id="6" Count="2" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
