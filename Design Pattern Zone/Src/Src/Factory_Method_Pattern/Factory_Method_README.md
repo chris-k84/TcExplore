@@ -8,11 +8,11 @@ The Factory is used to create instances of Mover, Track, Parts and Stations via 
 
 You can find an explanation of the pattern here:
 
-*[PatternGuru - Factory Method]()*
+*[PatternGuru - Factory Method](https://refactoring.guru/design-patterns/factory-method)*
 
 and a very good tutorial here:
 
-*[Chris O - Factory Method]()*
+*[Chris O - Factory Method](https://www.youtube.com/watch?v=EcFVTgRHJLM)*
 
 You can see the super factory has a create method, this returns a cyclic interface which all elements obey.
 
