@@ -4,7 +4,7 @@
 
 This sample was created to show the Factory Method Pattern applied to TwinCAT XTS, specifically creating the elements contained within an XTS system.
 
-The Factory is used to create instances of Mover, Track, Parts and Stations via an interface.
+The Factory is used to create instances of Mover, Track, Parts and Stations via an interface. The Factory Pattern is a creational pattern, it is designed to decouple the creation of objects from the thing creating them. By shifting the creation into a class we simplyfy the creation and focus the control of the created objects in a single location.
 
 You can find an explanation of the pattern here:
 
