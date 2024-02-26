@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MyCalculatorTests" Id="{e1a3d36a-7d44-45ec-aa78-a22fd6fcc456}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK MyCalculatorTests EXTENDS FB_TestSuite
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="DivideByZeroTest" Id="{56b81339-bf83-457b-9939-89624932ecb3}">
+      <Declaration><![CDATA[METHOD DivideByZeroTest : REFERENCE TO FB_Test
+VAR
+	myCalc : MyCalculatorClass;
+    Result : UINT;
+    ExpectedSum : UINT := 4;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST('GivenAZeroDivisorThenTheCalcShouldReturnAError');
+ 
+Result :=  myCalc.Divide(2,0);
+
+AssertEquals(Expected := ExpectedSum,
+             Actual := Result,
+             Message := 'The division didnt return an error');
+ 
+TEST_FINISHED();]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="TwoPositiveIntegers" Id="{369e8880-8c75-4617-a40e-88d243312c48}">
+      <Declaration><![CDATA[METHOD TwoPositiveIntegers : REFERENCE TO FB_Test
+VAR
+	myCalc : MyCalculatorClass;
+    Result : INT;
+    ExpectedSum : INT := 2;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST('GivenTwoPositiveIntegersThenTheResultShouldBeValid');
+ 
+Result := myCalc.Divide(4,2);
+ 
+AssertEquals(Expected := ExpectedSum,
+             Actual := Result,
+             Message := 'The division returned an error');
+ 
+TEST_FINISHED();]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="MyCalculatorTests">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="MyCalculatorTests.DivideByZeroTest">
+      <LineId Id="11" Count="2" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="15" Count="3" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="MyCalculatorTests.TwoPositiveIntegers">
+      <LineId Id="6" Count="7" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
