@@ -9,11 +9,15 @@
 				<Task Id="4" Priority="21" CycleTime="100000" AmsPort="351" AdtTasks="true">
 					<Name>PlcTask1</Name>
 				</Task>
+				<Task Id="5" Priority="22" CycleTime="100000" AmsPort="352" AdtTasks="true">
+					<Name>PlcTask2</Name>
+				</Task>
 			</Tasks>
 		</System>
 		<Plc>
 			<Project File="Simple_Factory_Pattern.xti"/>
 			<Project File="Factory_Method_Pattern.xti"/>
+			<Project File="Abstract_Factory_Pattern.xti"/>
 		</Plc>
 	</Project>
 </TcSmProject>
