@@ -1,13 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1">
-  <POU Name="MAIN" Id="{f94b5d02-9944-4b96-a5c8-57cfccdc367f}">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MAIN" Id="{f94b5d02-9944-4b96-a5c8-57cfccdc367f}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
+	fbCalcTest : MyCalculatorTests;
 END_VAR
-]]>
-    </Declaration>
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[TcUnit.RUN();]]></ST>
     </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

@@ -10,7 +10,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[DivideByZeroTest();
+TwoPositiveIntegers();]]></ST>
     </Implementation>
     <Method Name="DivideByZeroTest" Id="{56b81339-bf83-457b-9939-89624932ecb3}">
       <Declaration><![CDATA[METHOD DivideByZeroTest : REFERENCE TO FB_Test
@@ -54,6 +55,7 @@ TEST_FINISHED();]]></ST>
     </Method>
     <LineIds Name="MyCalculatorTests">
       <LineId Id="9" Count="0" />
+      <LineId Id="17" Count="0" />
     </LineIds>
     <LineIds Name="MyCalculatorTests.DivideByZeroTest">
       <LineId Id="11" Count="2" />
