@@ -10,7 +10,6 @@ VAR
 	runOperation1: BOOL;
 	runOperation2: BOOL;
 	runOperation3: BOOL;
-	xtest: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -30,11 +29,6 @@ IF runOperation3 THEN
 	runOperation3 := FALSE;
 	myObject.MyWriter := myCsvWriter;
 	myObject.DoSomething();
-END_IF
-
-IF xtest THEN
-	xtest := FALSE;
-	myObject.MyWriter := myCsvWriter;
 END_IF]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
@@ -49,11 +43,6 @@ END_IF]]></ST>
       <LineId Id="21" Count="3" />
       <LineId Id="31" Count="0" />
       <LineId Id="20" Count="0" />
-      <LineId Id="33" Count="0" />
-      <LineId Id="32" Count="0" />
-      <LineId Id="34" Count="0" />
-      <LineId Id="37" Count="0" />
-      <LineId Id="35" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
