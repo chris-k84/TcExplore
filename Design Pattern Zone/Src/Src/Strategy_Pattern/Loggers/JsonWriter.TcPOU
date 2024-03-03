@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="JsonWriter" Id="{f665ae98-ed96-4d3d-9a09-fff139e1b7b7}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK JsonWriter IMPLEMENTS ITF_Writer
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="WriteMessage" Id="{10cf58aa-9ece-4428-a808-5f378a1f06b3}">
+      <Declaration><![CDATA[METHOD WriteMessage : BOOL
+VAR_INPUT
+	SomeString	: STRING(80);
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[ADSLOGSTR(msgCtrlMask := ADSLOG_MSGTYPE_LOG, msgFmtStr := 'I wrote a JSON line with: %s',strArg := SomeString);
+]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="JsonWriter">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="JsonWriter.WriteMessage">
+      <LineId Id="8" Count="0" />
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

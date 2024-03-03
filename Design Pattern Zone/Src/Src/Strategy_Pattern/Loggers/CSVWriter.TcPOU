@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="CSVWriter" Id="{c850e885-e42f-4ca8-a387-23343dec58d0}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK CSVWriter IMPLEMENTS ITF_Writer
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="WriteMessage" Id="{fbd2ee40-6875-45ff-a00d-2137b7064d42}">
+      <Declaration><![CDATA[METHOD WriteMessage : BOOL
+VAR_INPUT
+	SomeString	: STRING(80);
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[ADSLOGSTR(msgCtrlMask := ADSLOG_MSGTYPE_LOG, msgFmtStr := 'I wrote a CSV line with: %s',strArg := SomeString);
+]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="CSVWriter">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="CSVWriter.WriteMessage">
+      <LineId Id="7" Count="1" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

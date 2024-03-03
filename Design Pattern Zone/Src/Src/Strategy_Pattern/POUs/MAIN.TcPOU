@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MAIN" Id="{46c6e83c-31ed-463f-8e37-5ce86575fcba}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	myCsvWriter : CSVWriter;
+	myJsonWriter : JsonWriter;
+	myTextWriter : TextWriter;
+	myObject : SomeCyclicClass := (MyWriter := myTextWriter);
+	runOperation1: BOOL;
+	runOperation2: BOOL;
+	runOperation3: BOOL;
+	xtest: BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF runOperation1 THEN
+	runOperation1 := FALSE;
+	myObject.MyWriter := myJsonWriter;
+	myObject.DoSomething();
+END_IF
+
+IF runOperation2 THEN
+	runOperation2 := FALSE;
+	myObject.MyWriter := myTextWriter;
+	myObject.DoSomething();
+END_IF
+
+IF runOperation3 THEN
+	runOperation3 := FALSE;
+	myObject.MyWriter := myCsvWriter;
+	myObject.DoSomething();
+END_IF
+
+IF xtest THEN
+	xtest := FALSE;
+	myObject.MyWriter := myCsvWriter;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="16" Count="3" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="21" Count="3" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="32" Count="0" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="35" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="SomeCyclicClass" Id="{c971e421-8128-48df-a9ae-39d00c83f57b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK SomeCyclicClass
+VAR
+	_myWriter : ITF_Writer;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="DoSomething" Id="{565c603a-7b40-431c-b568-38c5684d96f6}">
+      <Declaration><![CDATA[METHOD DoSomething : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[///////Perform some operations////////
+
+IF _myWriter <> 0 THEN
+	_myWriter.WriteMessage('I did a job :-)');
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="MyWriter" Id="{7ad904d8-f5a6-4abc-8725-2587f58609e4}">
+      <Declaration><![CDATA[PROPERTY MyWriter : ITF_Writer]]></Declaration>
+      <Get Name="Get" Id="{51d8146f-cd4a-4e35-9bf6-60a75ad22deb}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[MyWriter := _myWriter;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{af74eea1-a8e5-4e91-96bb-88c67c2c27c9}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_myWriter := MyWriter;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <LineIds Name="SomeCyclicClass">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="SomeCyclicClass.DoSomething">
+      <LineId Id="5" Count="0" />
+      <LineId Id="7" Count="0" />
+      <LineId Id="6" Count="0" />
+      <LineId Id="8" Count="1" />
+    </LineIds>
+    <LineIds Name="SomeCyclicClass.MyWriter.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="SomeCyclicClass.MyWriter.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

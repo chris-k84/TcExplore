@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="TextWriter" Id="{bdb4051e-841a-46c1-94bf-6ccad23ae39e}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK TextWriter IMPLEMENTS ITF_Writer
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="WriteMessage" Id="{e29b27ff-18ba-4363-9bb1-c18379a5f128}">
+      <Declaration><![CDATA[METHOD WriteMessage : BOOL
+VAR_INPUT
+	SomeString	: STRING(80);
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[ADSLOGSTR(msgCtrlMask := ADSLOG_MSGTYPE_LOG, msgFmtStr := 'I wrote a Text line with: %s',strArg := SomeString);
+]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="TextWriter">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="TextWriter.WriteMessage">
+      <LineId Id="8" Count="0" />
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

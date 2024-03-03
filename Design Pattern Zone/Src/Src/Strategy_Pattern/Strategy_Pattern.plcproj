@@ -3,21 +3,36 @@
   <PropertyGroup>
     <FileVersion>1.0.0.0</FileVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{115bf93e-f425-458e-9078-fa33cd7b28d8}</ProjectGuid>
+    <ProjectGuid>{23cd46ac-94dd-4b38-959a-c9dea3af2864}</ProjectGuid>
     <SubObjectsSortedByName>True</SubObjectsSortedByName>
     <DownloadApplicationInfo>true</DownloadApplicationInfo>
     <WriteProductVersion>true</WriteProductVersion>
     <GenerateTpy>false</GenerateTpy>
-    <Name>Abstract_Factory_Pattern</Name>
+    <Name>Strategy_Pattern</Name>
     <ProgramVersion>3.1.4024.0</ProgramVersion>
-    <Application>{4bac8873-0f4b-4e68-ad4c-98b6b8f93ebc}</Application>
-    <TypeSystem>{19cd60d2-f95c-41d6-a0aa-42a2cf446c2e}</TypeSystem>
-    <Implicit_Task_Info>{d7ad766e-05ea-48fc-a73f-8bbae503d970}</Implicit_Task_Info>
-    <Implicit_KindOfTask>{eb928cb6-3752-4d15-ad68-12b0c742bf38}</Implicit_KindOfTask>
-    <Implicit_Jitter_Distribution>{0fb61ae8-d516-4c98-aae3-7fb779101a92}</Implicit_Jitter_Distribution>
-    <LibraryReferences>{9ce93ad9-c38c-4698-aad1-32ba6cf7afda}</LibraryReferences>
+    <Application>{b3b32491-8f70-4b3d-b523-415875d2aa5d}</Application>
+    <TypeSystem>{d29c5af9-29aa-44d7-a60a-651e5b1b775a}</TypeSystem>
+    <Implicit_Task_Info>{70407617-f06f-439e-a50e-a4f749a84235}</Implicit_Task_Info>
+    <Implicit_KindOfTask>{9feeb5de-4347-494f-9afa-cd1ba8527db6}</Implicit_KindOfTask>
+    <Implicit_Jitter_Distribution>{2d23eeff-428d-41e2-beb2-a9bef60389f7}</Implicit_Jitter_Distribution>
+    <LibraryReferences>{e7ace260-99e5-4f8e-aab1-112a6e24faa8}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Classes\SomeCyclicClass.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Loggers\CSVWriter.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Loggers\ITF_Writer.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Loggers\JsonWriter.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Loggers\TextWriter.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -26,9 +41,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DUTs" />
-    <Folder Include="GVLs" />
-    <Folder Include="VISUs" />
+    <Folder Include="Loggers" />
+    <Folder Include="Classes" />
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
@@ -46,15 +60,15 @@
     </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Abstract_Factory_Pattern.tmc">
+    <None Include="Strategy_Pattern.tmc">
       <SubType>Content</SubType>
     </None>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
       <XmlArchive>
-        <Data>
-          <o xml:space="preserve" t="OptionKey">
+  <Data>
+    <o xml:space="preserve" t="OptionKey">
       <v n="Name">"&lt;ProjectRoot&gt;"</v>
       <d n="SubKeys" t="Hashtable" ckt="String" cvt="OptionKey">
         <v>{40450F57-0AA3-4216-96F3-5444ECB29763}</v>
@@ -75,13 +89,13 @@
       </d>
       <d n="Values" t="Hashtable" />
     </o>
-        </Data>
-        <TypeList>
-          <Type n="Hashtable">System.Collections.Hashtable</Type>
-          <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
-          <Type n="String">System.String</Type>
-        </TypeList>
-      </XmlArchive>
+  </Data>
+  <TypeList>
+    <Type n="Hashtable">System.Collections.Hashtable</Type>
+    <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+    <Type n="String">System.String</Type>
+  </TypeList>
+</XmlArchive>
     </PlcProjectOptions>
   </ProjectExtensions>
 </Project>

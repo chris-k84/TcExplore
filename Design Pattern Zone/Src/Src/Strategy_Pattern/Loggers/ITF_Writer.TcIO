@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_Writer" Id="{a64e0f6d-d113-44bb-92cb-ccd3345a0e25}">
+    <Declaration><![CDATA[INTERFACE ITF_Writer
+]]></Declaration>
+    <Method Name="WriteMessage" Id="{ea160ff3-f226-4021-91d9-0644a31e4034}">
+      <Declaration><![CDATA[METHOD WriteMessage : BOOL
+VAR_INPUT
+	SomeString : STRING(80);
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>
