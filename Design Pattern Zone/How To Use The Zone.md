@@ -21,3 +21,5 @@ When you create a project or add some code to one, please list it locally in the
 **[Simple Factory - Not a pattern](./Src/Src/Simple_Factory_Pattern/Factory_README.md)**
 
 **[Factory Method Pattern](./Src/Src/Factory_Method_Pattern/Factory_Method_README.md)**
+
+**[Strategy Pettern](./Src/Src/Strategy_Pattern/Strategy_Pattern_README.md)**
