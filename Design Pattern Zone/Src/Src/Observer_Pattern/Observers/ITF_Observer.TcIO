@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_Observer" Id="{22088183-9676-40aa-b065-41c25e0b52a7}">
+    <Declaration><![CDATA[INTERFACE ITF_Observer
+]]></Declaration>
+    <Method Name="Update" Id="{3ae5d886-bbd4-4453-b259-c5a605e1466a}">
+      <Declaration><![CDATA[METHOD Update : BOOL
+VAR_INPUT
+	TwinSAFEState : INT;
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

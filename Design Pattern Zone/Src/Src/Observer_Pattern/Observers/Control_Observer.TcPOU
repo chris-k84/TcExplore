@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Control_Observer" Id="{74fe5921-e5b1-4b65-972d-5c4a51ab573d}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Control_Observer IMPLEMENTS ITF_Observer
+VAR
+	SystemSafetyState : INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Update" Id="{ca0713df-fd81-4182-a262-eff6df3cef60}">
+      <Declaration><![CDATA[METHOD Update : BOOL
+VAR_INPUT
+	TwinSAFEState : INT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[SystemSafetyState := TwinSAFEState;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="Control_Observer">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="Control_Observer.Update">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

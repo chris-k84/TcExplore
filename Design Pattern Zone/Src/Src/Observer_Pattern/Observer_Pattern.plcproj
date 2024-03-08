@@ -18,14 +18,28 @@
     <LibraryReferences>{4cfc6097-2b4e-44b7-a491-565519bf1f43}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Observers\Control_Observer.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Observers\ITF_Observer.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Observers\Motion_Observer.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Safety\TwinSAFEGroup.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Observers" />
+    <Folder Include="Safety" />
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
@@ -41,6 +55,11 @@
       <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc3_Module</Namespace>
     </PlaceholderReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Observer_Pattern.tmc">
+      <SubType>Content</SubType>
+    </None>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Motion_Observer" Id="{740b309b-9ac9-459a-be4a-b6b2c942ba0a}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Motion_Observer IMPLEMENTS ITF_Observer
+VAR
+	SystemSafetyState : INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Update" Id="{d0c5958a-729a-41c7-8e02-87338ae907e6}">
+      <Declaration><![CDATA[METHOD Update : BOOL
+VAR_INPUT
+	TwinSAFEState : INT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[SystemSafetyState := TwinSAFEState;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="Motion_Observer">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="Motion_Observer.Update">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
