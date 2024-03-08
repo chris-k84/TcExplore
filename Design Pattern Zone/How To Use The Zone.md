@@ -23,3 +23,5 @@ When you create a project or add some code to one, please list it locally in the
 **[Factory Method Pattern](./Src/Src/Factory_Method_Pattern/Factory_Method_README.md)**
 
 **[Strategy Pettern](./Src/Src/Strategy_Pattern/Strategy_Pattern_README.md)**
+
+**[Observer Pattern](./Src/Src/Observer_Pattern/Observer_Pattern_README.md)**
