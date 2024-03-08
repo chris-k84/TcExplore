@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.54">
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.55">
 	<Project ProjectGUID="{F2E572BC-CC36-4012-BBF9-6610F6B5F916}" TargetNetId="192.168.4.1.1.1" Target64Bit="true" ShowHideConfigurations="#x6">
 		<System>
 			<Tasks>
@@ -15,6 +15,9 @@
 				<Task Id="6" Priority="23" CycleTime="100000" AmsPort="353" AdtTasks="true">
 					<Name>PlcTask3</Name>
 				</Task>
+				<Task Id="7" Priority="24" CycleTime="100000" AmsPort="354" AdtTasks="true">
+					<Name>PlcTask4</Name>
+				</Task>
 			</Tasks>
 		</System>
 		<Plc>
@@ -22,6 +25,7 @@
 			<Project File="Factory_Method_Pattern.xti"/>
 			<Project File="Abstract_Factory_Pattern.xti"/>
 			<Project File="Strategy_Pattern.xti"/>
+			<Project File="Observer_Pattern.xti"/>
 		</Plc>
 	</Project>
 </TcSmProject>

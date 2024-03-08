@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.55" ClassName="CNestedPlcProjDef">
+	<Project GUID="{3DF215A4-8017-49D5-B02E-55793C2A9E71}" Name="Observer_Pattern" PrjFilePath="..\..\Observer_Pattern\Observer_Pattern.plcproj" TmcFilePath="..\..\Observer_Pattern\Observer_Pattern.tmc" ReloadTmc="true" AmsPort="855" FileArchiveSettings="#x000e" SymbolicMapping="true">
+		<Instance Id="#x08502100" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2">
+			<Name>Observer_Pattern Instance</Name>
+			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+			<Contexts>
+				<Context>
+					<Id>1</Id>
+					<Name>Default</Name>
+				</Context>
+			</Contexts>
+		</Instance>
+	</Project>
+</TcSmItem>
