@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_TwinSAFEGroup" Id="{8d352e09-fce2-4486-b818-14e921ab76a6}">
+    <Declaration><![CDATA[INTERFACE ITF_TwinSAFEGroup
+]]></Declaration>
+    <Method Name="GetTwinSAFEState" Id="{7b6e0dda-6f7b-4d05-a2ef-604caa0831d2}">
+      <Declaration><![CDATA[METHOD GetTwinSAFEState : int
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

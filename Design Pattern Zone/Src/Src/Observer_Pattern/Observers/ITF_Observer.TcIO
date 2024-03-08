@@ -6,7 +6,7 @@
     <Method Name="Update" Id="{3ae5d886-bbd4-4453-b259-c5a605e1466a}">
       <Declaration><![CDATA[METHOD Update : BOOL
 VAR_INPUT
-	TwinSAFEState : INT;
+	TwinSAFEGroup : ITF_TwinSAFEGroup;
 END_VAR
 ]]></Declaration>
     </Method>

@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="TwinSAFEGroup" Id="{ba0039fd-fd78-4dab-9c52-1edcbf801f38}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK TwinSAFEGroup
+    <Declaration><![CDATA[FUNCTION_BLOCK TwinSAFEGroup IMPLEMENTS ITF_TwinSAFEGroup
 VAR
 	MySubscribers : ARRAY[0..9] OF ITF_Observer;
 	i: INT;
 	SubscriberAlreadyAdded : BOOL;
 	NumberOfSubscribers: INT;
-	TwinSAFEState : INT := 8;
+	ActTwinSAFEState : INT := 8;
+	OldTwinSAFEState : INT;
 	Update: BOOL;
 END_VAR
 ]]></Declaration>
@@ -20,21 +21,30 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[IF Update THEN
-	Update := FALSE;
+        <ST><![CDATA[IF ActTwinSAFEState <> OldTwinSAFEState THEN
+	OldTwinSAFEState := ActTwinSAFEState;
 	This^.Notify();
 END_IF]]></ST>
       </Implementation>
     </Method>
+    <Method Name="GetTwinSAFEState" Id="{0ea0154b-26e0-463d-a391-f024f0b347bb}">
+      <Declaration><![CDATA[METHOD GetTwinSAFEState : INT
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[GetTwinSAFEState := ActTwinSAFEState;]]></ST>
+      </Implementation>
+    </Method>
     <Method Name="Notify" Id="{c13b9ce4-d1ad-41a1-99d0-f6df0c7cd297}">
-      <Declaration><![CDATA[METHOD Notify : BOOL
+      <Declaration><![CDATA[METHOD PRIVATE Notify : BOOL
 VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
         <ST><![CDATA[FOR i := 0 TO 9 DO
 	IF MySubscribers[i] <> 0 THEN
-		MySubscribers[i].Update(This^.TwinSAFEState);
+		MySubscribers[i].Update(THIS^);
 	END_IF
 END_FOR]]></ST>
       </Implementation>
@@ -81,6 +91,9 @@ END_FOR]]></ST>
       <LineId Id="5" Count="1" />
       <LineId Id="8" Count="0" />
       <LineId Id="7" Count="0" />
+    </LineIds>
+    <LineIds Name="TwinSAFEGroup.GetTwinSAFEState">
+      <LineId Id="5" Count="0" />
     </LineIds>
     <LineIds Name="TwinSAFEGroup.Notify">
       <LineId Id="5" Count="1" />

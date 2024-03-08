@@ -12,11 +12,11 @@ END_VAR
     <Method Name="Update" Id="{ca0713df-fd81-4182-a262-eff6df3cef60}">
       <Declaration><![CDATA[METHOD Update : BOOL
 VAR_INPUT
-	TwinSAFEState : INT;
+	TwinSAFEGroup : ITF_TwinSAFEGroup;
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[SystemSafetyState := TwinSAFEState;]]></ST>
+        <ST><![CDATA[SystemSafetyState := TwinSAFEGroup.GetTwinSAFEState();]]></ST>
       </Implementation>
     </Method>
     <LineIds Name="Control_Observer">
