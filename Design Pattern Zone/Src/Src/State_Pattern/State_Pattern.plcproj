@@ -26,7 +26,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AxisClass" />
+    <Folder Include="PackML" />
     <Folder Include="States" />
     <Folder Include="POUs" />
   </ItemGroup>
