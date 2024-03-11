@@ -15,6 +15,13 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
     </Method>
+    <Method Name="SetContext" Id="{64c80388-81c6-4c21-b859-370cc7ce1276}">
+      <Declaration><![CDATA[METHOD SetContext : BOOL
+VAR_INPUT
+	context : Reference TO SomeMachine;
+END_VAR
+]]></Declaration>
+    </Method>
     <Method Name="Start" Id="{98d27ca1-d0a4-442e-867f-f84e49283cd4}">
       <Declaration><![CDATA[METHOD Start : BOOL
 VAR_INPUT

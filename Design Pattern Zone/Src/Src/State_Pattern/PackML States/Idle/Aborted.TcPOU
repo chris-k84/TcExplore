@@ -33,6 +33,17 @@ METHOD Reset : BOOL
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
+    <Method Name="SetContext" Id="{303e0a7a-07ee-4091-b322-861fb608e37f}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD SetContext : BOOL
+VAR_INPUT
+	context	: REFERENCE TO SomeMachine;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
     <Method Name="Start" Id="{94432c27-b53a-49a2-90e2-527d66d45328}">
       <Declaration><![CDATA[{warning 'add method implementation '}
 METHOD Start : BOOL
@@ -60,6 +71,9 @@ METHOD Stop : BOOL
     </LineIds>
     <LineIds Name="Aborted.Reset">
       <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Aborted.SetContext">
+      <LineId Id="7" Count="0" />
     </LineIds>
     <LineIds Name="Aborted.Start">
       <LineId Id="4" Count="0" />

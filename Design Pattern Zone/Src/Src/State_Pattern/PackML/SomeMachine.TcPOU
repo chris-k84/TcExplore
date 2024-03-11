@@ -9,6 +9,17 @@ END_VAR
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
+    <Method Name="ChangeState" Id="{6244edf1-c088-4089-92f0-602943a02aa6}">
+      <Declaration><![CDATA[METHOD ChangeState : BOOL
+VAR_INPUT
+	NewState : ITF_PackMLState;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[_MyState := NewState;
+_MyState.SetContext(THIS);]]></ST>
+      </Implementation>
+    </Method>
     <Method Name="CyclicLogic" Id="{cf8cfe0e-a409-463c-bd73-24a121647ac1}">
       <Declaration><![CDATA[METHOD CyclicLogic : BOOL
 VAR_INPUT
@@ -20,11 +31,63 @@ END_VAR
 END_IF]]></ST>
       </Implementation>
     </Method>
+    <Method Name="EStop" Id="{1b9f0e87-8745-482b-952c-e92621ee9951}">
+      <Declaration><![CDATA[METHOD EStop : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Reset" Id="{64845523-7ded-4c82-a4b2-e98329962d21}">
+      <Declaration><![CDATA[METHOD Reset : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Start" Id="{a046d53a-bea4-4b2d-8cec-0d466afe4469}">
+      <Declaration><![CDATA[METHOD Start : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Stop" Id="{feb16b1c-88f9-4336-83ab-82109a72bbc3}">
+      <Declaration><![CDATA[METHOD Stop : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
     <LineIds Name="SomeMachine">
       <LineId Id="9" Count="0" />
     </LineIds>
+    <LineIds Name="SomeMachine.ChangeState">
+      <LineId Id="5" Count="0" />
+      <LineId Id="7" Count="0" />
+    </LineIds>
     <LineIds Name="SomeMachine.CyclicLogic">
       <LineId Id="5" Count="2" />
+    </LineIds>
+    <LineIds Name="SomeMachine.EStop">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="SomeMachine.Reset">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="SomeMachine.Start">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="SomeMachine.Stop">
+      <LineId Id="5" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
