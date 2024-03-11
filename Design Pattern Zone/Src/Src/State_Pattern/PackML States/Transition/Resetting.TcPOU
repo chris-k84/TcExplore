@@ -1,11 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="Resetting" Id="{a04f2b88-54e0-4f9d-96c2-2413b8f8730d}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK Resetting
-VAR_INPUT
-END_VAR
-VAR_OUTPUT
-END_VAR
+    <Declaration><![CDATA[FUNCTION_BLOCK Resetting IMPLEMENTS ITF_PackMLState
 VAR
 END_VAR
 ]]></Declaration>
@@ -21,11 +17,55 @@ END_VAR
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
+    <Method Name="EStop" Id="{78564e11-a330-4481-9f40-b5bfe72c172c}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD EStop : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Reset" Id="{3eeefcff-7251-4a92-9417-b79f79efa8cc}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD Reset : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Start" Id="{43d98a02-e31f-4f4c-a038-9348e3d08df8}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD Start : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Stop" Id="{349ec728-9daf-4fbf-b132-65798d14f7a9}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD Stop : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
     <LineIds Name="Resetting">
       <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="Resetting.CyclicLogic">
       <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="Resetting.EStop">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Resetting.Reset">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Resetting.Start">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Resetting.Stop">
+      <LineId Id="4" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

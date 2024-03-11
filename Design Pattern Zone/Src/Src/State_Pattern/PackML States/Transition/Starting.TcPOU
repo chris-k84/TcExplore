@@ -1,11 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="Starting" Id="{624bebe4-67c6-44f5-beab-72635c155632}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK Starting
-VAR_INPUT
-END_VAR
-VAR_OUTPUT
-END_VAR
+    <Declaration><![CDATA[FUNCTION_BLOCK Starting IMPLEMENTS ITF_PackMLState
 VAR
 END_VAR
 ]]></Declaration>
@@ -21,11 +17,55 @@ END_VAR
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
+    <Method Name="EStop" Id="{6cc05f29-5f9f-4b95-af67-3fa6d6332d92}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD EStop : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Reset" Id="{78ca631f-4d7b-4599-bf61-fb545cd859b2}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD Reset : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Start" Id="{e09d86fc-5ae2-4b3a-b400-588448b4ef81}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD Start : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Stop" Id="{27297469-e38c-448f-97df-f229cd1d7c5e}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD Stop : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
     <LineIds Name="Starting">
       <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="Starting.CyclicLogic">
       <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="Starting.EStop">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Starting.Reset">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Starting.Start">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Starting.Stop">
+      <LineId Id="4" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

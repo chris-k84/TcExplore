@@ -1,11 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="Aborted" Id="{9d11f351-b4bf-4f98-a02b-044980c0fcf0}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK Aborted
-VAR_INPUT
-END_VAR
-VAR_OUTPUT
-END_VAR
+    <Declaration><![CDATA[FUNCTION_BLOCK Aborted IMPLEMENTS ITF_PackMLState
 VAR
 END_VAR
 ]]></Declaration>
@@ -21,11 +17,55 @@ END_VAR
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
+    <Method Name="EStop" Id="{1c038dc6-38e7-4546-b25e-01963f2585e2}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD EStop : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Reset" Id="{cb08e04f-e3a3-4729-87b7-21953aad123b}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD Reset : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Start" Id="{94432c27-b53a-49a2-90e2-527d66d45328}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD Start : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Stop" Id="{4be6a551-e4c1-49cc-83c1-f9278ebab854}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD Stop : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
     <LineIds Name="Aborted">
       <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="Aborted.CyclicLogic">
       <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="Aborted.EStop">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Aborted.Reset">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Aborted.Start">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Aborted.Stop">
+      <LineId Id="4" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

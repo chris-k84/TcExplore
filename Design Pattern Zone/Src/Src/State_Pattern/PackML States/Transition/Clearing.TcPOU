@@ -1,11 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="Clearing" Id="{a6f0b167-4c13-4b94-937d-2718ad9d0c4c}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK Clearing
-VAR_INPUT
-END_VAR
-VAR_OUTPUT
-END_VAR
+    <Declaration><![CDATA[FUNCTION_BLOCK Clearing IMPLEMENTS ITF_PackMLState
 VAR
 END_VAR
 ]]></Declaration>
@@ -21,11 +17,55 @@ END_VAR
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
+    <Method Name="EStop" Id="{549d8647-c1b6-4564-b600-4c8d59c32a93}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD EStop : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Reset" Id="{e79bc8a8-656b-4d44-a6fa-8bfcb2bf92df}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD Reset : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Start" Id="{d70cc64b-471d-4407-83ae-9ec920ed16af}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD Start : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Stop" Id="{020009b6-cd1f-4ff7-99d7-2fbd1f97d684}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD Stop : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
     <LineIds Name="Clearing">
       <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="Clearing.CyclicLogic">
       <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="Clearing.EStop">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Clearing.Reset">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Clearing.Start">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Clearing.Stop">
+      <LineId Id="4" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

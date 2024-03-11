@@ -9,8 +9,22 @@ END_VAR
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
+    <Method Name="CyclicLogic" Id="{cf8cfe0e-a409-463c-bd73-24a121647ac1}">
+      <Declaration><![CDATA[METHOD CyclicLogic : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF _MyState <> 0 THEN
+	_MyState.CyclicLogic();
+END_IF]]></ST>
+      </Implementation>
+    </Method>
     <LineIds Name="SomeMachine">
       <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="SomeMachine.CyclicLogic">
+      <LineId Id="5" Count="2" />
     </LineIds>
   </POU>
 </TcPlcObject>

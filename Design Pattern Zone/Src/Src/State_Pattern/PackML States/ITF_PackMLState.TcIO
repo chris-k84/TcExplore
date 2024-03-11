@@ -3,5 +3,29 @@
   <Itf Name="ITF_PackMLState" Id="{e9c1366e-6fde-42b1-a453-45ddf914b23a}">
     <Declaration><![CDATA[INTERFACE ITF_PackMLState
 ]]></Declaration>
+    <Method Name="EStop" Id="{02a9ba80-d1a4-4114-bdb6-ae917084a07b}">
+      <Declaration><![CDATA[METHOD EStop : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="Reset" Id="{67e4205b-ea17-4b05-914c-cbb517da0b9f}">
+      <Declaration><![CDATA[METHOD Reset : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="Start" Id="{98d27ca1-d0a4-442e-867f-f84e49283cd4}">
+      <Declaration><![CDATA[METHOD Start : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="Stop" Id="{42ec46a1-995b-4534-977a-fa77637986f4}">
+      <Declaration><![CDATA[METHOD Stop : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
   </Itf>
 </TcPlcObject>
