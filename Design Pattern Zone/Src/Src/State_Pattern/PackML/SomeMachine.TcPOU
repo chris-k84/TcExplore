@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="SomeMachine" Id="{ff6886fb-65b8-468b-be70-46b545e120bf}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK SomeMachine
+VAR
+	_MyState : ITF_PackMLState;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <LineIds Name="SomeMachine">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

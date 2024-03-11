@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Resetting" Id="{a04f2b88-54e0-4f9d-96c2-2413b8f8730d}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Resetting
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="CyclicLogic" Id="{3fe49579-6c57-41a1-89d6-f13a605f4ed3}">
+      <Declaration><![CDATA[METHOD CyclicLogic : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="Resetting">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="Resetting.CyclicLogic">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

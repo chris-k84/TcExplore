@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_PackMLState" Id="{e9c1366e-6fde-42b1-a453-45ddf914b23a}">
+    <Declaration><![CDATA[INTERFACE ITF_PackMLState
+]]></Declaration>
+  </Itf>
+</TcPlcObject>
