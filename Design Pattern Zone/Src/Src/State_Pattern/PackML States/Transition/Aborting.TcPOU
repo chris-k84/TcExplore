@@ -3,6 +3,7 @@
   <POU Name="Aborting" Id="{53b868d1-8bc9-4c10-8ac2-c1d64eeae366}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK Aborting IMPLEMENTS ITF_PackMLState
 VAR
+	_MyContext : REFERENCE TO SomeMachine;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -34,14 +35,13 @@ METHOD Reset : BOOL
       </Implementation>
     </Method>
     <Method Name="SetContext" Id="{44eb273c-3e24-4070-b0da-a59f6767b731}">
-      <Declaration><![CDATA[{warning 'add method implementation '}
-METHOD SetContext : BOOL
+      <Declaration><![CDATA[METHOD SetContext : BOOL
 VAR_INPUT
 	context	: REFERENCE TO SomeMachine;
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[_MyContext REF= context;]]></ST>
       </Implementation>
     </Method>
     <Method Name="Start" Id="{006918a1-0058-4df6-83fd-6a4309e2c2e0}">

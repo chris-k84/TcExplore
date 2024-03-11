@@ -3,6 +3,7 @@
   <POU Name="Stopped" Id="{dc82a4e7-f66d-44be-8922-178610a55f51}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK Stopped IMPLEMENTS ITF_PackMLState
 VAR
+	_MyContext : REFERENCE TO SomeMachine;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -41,7 +42,7 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[_MyContext REF= context;]]></ST>
       </Implementation>
     </Method>
     <Method Name="Start" Id="{20c86fab-cbe7-4b19-8451-6d5663a6fc22}">

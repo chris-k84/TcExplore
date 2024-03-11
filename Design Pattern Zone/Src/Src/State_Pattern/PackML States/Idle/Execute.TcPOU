@@ -3,6 +3,7 @@
   <POU Name="Execute" Id="{16de238c-02d0-4654-b592-0c63039045d2}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK Execute IMPLEMENTS ITF_PackMLState
 VAR
+	_MyContext : REFERENCE TO SomeMachine;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -41,7 +42,7 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[_MyContext REF= context;]]></ST>
       </Implementation>
     </Method>
     <Method Name="Start" Id="{42576e4a-c1d8-4012-9b36-1be3c4c250b5}">
