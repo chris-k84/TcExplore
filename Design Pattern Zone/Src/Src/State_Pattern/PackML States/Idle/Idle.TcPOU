@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="Idle" Id="{1a71340b-855d-47b4-8af3-2d3f122be3c4}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK Idle IMPLEMENTS ITF_PackMLState
+    <Declaration><![CDATA[FUNCTION_BLOCK Idle IMPLEMENTS ITF_PackMLState, ITF_States
 VAR
 	_MyContext : REFERENCE TO SomeMachine;
 END_VAR
@@ -9,6 +9,27 @@ END_VAR
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
+    <Property Name="AbortingState" Id="{93d45b04-03aa-4c9f-b629-33910be73ff5}">
+      <Declaration><![CDATA[{warning 'add property implementation'}
+PROPERTY AbortingState : ITF_PackMLState
+]]></Declaration>
+      <Get Name="Get" Id="{24626629-f035-4ec5-8970-4d1be1d0ff50}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{07801e0e-4572-42e6-94bd-cac3d80c6bdf}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
     <Method Name="CyclicLogic" Id="{a5ec4d88-4540-415e-9a46-d7578f3cae61}">
       <Declaration><![CDATA[METHOD CyclicLogic : BOOL
 VAR_INPUT
@@ -26,6 +47,27 @@ METHOD EStop : BOOL
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
+    <Property Name="MyNextState" Id="{d8e7074c-bf43-49e5-850f-09cc4166e927}">
+      <Declaration><![CDATA[{warning 'add property implementation'}
+PROPERTY MyNextState : ITF_PackMLState
+]]></Declaration>
+      <Get Name="Get" Id="{335c3f5f-df28-4e8f-b559-be79ae39147e}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{397770b4-5804-4d6f-989e-b5223a26cce2}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
     <Method Name="Reset" Id="{8c045b4a-999b-4563-8473-bd3ae698008d}">
       <Declaration><![CDATA[{warning 'add method implementation '}
 METHOD Reset : BOOL
@@ -61,14 +103,47 @@ METHOD Stop : BOOL
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
+    <Property Name="StoppingState" Id="{d97bee16-e0c1-4258-bcc5-70ee76293a2a}">
+      <Declaration><![CDATA[{warning 'add property implementation'}
+PROPERTY StoppingState : ITF_PackMLState
+]]></Declaration>
+      <Get Name="Get" Id="{7fa59a36-4523-4532-a705-dabb181a349a}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{6b0b833a-c6fe-4e3b-99df-add62a39f63c}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
     <LineIds Name="Idle">
       <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="Idle.AbortingState.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="Idle.AbortingState.Set">
+      <LineId Id="2" Count="0" />
     </LineIds>
     <LineIds Name="Idle.CyclicLogic">
       <LineId Id="5" Count="0" />
     </LineIds>
     <LineIds Name="Idle.EStop">
       <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Idle.MyNextState.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="Idle.MyNextState.Set">
+      <LineId Id="2" Count="0" />
     </LineIds>
     <LineIds Name="Idle.Reset">
       <LineId Id="4" Count="0" />
@@ -81,6 +156,12 @@ METHOD Stop : BOOL
     </LineIds>
     <LineIds Name="Idle.Stop">
       <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Idle.StoppingState.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="Idle.StoppingState.Set">
+      <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
