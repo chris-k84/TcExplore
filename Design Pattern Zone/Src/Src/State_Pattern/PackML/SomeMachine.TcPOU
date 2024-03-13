@@ -4,6 +4,10 @@
     <Declaration><![CDATA[FUNCTION_BLOCK SomeMachine
 VAR
 	_MyState : ITF_PackMLState;
+	_Aborting : Aborting := (MyNextState := _Aborted);
+	_Aborted : Aborted := (MyNextState := _Clearing);
+	_Clearing : Clearing := (MyNextState := _Stopped);
+	_Stopped : Stopped;
 END_VAR
 ]]></Declaration>
     <Implementation>

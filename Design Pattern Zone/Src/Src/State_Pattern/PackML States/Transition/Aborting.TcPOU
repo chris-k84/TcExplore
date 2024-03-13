@@ -9,6 +9,27 @@ END_VAR
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
+    <Property Name="AbortingState" Id="{66285ba6-b37d-41b3-bd63-c87863c07ed3}">
+      <Declaration><![CDATA[{warning 'add property implementation'}
+PROPERTY AbortingState : ITF_PackMLState
+]]></Declaration>
+      <Get Name="Get" Id="{0959a5f0-5c74-49bf-88ee-982d5b075cfa}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{8f5d0938-451b-48be-aeeb-c6ab01b2c76f}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
     <Method Name="CyclicLogic" Id="{6c0f6590-0459-482e-8713-8ce383ea8165}">
       <Declaration><![CDATA[METHOD CyclicLogic : BOOL
 VAR_INPUT
@@ -26,6 +47,27 @@ METHOD EStop : BOOL
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
+    <Property Name="MyNextState" Id="{11346b26-7c26-498c-bf1f-9d20d1a4e684}">
+      <Declaration><![CDATA[{warning 'add property implementation'}
+PROPERTY MyNextState : ITF_PackMLState
+]]></Declaration>
+      <Get Name="Get" Id="{eb8a60ca-d4bd-44bc-ba5a-c03d669ecdea}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{cd1a34b0-72a0-4d42-8137-d59de8d8a44c}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
     <Method Name="Reset" Id="{2650164a-692b-43b9-9794-739b4238b555}">
       <Declaration><![CDATA[{warning 'add method implementation '}
 METHOD Reset : BOOL
@@ -60,14 +102,47 @@ METHOD Stop : BOOL
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
+    <Property Name="StoppingState" Id="{a06fff14-4345-43dc-b092-0cfde1b2b797}">
+      <Declaration><![CDATA[{warning 'add property implementation'}
+PROPERTY StoppingState : ITF_PackMLState
+]]></Declaration>
+      <Get Name="Get" Id="{5b406da0-ec53-4516-83fb-8dcfe9492cae}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{6577c661-2e26-4c0e-9f83-03a37e5ae6b8}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
     <LineIds Name="Aborting">
       <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="Aborting.AbortingState.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="Aborting.AbortingState.Set">
+      <LineId Id="2" Count="0" />
     </LineIds>
     <LineIds Name="Aborting.CyclicLogic">
       <LineId Id="5" Count="0" />
     </LineIds>
     <LineIds Name="Aborting.EStop">
       <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Aborting.MyNextState.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="Aborting.MyNextState.Set">
+      <LineId Id="2" Count="0" />
     </LineIds>
     <LineIds Name="Aborting.Reset">
       <LineId Id="4" Count="0" />
@@ -80,6 +155,12 @@ METHOD Stop : BOOL
     </LineIds>
     <LineIds Name="Aborting.Stop">
       <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="Aborting.StoppingState.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="Aborting.StoppingState.Set">
+      <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
