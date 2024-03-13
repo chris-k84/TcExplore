@@ -30,6 +30,9 @@
     <Compile Include="PackML States\Idle\Stopped.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="PackML States\ITF_States.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PackML States\Transition\Aborting.TcPOU">
       <SubType>Code</SubType>
     </Compile>

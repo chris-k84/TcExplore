@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_States" Id="{f78a5306-5325-4b69-88ea-abfd1faa0fa6}">
+    <Declaration><![CDATA[INTERFACE ITF_States
+]]></Declaration>
+    <Property Name="AbortingState" Id="{c8c0a174-8c19-441c-9d8f-1df88fb0d009}">
+      <Declaration><![CDATA[PROPERTY AbortingState : ITF_PackMLState]]></Declaration>
+      <Get Name="Get" Id="{71ef9a35-c265-436a-8843-38cfee5e2c1b}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{ff67ca8f-c3bc-45d9-8dfc-3add97352aec}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+    <Property Name="MyNextState" Id="{77c172a3-417a-4994-8780-12aa237315d1}">
+      <Declaration><![CDATA[PROPERTY MyNextState : ITF_PackMLState]]></Declaration>
+      <Get Name="Get" Id="{ecc05414-002f-4497-8d83-1198c48115fa}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{6ff3c9f2-ff7c-4166-8211-e2fbc88eae3f}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+    <Property Name="StoppingState" Id="{22e9742a-6075-4c8b-89a5-61d3e905a7ea}">
+      <Declaration><![CDATA[PROPERTY StoppingState : ITF_PackMLState]]></Declaration>
+      <Get Name="Get" Id="{49c4a6f8-9363-4697-a498-1c53f172da7e}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{fbe9b580-0db2-4479-8559-e45ee5231514}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+  </Itf>
+</TcPlcObject>
