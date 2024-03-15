@@ -43,11 +43,10 @@ END_VAR
       </Implementation>
     </Method>
     <Method Name="EStop" Id="{760555aa-8dd1-4b73-8d91-d630a3bc3cb5}">
-      <Declaration><![CDATA[{warning 'add method implementation '}
-METHOD EStop : BOOL
+      <Declaration><![CDATA[METHOD EStop : BOOL
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[_MyContext.ChangeState(_MyAbortingState);]]></ST>
       </Implementation>
     </Method>
     <Property Name="MyNextState" Id="{e90a2af3-8ec0-4e82-8bd2-295f435cd4ee}">
