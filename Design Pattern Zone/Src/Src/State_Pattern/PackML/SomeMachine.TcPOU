@@ -40,9 +40,8 @@ END_VAR
         <ST><![CDATA[IF NOT Initialised THEN
 	_MyState.SetContext(THIS^);
 	Initialised := TRUE;
-ELSE
-	RETURN;
 END_IF
+
 IF _MyState <> 0 THEN
 	_MyState.CyclicLogic();
 	CurrentState := _MyState.MyStateName;
@@ -102,8 +101,9 @@ END_IF]]></ST>
     </LineIds>
     <LineIds Name="SomeMachine.CyclicLogic">
       <LineId Id="11" Count="1" />
-      <LineId Id="14" Count="2" />
+      <LineId Id="14" Count="0" />
       <LineId Id="13" Count="0" />
+      <LineId Id="18" Count="0" />
       <LineId Id="5" Count="1" />
       <LineId Id="17" Count="0" />
       <LineId Id="7" Count="0" />
