@@ -4,29 +4,31 @@
     <Declaration><![CDATA[FUNCTION_BLOCK Aborting IMPLEMENTS ITF_PackMLState, ITF_States
 VAR
 	_MyContext : ITF_PackMLMachine;
+	_MyNextState : ITF_PackMLState;
+	_MyStoppingState : ITF_PackMLState;
+	_MyAbortingState : ITF_PackMLState;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
-    <Property Name="AbortingState" Id="{66285ba6-b37d-41b3-bd63-c87863c07ed3}">
-      <Declaration><![CDATA[{warning 'add property implementation'}
-PROPERTY AbortingState : ITF_PackMLState
+    <Property Name="AbortingState" Id="{028fe2d6-f100-43e0-afdb-130f3b097ed3}">
+      <Declaration><![CDATA[PROPERTY AbortingState : ITF_PackMLState
 ]]></Declaration>
-      <Get Name="Get" Id="{0959a5f0-5c74-49bf-88ee-982d5b075cfa}">
+      <Get Name="Get" Id="{0233fc55-0a4a-44c3-8e10-1ba4ecf13b7f}">
         <Declaration><![CDATA[VAR
 END_VAR
 ]]></Declaration>
         <Implementation>
-          <ST><![CDATA[]]></ST>
+          <ST><![CDATA[AbortingState := _MyAbortingState;]]></ST>
         </Implementation>
       </Get>
-      <Set Name="Set" Id="{8f5d0938-451b-48be-aeeb-c6ab01b2c76f}">
+      <Set Name="Set" Id="{ac1eb9f5-6d8f-4a10-ad32-cb89ad99ff89}">
         <Declaration><![CDATA[VAR
 END_VAR
 ]]></Declaration>
         <Implementation>
-          <ST><![CDATA[]]></ST>
+          <ST><![CDATA[_MyAbortingState := AbortingState;]]></ST>
         </Implementation>
       </Set>
     </Property>
@@ -47,24 +49,24 @@ METHOD EStop : BOOL
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
-    <Property Name="MyNextState" Id="{11346b26-7c26-498c-bf1f-9d20d1a4e684}">
+    <Property Name="MyNextState" Id="{d7e2bb93-e36a-4471-b006-0220d69b27ff}">
       <Declaration><![CDATA[{warning 'add property implementation'}
 PROPERTY MyNextState : ITF_PackMLState
 ]]></Declaration>
-      <Get Name="Get" Id="{eb8a60ca-d4bd-44bc-ba5a-c03d669ecdea}">
+      <Get Name="Get" Id="{a0123510-3cdb-40e8-85bd-fad0dc2eb6ee}">
         <Declaration><![CDATA[VAR
 END_VAR
 ]]></Declaration>
         <Implementation>
-          <ST><![CDATA[]]></ST>
+          <ST><![CDATA[MyNextState := _MyNextState;]]></ST>
         </Implementation>
       </Get>
-      <Set Name="Set" Id="{cd1a34b0-72a0-4d42-8137-d59de8d8a44c}">
+      <Set Name="Set" Id="{cbe05cc9-3529-4061-a505-915ee1361bd1}">
         <Declaration><![CDATA[VAR
 END_VAR
 ]]></Declaration>
         <Implementation>
-          <ST><![CDATA[]]></ST>
+          <ST><![CDATA[_MyNextState := MyNextState;]]></ST>
         </Implementation>
       </Set>
     </Property>
@@ -102,24 +104,24 @@ METHOD Stop : BOOL
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
-    <Property Name="StoppingState" Id="{a06fff14-4345-43dc-b092-0cfde1b2b797}">
+    <Property Name="StoppingState" Id="{0928a0e5-2d43-48f9-8595-e47ea91f1cdc}">
       <Declaration><![CDATA[{warning 'add property implementation'}
 PROPERTY StoppingState : ITF_PackMLState
 ]]></Declaration>
-      <Get Name="Get" Id="{5b406da0-ec53-4516-83fb-8dcfe9492cae}">
+      <Get Name="Get" Id="{5f0d9e4c-f572-436d-a2a9-41c198eabbb2}">
         <Declaration><![CDATA[VAR
 END_VAR
 ]]></Declaration>
         <Implementation>
-          <ST><![CDATA[]]></ST>
+          <ST><![CDATA[StoppingState := _MyStoppingState;]]></ST>
         </Implementation>
       </Get>
-      <Set Name="Set" Id="{6577c661-2e26-4c0e-9f83-03a37e5ae6b8}">
+      <Set Name="Set" Id="{3c15afcc-ee5a-4544-87c4-f607dc6445de}">
         <Declaration><![CDATA[VAR
 END_VAR
 ]]></Declaration>
         <Implementation>
-          <ST><![CDATA[]]></ST>
+          <ST><![CDATA[_MyStoppingState := StoppingState;]]></ST>
         </Implementation>
       </Set>
     </Property>

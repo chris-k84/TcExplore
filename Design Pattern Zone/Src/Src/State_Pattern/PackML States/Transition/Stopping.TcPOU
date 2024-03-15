@@ -4,21 +4,23 @@
     <Declaration><![CDATA[FUNCTION_BLOCK Stopping IMPLEMENTS ITF_PackMLState, ITF_States
 VAR
 	_MyContext : ITF_PackMLMachine;
+	_MyNextState : ITF_PackMLState;
+	_MyStoppingState : ITF_PackMLState;
+	_MyAbortingState : ITF_PackMLState;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
     <Property Name="AbortingState" Id="{12d746e4-45d6-4347-abbc-97b2f11ef8e1}">
-      <Declaration><![CDATA[{warning 'add property implementation'}
-PROPERTY AbortingState : ITF_PackMLState
+      <Declaration><![CDATA[PROPERTY AbortingState : ITF_PackMLState
 ]]></Declaration>
       <Get Name="Get" Id="{fc603993-f816-4c6c-a292-bab77e7b8fe8}">
         <Declaration><![CDATA[VAR
 END_VAR
 ]]></Declaration>
         <Implementation>
-          <ST><![CDATA[]]></ST>
+          <ST><![CDATA[AbortingState := _MyAbortingState;]]></ST>
         </Implementation>
       </Get>
       <Set Name="Set" Id="{69a1bd5b-e714-4358-bf87-2f229aad4e78}">
@@ -26,7 +28,7 @@ END_VAR
 END_VAR
 ]]></Declaration>
         <Implementation>
-          <ST><![CDATA[]]></ST>
+          <ST><![CDATA[_MyAbortingState := AbortingState;]]></ST>
         </Implementation>
       </Set>
     </Property>
@@ -56,7 +58,7 @@ PROPERTY MyNextState : ITF_PackMLState
 END_VAR
 ]]></Declaration>
         <Implementation>
-          <ST><![CDATA[]]></ST>
+          <ST><![CDATA[MyNextState := _MyNextState;]]></ST>
         </Implementation>
       </Get>
       <Set Name="Set" Id="{8c03aabf-ccbe-417e-b028-853379fea61c}">
@@ -64,7 +66,7 @@ END_VAR
 END_VAR
 ]]></Declaration>
         <Implementation>
-          <ST><![CDATA[]]></ST>
+          <ST><![CDATA[_MyNextState := MyNextState;]]></ST>
         </Implementation>
       </Set>
     </Property>
@@ -111,7 +113,7 @@ PROPERTY StoppingState : ITF_PackMLState
 END_VAR
 ]]></Declaration>
         <Implementation>
-          <ST><![CDATA[]]></ST>
+          <ST><![CDATA[StoppingState := _MyStoppingState;]]></ST>
         </Implementation>
       </Get>
       <Set Name="Set" Id="{a450c690-b693-4bff-bcff-127f81d1aa7a}">
@@ -119,7 +121,7 @@ END_VAR
 END_VAR
 ]]></Declaration>
         <Implementation>
-          <ST><![CDATA[]]></ST>
+          <ST><![CDATA[_MyStoppingState := StoppingState;]]></ST>
         </Implementation>
       </Set>
     </Property>
