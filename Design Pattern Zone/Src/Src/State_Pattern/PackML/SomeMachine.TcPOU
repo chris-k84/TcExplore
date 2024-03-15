@@ -6,8 +6,13 @@ VAR
 	_MyState : ITF_PackMLState;
 	_Aborting : Aborting := (MyNextState := _Aborted);
 	_Aborted : Aborted := (MyNextState := _Clearing);
-	_Clearing : Clearing := (MyNextState := _Stopped);
-	_Stopped : Stopped;
+	_Clearing : Clearing := (MyNextState := _Stopped, AbortingState := _Aborting);
+	_Stopping : Stopping := (MyNextState := _Stopped, AbortingState := _Aborting);
+	_Stopped : Stopped := (MyNextState := _Resetting, AbortingState := _Aborting);
+	_Resetting : Resetting := (MyNextState := _Idle, AbortingState := _Aborting, StoppingState := _Stopping);
+	_Idle : Idle := (MyNextState := _Starting, AbortingState := _Aborting, StoppingState := _Stopping);
+	_Starting : Starting := (MyNextState := _Execute, AbortingState := _Aborting, StoppingState := _Stopping);
+	_Execute : Execute := (AbortingState := _Aborting, StoppingState := _Stopping);
 END_VAR
 ]]></Declaration>
     <Implementation>
