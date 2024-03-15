@@ -3,6 +3,12 @@
   <Itf Name="ITF_PackMLState" Id="{e9c1366e-6fde-42b1-a453-45ddf914b23a}">
     <Declaration><![CDATA[INTERFACE ITF_PackMLState
 ]]></Declaration>
+    <Method Name="CyclicLogic" Id="{8098c19c-5131-4968-a6ba-edce4f338178}">
+      <Declaration><![CDATA[METHOD CyclicLogic : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
     <Method Name="EStop" Id="{02a9ba80-d1a4-4114-bdb6-ae917084a07b}">
       <Declaration><![CDATA[METHOD EStop : BOOL
 VAR_INPUT
@@ -18,7 +24,7 @@ END_VAR
     <Method Name="SetContext" Id="{64c80388-81c6-4c21-b859-370cc7ce1276}">
       <Declaration><![CDATA[METHOD SetContext : BOOL
 VAR_INPUT
-	context : Reference TO SomeMachine;
+	context : ITF_PackMLMachine;
 END_VAR
 ]]></Declaration>
     </Method>

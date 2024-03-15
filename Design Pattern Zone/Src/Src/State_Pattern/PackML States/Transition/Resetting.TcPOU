@@ -3,7 +3,7 @@
   <POU Name="Resetting" Id="{a04f2b88-54e0-4f9d-96c2-2413b8f8730d}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK Resetting IMPLEMENTS ITF_PackMLState, ITF_States
 VAR
-	_MyContext : REFERENCE TO SomeMachine;
+	_MyContext : ITF_PackMLMachine;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -79,11 +79,11 @@ METHOD Reset : BOOL
     <Method Name="SetContext" Id="{f22654db-fe71-4a75-9e91-cbb3916e52e5}">
       <Declaration><![CDATA[METHOD SetContext : BOOL
 VAR_INPUT
-	context	: REFERENCE TO SomeMachine;
+	context	: ITF_PackMLMachine;
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[_MyContext REF= context;]]></ST>
+        <ST><![CDATA[_MyContext := context;]]></ST>
       </Implementation>
     </Method>
     <Method Name="Start" Id="{43d98a02-e31f-4f4c-a038-9348e3d08df8}">

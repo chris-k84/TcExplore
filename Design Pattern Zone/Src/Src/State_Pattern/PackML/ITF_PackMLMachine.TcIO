@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_PackMLMachine" Id="{2091b42c-d4f4-4f97-bd3e-4ab431542d4e}">
+    <Declaration><![CDATA[INTERFACE ITF_PackMLMachine
+]]></Declaration>
+    <Method Name="ChangeState" Id="{8073c9ce-25da-495a-a5f3-69d0703149a9}">
+      <Declaration><![CDATA[METHOD ChangeState : BOOL
+VAR_INPUT
+	NewState : ITF_PackMLState;
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

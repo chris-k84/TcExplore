@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="SomeMachine" Id="{ff6886fb-65b8-468b-be70-46b545e120bf}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK SomeMachine
+    <Declaration><![CDATA[FUNCTION_BLOCK SomeMachine IMPLEMENTS ITF_PackMLMachine
 VAR
 	_MyState : ITF_PackMLState;
 	_Aborting : Aborting := (MyNextState := _Aborted);
@@ -21,7 +21,7 @@ END_VAR
 ]]></Declaration>
       <Implementation>
         <ST><![CDATA[_MyState := NewState;
-_MyState.SetContext(THIS);]]></ST>
+_MyState.SetContext(this^);]]></ST>
       </Implementation>
     </Method>
     <Method Name="CyclicLogic" Id="{cf8cfe0e-a409-463c-bd73-24a121647ac1}">

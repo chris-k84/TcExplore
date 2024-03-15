@@ -3,7 +3,7 @@
   <POU Name="Stopped" Id="{dc82a4e7-f66d-44be-8922-178610a55f51}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK Stopped IMPLEMENTS ITF_PackMLState, ITF_States
 VAR
-	_MyContext : REFERENCE TO SomeMachine;
+	_MyContext : ITF_PackMLMachine;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -80,11 +80,11 @@ METHOD Reset : BOOL
       <Declaration><![CDATA[{warning 'add method implementation '}
 METHOD SetContext : BOOL
 VAR_INPUT
-	context	: REFERENCE TO SomeMachine;
+	context	: ITF_PackMLMachine;
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[_MyContext REF= context;]]></ST>
+        <ST><![CDATA[_MyContext := context;]]></ST>
       </Implementation>
     </Method>
     <Method Name="Start" Id="{20c86fab-cbe7-4b19-8451-6d5663a6fc22}">

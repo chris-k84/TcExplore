@@ -48,6 +48,9 @@
     <Compile Include="PackML States\Transition\Stopping.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="PackML\ITF_PackMLMachine.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PackML\SomeMachine.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -81,6 +84,11 @@
       <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc3_Module</Namespace>
     </PlaceholderReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="State_Pattern.tmc">
+      <SubType>Content</SubType>
+    </None>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>

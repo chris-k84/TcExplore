@@ -3,7 +3,7 @@
   <POU Name="Clearing" Id="{a6f0b167-4c13-4b94-937d-2718ad9d0c4c}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK Clearing IMPLEMENTS ITF_PackMLState, ITF_States
 VAR
-	_MyContext : REFERENCE TO SomeMachine;
+	_MyContext : ITF_PackMLMachine;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -79,11 +79,11 @@ METHOD Reset : BOOL
     <Method Name="SetContext" Id="{94d8d472-e609-456d-a377-2295695183ba}">
       <Declaration><![CDATA[METHOD SetContext : BOOL
 VAR_INPUT
-	context	: REFERENCE TO SomeMachine;
+	context	: ITF_PackMLMachine;
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[_MyContext REF= context;]]></ST>
+        <ST><![CDATA[_MyContext := context;]]></ST>
       </Implementation>
     </Method>
     <Method Name="Start" Id="{d70cc64b-471d-4407-83ae-9ec920ed16af}">
