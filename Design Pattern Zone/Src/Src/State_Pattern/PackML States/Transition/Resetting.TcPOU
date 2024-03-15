@@ -36,7 +36,7 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[_MyContext.ChangeState(MyNextState);]]></ST>
       </Implementation>
     </Method>
     <Method Name="EStop" Id="{78564e11-a330-4481-9f40-b5bfe72c172c}">

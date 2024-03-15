@@ -69,11 +69,10 @@ END_VAR
       </Set>
     </Property>
     <Method Name="Reset" Id="{45ca4b20-ee67-47cb-b58e-2a104fcefcc3}">
-      <Declaration><![CDATA[{warning 'add method implementation '}
-METHOD Reset : BOOL
+      <Declaration><![CDATA[METHOD Reset : BOOL
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[_MyContext.ChangeState(MyNextState);]]></ST>
       </Implementation>
     </Method>
     <Method Name="SetContext" Id="{7016a00a-42e2-4ead-a1d6-736bd46e651a}">

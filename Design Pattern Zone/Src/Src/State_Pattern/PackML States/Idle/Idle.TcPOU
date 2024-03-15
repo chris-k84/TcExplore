@@ -88,11 +88,10 @@ END_VAR
       </Implementation>
     </Method>
     <Method Name="Start" Id="{34ca202e-52e0-4fbc-9e00-d3f29dfcabcb}">
-      <Declaration><![CDATA[{warning 'add method implementation '}
-METHOD Start : BOOL
+      <Declaration><![CDATA[METHOD Start : BOOL
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[_MyContext.ChangeState(MyNextState);]]></ST>
       </Implementation>
     </Method>
     <Method Name="Stop" Id="{5bdd16e5-bc26-4e93-ae5f-93d096ef6a87}">
