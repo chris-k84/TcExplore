@@ -3,7 +3,6 @@
   <POU Name="SomeMachine" Id="{ff6886fb-65b8-468b-be70-46b545e120bf}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK SomeMachine IMPLEMENTS ITF_PackMLMachine
 VAR
-	_MyState : ITF_PackMLState;
 	_Aborting : Aborting := (MyNextState := _Aborted);
 	_Aborted : Aborted := (MyNextState := _Clearing);
 	_Clearing : Clearing := (MyNextState := _Stopped, AbortingState := _Aborting);
@@ -13,6 +12,9 @@ VAR
 	_Idle : Idle := (MyNextState := _Starting, AbortingState := _Aborting, StoppingState := _Stopping);
 	_Starting : Starting := (MyNextState := _Execute, AbortingState := _Aborting, StoppingState := _Stopping);
 	_Execute : Execute := (AbortingState := _Aborting, StoppingState := _Stopping);
+	_MyState : ITF_PackMLState := _Aborting;
+	Initialised: BOOL;
+	CurrentState : STRING(20);
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -35,8 +37,15 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[IF _MyState <> 0 THEN
+        <ST><![CDATA[IF NOT Initialised THEN
+	_MyState.SetContext(THIS^);
+	Initialised := TRUE;
+ELSE
+	RETURN;
+END_IF
+IF _MyState <> 0 THEN
 	_MyState.CyclicLogic();
+	CurrentState := _MyState.MyStateName;
 END_IF]]></ST>
       </Implementation>
     </Method>
@@ -92,7 +101,12 @@ END_IF]]></ST>
       <LineId Id="7" Count="0" />
     </LineIds>
     <LineIds Name="SomeMachine.CyclicLogic">
-      <LineId Id="5" Count="2" />
+      <LineId Id="11" Count="1" />
+      <LineId Id="14" Count="2" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="5" Count="1" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="7" Count="0" />
     </LineIds>
     <LineIds Name="SomeMachine.EStop">
       <LineId Id="5" Count="2" />

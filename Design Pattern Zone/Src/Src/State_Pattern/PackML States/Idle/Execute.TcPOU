@@ -7,6 +7,7 @@ VAR
 	_MyNextState : ITF_PackMLState;
 	_MyStoppingState : ITF_PackMLState;
 	_MyAbortingState : ITF_PackMLState;
+	_MyName : STRING(20) := 'Execute';
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -69,6 +70,17 @@ END_VAR
           <ST><![CDATA[_MyNextState := MyNextState;]]></ST>
         </Implementation>
       </Set>
+    </Property>
+    <Property Name="MyStateName" Id="{8976abae-eefc-4513-8348-4ffb6ed01903}">
+      <Declaration><![CDATA[PROPERTY MyStateName : String(20)]]></Declaration>
+      <Get Name="Get" Id="{0ffcb83e-153b-4248-94b8-c0ac0d69ac6e}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[MyStateName := _MyName;]]></ST>
+        </Implementation>
+      </Get>
     </Property>
     <Method Name="Reset" Id="{1a9cf0ec-8b14-4e8d-9539-992a9b7b2e78}">
       <Declaration><![CDATA[{warning 'add method implementation '}
@@ -145,6 +157,9 @@ END_VAR
       <LineId Id="2" Count="0" />
     </LineIds>
     <LineIds Name="Execute.MyNextState.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="Execute.MyStateName.Get">
       <LineId Id="2" Count="0" />
     </LineIds>
     <LineIds Name="Execute.Reset">

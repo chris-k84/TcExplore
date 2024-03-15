@@ -15,6 +15,12 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
     </Method>
+    <Property Name="MyStateName" Id="{d9a85d42-939e-4fdf-8cf7-f418dc52c7e1}">
+      <Declaration><![CDATA[PROPERTY MyStateName : String(20)]]></Declaration>
+      <Get Name="Get" Id="{a84508ed-1caf-4352-814e-bcbbd8d32774}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+    </Property>
     <Method Name="Reset" Id="{67e4205b-ea17-4b05-914c-cbb517da0b9f}">
       <Declaration><![CDATA[METHOD Reset : BOOL
 VAR_INPUT

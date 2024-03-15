@@ -4,13 +4,57 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	MyMachine : SomeMachine;
+	HMIStartButton : BOOL;
+	HMIResetButton : BOOL;
+	HMIStopButton : BOOL;
+	ESTOP : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[MyMachine.CyclicLogic();
+
+IF HMIStartButton THEN
+	HMIStartButton := FALSE;
+	MyMachine.Start();
+END_IF
+
+IF HMIStopButton THEN
+	HMIStopButton := FALSE;
+	MyMachine.Stop();
+END_IF
+
+IF HMIResetButton THEN
+	HMIResetButton := FALSE;
+	MyMachine.Reset();
+END_IF
+
+IF ESTOP THEN
+	ESTOP := FALSE;
+	MyMachine.EStop();
+END_IF]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="2" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="29" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
