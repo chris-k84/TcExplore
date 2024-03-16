@@ -4,7 +4,9 @@
 
 This sample was created to show the State Pattern applied to TwinCAT, specifically handling how an object can implement the PackML state machine.
 
+State Pattern is a behavioural pattern, it allows an object to change its behaviour based on an internal state.
 
+This may seem exactly like Strategy Pattern, however it is different because the behaviours are locked to a state, not a behaviour and more importantly the states can be aware of each other and initiate transitions between themselves.
 
 *[PatternGuru - State Pattern](https://refactoring.guru/design-patterns/state)*
 
