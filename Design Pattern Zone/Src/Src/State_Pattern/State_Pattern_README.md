@@ -25,3 +25,7 @@ and a very good tutorial here:
 *[Chris O - State Pattern](https://www.youtube.com/watch?v=N12L5D78MAA)*
 
 This is a good example of dependancy inversion, the SomeCyclicClass is not dependant on the lower level modules. The lower level modules are not dependant on the 'upper level', the SomeCyclicClass in this case. The both depend on the abstraction, the interface that links them, making the coupling loose and flexible for further extension.
+
+### Note
+
+I've cheated slightly and havent done all the states, the complete, suspend and held branches of the state machine arent in there yet.
