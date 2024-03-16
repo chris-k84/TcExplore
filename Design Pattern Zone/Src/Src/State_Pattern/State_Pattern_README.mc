@@ -2,7 +2,7 @@
 
 ## The State Pattern for PackML
 
-This sample was created to show the State Pattern applied to TwinCAT, specifically handling how object can implement PackML.
+This sample was created to show the State Pattern applied to TwinCAT, specifically handling how an object can implement the PackML state machine.
 
 
 
