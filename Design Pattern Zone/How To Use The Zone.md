@@ -27,3 +27,5 @@ When you create a project or add some code to one, please list it locally in the
 **[Observer Pattern](./Src/Src/Observer_Pattern/Observer_Pattern_README.md)**
 
 **[State Pattern](./Src/Src/State_Pattern/State_Pattern_README.mc)**
+
+**[Decorator Pattern](./Src/Src/Decorator_Pattern/Decorator_Pattern_README.md)**
