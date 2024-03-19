@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="DecimationDecorator" Id="{489ffb12-88d5-4f8c-ae82-30974d4d0db9}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK DecimationDecorator IMPLEMENTS ITF_Analogue
+    <Declaration><![CDATA[FUNCTION_BLOCK DecimationDecorator EXTENDS DecoratorBase
 VAR
-	wrappee : ITF_Analogue;
-	decimationfactor : int := 1;
+	decimationfactor : INT := 1;
+	currentValue: LREAL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -17,9 +17,11 @@ END_VAR
         <ST><![CDATA[IF (THIS^.wrappee <> 0) THEN
 	IF decimationfactor = 5 THEN
 		GetValue := THIS^.wrappee.GetValue();
+		currentValue := GetValue;
 		decimationfactor := 1;
 	ELSE
 		decimationfactor := decimationfactor + 1;
+		GetValue := currentValue;
 	END_IF
 END_IF]]></ST>
       </Implementation>
@@ -30,9 +32,12 @@ END_IF]]></ST>
     <LineIds Name="DecimationDecorator.GetValue">
       <LineId Id="5" Count="0" />
       <LineId Id="7" Count="0" />
-      <LineId Id="11" Count="1" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="12" Count="0" />
       <LineId Id="8" Count="0" />
       <LineId Id="10" Count="0" />
+      <LineId Id="14" Count="0" />
       <LineId Id="9" Count="0" />
       <LineId Id="4" Count="0" />
     </LineIds>

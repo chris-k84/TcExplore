@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="ScaleDecorator" Id="{9cf9a9ee-882f-4ed8-9106-b173b56b8405}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK ScaleDecorator IMPLEMENTS ITF_Analogue
+    <Declaration><![CDATA[FUNCTION_BLOCK ScaleDecorator EXTENDS DecoratorBase
 VAR
-	wrappee : ITF_Analogue;
 END_VAR
 ]]></Declaration>
     <Implementation>

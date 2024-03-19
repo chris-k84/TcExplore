@@ -4,13 +4,30 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	MyAnalogueTerminal : AnalogueTerminal;
+	SignalDecimation : DecimationDecorator;
+	SignalOffset : OffsetDecorator;
+	SignalScale : ScaleDecorator;
+	AnalogueChannel : ITF_Analogue;
+	init: BOOL;
+	MySignal: LREAL;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[IF NOT init	THEN
+	init := TRUE;
+	SignalDecimation.MyWrappee := MyAnalogueTerminal;
+	SignalScale.MyWrappee := SignalDecimation;
+	SignalOffset.MyWrappee := SignalScale;
+	AnalogueChannel := SignalOffset;
+ELSE
+	MySignal := AnalogueChannel.GetValue();
+END_IF]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="2" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="15" Count="5" />
+      <LineId Id="13" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

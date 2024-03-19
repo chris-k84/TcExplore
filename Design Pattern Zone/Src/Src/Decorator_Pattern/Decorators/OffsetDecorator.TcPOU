@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="OffsetDecorator" Id="{9de537f0-d915-4a60-874f-abd46092d676}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK OffsetDecorator IMPLEMENTS ITF_Analogue
+    <Declaration><![CDATA[FUNCTION_BLOCK OffsetDecorator EXTENDS DecoratorBase
 VAR
-	wrappee : ITF_Analogue;
-	UpperLimit: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
