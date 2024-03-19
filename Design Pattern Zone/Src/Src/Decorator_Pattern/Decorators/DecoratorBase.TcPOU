@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="DecoratorBase" Id="{1cb74713-3c8c-45d1-a0fd-959659e4b46f}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK DecoratorBase IMPLEMENTS ITF_Analogue
+VAR
+	wrappee : ITF_Analogue;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="GetValue" Id="{d204e14d-39c6-4f66-8b66-04a44c2c3614}">
+      <Declaration><![CDATA[METHOD GetValue : LREAL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="MyWrappee" Id="{eb7cabae-0d06-4c6a-99e0-5bc98b30dd14}">
+      <Declaration><![CDATA[PROPERTY MyWrappee : itf_analogue]]></Declaration>
+      <Get Name="Get" Id="{82e649fd-4cf8-473e-bac5-0670e47f5f7b}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[MyWrappee := wrappee;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{22b53e0c-d5d2-404f-92d2-92f8187c3bb1}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[wrappee := MyWrappee;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <LineIds Name="DecoratorBase">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="DecoratorBase.GetValue">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="DecoratorBase.MyWrappee.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="DecoratorBase.MyWrappee.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

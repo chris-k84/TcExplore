@@ -27,6 +27,9 @@
     <Compile Include="Decorators\DecimationDecorator.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Decorators\DecoratorBase.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Decorators\OffsetDecorator.TcPOU">
       <SubType>Code</SubType>
     </Compile>
