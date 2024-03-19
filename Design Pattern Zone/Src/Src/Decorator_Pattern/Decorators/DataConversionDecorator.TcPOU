@@ -1,14 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
-  <POU Name="ScaleDecorator" Id="{9cf9a9ee-882f-4ed8-9106-b173b56b8405}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK ScaleDecorator IMPLEMENTS ITF_Analogue
+  <POU Name="DataConversionDecorator" Id="{4b1d2179-15d5-4bf4-bc8e-05c702dbfa59}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK DataConversionDecorator IMPLEMENTS ITF_Analogue
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
 VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
-    <Method Name="GetValue" Id="{23c4be5e-6b38-43f6-adef-2b3982100275}">
+    <Method Name="GetValue" Id="{643484a3-ba6c-4b4b-9e12-d59a094794f0}">
       <Declaration><![CDATA[{warning 'add method implementation '}
 METHOD GetValue : INT
 ]]></Declaration>
@@ -16,10 +20,10 @@ METHOD GetValue : INT
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
-    <LineIds Name="ScaleDecorator">
+    <LineIds Name="DataConversionDecorator">
       <LineId Id="9" Count="0" />
     </LineIds>
-    <LineIds Name="ScaleDecorator.GetValue">
+    <LineIds Name="DataConversionDecorator.GetValue">
       <LineId Id="4" Count="0" />
     </LineIds>
   </POU>
