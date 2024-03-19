@@ -18,6 +18,18 @@
     <LibraryReferences>{fb8bbac5-8d63-46a0-abc5-672d6920ee98}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Analogues\AnalogueTerminal.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Analogues\ITF_Analogue.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Decorators\LimitDecorator.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Decorators\ScaleDecorator.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -26,6 +38,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Analogues" />
+    <Folder Include="Decorators" />
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
@@ -45,8 +59,8 @@
   <ProjectExtensions>
     <PlcProjectOptions>
       <XmlArchive>
-  <Data>
-    <o xml:space="preserve" t="OptionKey">
+        <Data>
+          <o xml:space="preserve" t="OptionKey">
       <v n="Name">"&lt;ProjectRoot&gt;"</v>
       <d n="SubKeys" t="Hashtable" ckt="String" cvt="OptionKey">
         <v>{40450F57-0AA3-4216-96F3-5444ECB29763}</v>
@@ -67,13 +81,13 @@
       </d>
       <d n="Values" t="Hashtable" />
     </o>
-  </Data>
-  <TypeList>
-    <Type n="Hashtable">System.Collections.Hashtable</Type>
-    <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
-    <Type n="String">System.String</Type>
-  </TypeList>
-</XmlArchive>
+        </Data>
+        <TypeList>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+          <Type n="String">System.String</Type>
+        </TypeList>
+      </XmlArchive>
     </PlcProjectOptions>
   </ProjectExtensions>
 </Project>

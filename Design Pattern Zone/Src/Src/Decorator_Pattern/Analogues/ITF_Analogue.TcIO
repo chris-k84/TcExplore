@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_Analogue" Id="{1c3863cb-38a1-42ec-a973-3d7f7caf3fb0}">
+    <Declaration><![CDATA[INTERFACE ITF_Analogue
+]]></Declaration>
+    <Method Name="GetValue" Id="{8a25bba1-0ec8-49bd-a615-831e194b3e56}">
+      <Declaration><![CDATA[METHOD GetValue : INT
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="AnalogueTerminal" Id="{4488c845-3d30-4fbe-b94d-3166a97201e0}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK AnalogueTerminal IMPLEMENTS ITF_Analogue
+VAR
+	_SomeValueFromIO : INT := 8192;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="GetValue" Id="{d33fb718-9046-4669-824b-90df2621771c}">
+      <Declaration><![CDATA[METHOD GetValue : INT
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[GetValue := _SomeValueFromIO;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="AnalogueTerminal">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="AnalogueTerminal.GetValue">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
