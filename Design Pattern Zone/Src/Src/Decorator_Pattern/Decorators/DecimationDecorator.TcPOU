@@ -2,28 +2,27 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="DecimationDecorator" Id="{489ffb12-88d5-4f8c-ae82-30974d4d0db9}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK DecimationDecorator IMPLEMENTS ITF_Analogue
-VAR_INPUT
-END_VAR
-VAR_OUTPUT
-END_VAR
 VAR
+	wrappee : ITF_Analogue;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
     <Method Name="GetValue" Id="{9e1632c3-3dab-40f9-9618-0a90b7bbe427}">
-      <Declaration><![CDATA[{warning 'add method implementation '}
-METHOD GetValue : INT
+      <Declaration><![CDATA[METHOD GetValue : INT
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[IF (THIS^.wrappee <> 0) THEN
+  GetValue := THIS^.wrappee.GetValue() + 0.9;
+END_IF]]></ST>
       </Implementation>
     </Method>
     <LineIds Name="DecimationDecorator">
       <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="DecimationDecorator.GetValue">
+      <LineId Id="5" Count="1" />
       <LineId Id="4" Count="0" />
     </LineIds>
   </POU>

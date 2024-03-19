@@ -3,23 +3,26 @@
   <POU Name="ScaleDecorator" Id="{9cf9a9ee-882f-4ed8-9106-b173b56b8405}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK ScaleDecorator IMPLEMENTS ITF_Analogue
 VAR
+	wrappee : ITF_Analogue;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
     <Method Name="GetValue" Id="{23c4be5e-6b38-43f6-adef-2b3982100275}">
-      <Declaration><![CDATA[{warning 'add method implementation '}
-METHOD GetValue : INT
+      <Declaration><![CDATA[METHOD GetValue : INT
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[IF (THIS^.wrappee <> 0) THEN
+  GetValue := THIS^.wrappee.GetValue() + 0.9;
+END_IF]]></ST>
       </Implementation>
     </Method>
     <LineIds Name="ScaleDecorator">
       <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="ScaleDecorator.GetValue">
+      <LineId Id="5" Count="1" />
       <LineId Id="4" Count="0" />
     </LineIds>
   </POU>

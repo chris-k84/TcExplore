@@ -3,23 +3,26 @@
   <POU Name="LimitDecorator" Id="{9de537f0-d915-4a60-874f-abd46092d676}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK LimitDecorator IMPLEMENTS ITF_Analogue
 VAR
+	wrappee : ITF_Analogue;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
     <Method Name="GetValue" Id="{d38bb00c-731a-4c41-89cb-c327be740ea4}">
-      <Declaration><![CDATA[{warning 'add method implementation '}
-METHOD GetValue : INT
+      <Declaration><![CDATA[METHOD GetValue : INT
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[IF (THIS^.wrappee <> 0) THEN
+  GetValue := THIS^.wrappee.GetValue() + 0.9;
+END_IF]]></ST>
       </Implementation>
     </Method>
     <LineIds Name="LimitDecorator">
       <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="LimitDecorator.GetValue">
+      <LineId Id="5" Count="1" />
       <LineId Id="4" Count="0" />
     </LineIds>
   </POU>
