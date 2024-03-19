@@ -24,13 +24,10 @@
     <Compile Include="Analogues\ITF_Analogue.TcIO">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Decorators\DataConversionDecorator.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Decorators\DecimationDecorator.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Decorators\LimitDecorator.TcPOU">
+    <Compile Include="Decorators\OffsetDecorator.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Decorators\ScaleDecorator.TcPOU">

@@ -10,12 +10,12 @@ END_VAR
       <ST><![CDATA[]]></ST>
     </Implementation>
     <Method Name="GetValue" Id="{d33fb718-9046-4669-824b-90df2621771c}">
-      <Declaration><![CDATA[METHOD GetValue : INT
+      <Declaration><![CDATA[METHOD GetValue : LREAL
 VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[GetValue := _SomeValueFromIO;]]></ST>
+        <ST><![CDATA[GetValue :=  (_SomeValueFromIO/32767.0)*10.0;]]></ST>
       </Implementation>
     </Method>
     <LineIds Name="AnalogueTerminal">

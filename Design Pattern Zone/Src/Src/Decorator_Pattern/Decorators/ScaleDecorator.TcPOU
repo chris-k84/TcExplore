@@ -10,11 +10,11 @@ END_VAR
       <ST><![CDATA[]]></ST>
     </Implementation>
     <Method Name="GetValue" Id="{23c4be5e-6b38-43f6-adef-2b3982100275}">
-      <Declaration><![CDATA[METHOD GetValue : INT
+      <Declaration><![CDATA[METHOD GetValue : LREAL
 ]]></Declaration>
       <Implementation>
         <ST><![CDATA[IF (THIS^.wrappee <> 0) THEN
-  GetValue := THIS^.wrappee.GetValue() + 0.9;
+  GetValue := (THIS^.wrappee.GetValue()/20.0)*100.0;
 END_IF]]></ST>
       </Implementation>
     </Method>

@@ -4,7 +4,7 @@
     <Declaration><![CDATA[INTERFACE ITF_Analogue
 ]]></Declaration>
     <Method Name="GetValue" Id="{8a25bba1-0ec8-49bd-a615-831e194b3e56}">
-      <Declaration><![CDATA[METHOD GetValue : INT
+      <Declaration><![CDATA[METHOD GetValue : LREAL
 VAR_INPUT
 END_VAR
 ]]></Declaration>
