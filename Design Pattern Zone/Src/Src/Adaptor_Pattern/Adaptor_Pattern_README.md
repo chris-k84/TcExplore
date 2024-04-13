@@ -2,7 +2,7 @@
 
 ## The Adaptor Pattern for 
 
-This sample was created to show the Adaptor Pattern applied to TwinCAT, in this case we have a TwinSAFE object which is relied upon by a whole machine.
+This sample was created to show the Adaptor Pattern applied to TwinCAT, in this case we have a communication object written for a standard control class and our customer wants us to extend with an MQTT library.
 
 
 You can find an explanation of the pattern here:
