@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_MQTTTool" Id="{fd375ca1-9267-486b-b188-2cebefbc230b}">
+    <Declaration><![CDATA[INTERFACE ITF_MQTTTool
+]]></Declaration>
+    <Method Name="SendMessage" Id="{d3655495-1523-4000-8737-af976150ac0b}">
+      <Declaration><![CDATA[METHOD SendMessage : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

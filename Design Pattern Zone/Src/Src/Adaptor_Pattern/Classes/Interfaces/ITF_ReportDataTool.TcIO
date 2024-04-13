@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_ReportDataTool" Id="{166c5ea4-2725-476d-89d4-b639d12a711c}">
+    <Declaration><![CDATA[INTERFACE ITF_ReportDataTool
+]]></Declaration>
+    <Method Name="Report" Id="{aee1e91b-ee81-46d1-9927-2ec179f4284c}">
+      <Declaration><![CDATA[METHOD Report : BOOL
+VAR_INPUT
+	somemessage : ARRAY[0..5] OF BYTE;
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

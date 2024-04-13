@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="mqttCommunication" Id="{2ea2534d-2221-4e83-a860-df9cd3f5f013}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK mqttCommunication IMPLEMENTS ITF_MQTTTool
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="SendMessage" Id="{d9bb83be-ccfe-4574-afd2-a18756318aa3}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD SendMessage : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="mqttCommunication">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="mqttCommunication.SendMessage">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

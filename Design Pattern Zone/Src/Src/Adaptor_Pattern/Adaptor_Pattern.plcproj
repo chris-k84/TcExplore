@@ -18,6 +18,21 @@
     <LibraryReferences>{856e06a6-d727-4abd-a4ae-3b6a8732b1d7}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="3rd Party Library\Interfaces\ITF_MQTTTool.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="3rd Party Library\mqttCommunication.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\adsCommunication.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Interfaces\ITF_ReportDataTool.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\MyControlClass.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
@@ -26,9 +41,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DUTs" />
-    <Folder Include="GVLs" />
-    <Folder Include="VISUs" />
+    <Folder Include="3rd Party Library" />
+    <Folder Include="3rd Party Library\Interfaces" />
+    <Folder Include="Classes" />
+    <Folder Include="Classes\Interfaces" />
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
