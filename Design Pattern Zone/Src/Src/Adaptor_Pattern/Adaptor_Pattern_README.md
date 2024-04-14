@@ -4,6 +4,11 @@
 
 This sample was created to show the Adaptor Pattern applied to TwinCAT, in this case we have a communication object written for a standard control class and our customer wants us to extend with an MQTT library.
 
+In this example we have a control logic class that takes an adscommunication class which has an interface for pushing data out via ads. the customer now requires the data to be routed out via mqtt.
+
+we could modify the control class and ads class, to match the interfaces, but this would break the SOLID design principals. 
+
+So how do we use the mqtt third party library. one solution is to use the adpator pattern, simply create a class to adapt the interfaces so the existing classes can use it. 
 
 You can find an explanation of the pattern here:
 
@@ -13,4 +18,4 @@ and a very good tutorial here:
 
 *[Chris O - Observer Method](https://www.youtube.com/watch?v=2PKQtcJjYvc)*
 
-To run the sample, go into the TwinSAFEGroup and change the ActTwinSAFEState, you will see the update passed to the Motion and Control objects.
+
