@@ -3,13 +3,53 @@
   <POU Name="MyControlClass" Id="{22f84247-0a53-41b5-853f-1172464fa996}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK MyControlClass
 VAR
+	iReportingTool : ITF_ReportDataTool;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
+    <Property Name="ReportingTool" Id="{55c2b1ab-0f24-4925-9392-082656ec58a8}">
+      <Declaration><![CDATA[PROPERTY ReportingTool : ITF_ReportDataTool]]></Declaration>
+      <Get Name="Get" Id="{5770cc69-dfcf-438a-be54-48c3716af690}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[ReportingTool := iReportingTool;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{97be675d-e46b-4f4d-8a14-fb673ce5eede}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[iReportingTool := ReportingTool;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Method Name="WriteStatus" Id="{5b8833ae-5c4b-4e4f-991b-df47bd0425d1}">
+      <Declaration><![CDATA[METHOD WriteStatus : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF iReportingTool <> 0 THEN
+	iReportingTool.Report();
+END_IF]]></ST>
+      </Implementation>
+    </Method>
     <LineIds Name="MyControlClass">
       <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="MyControlClass.ReportingTool.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="MyControlClass.ReportingTool.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="MyControlClass.WriteStatus">
+      <LineId Id="5" Count="2" />
     </LineIds>
   </POU>
 </TcPlcObject>
