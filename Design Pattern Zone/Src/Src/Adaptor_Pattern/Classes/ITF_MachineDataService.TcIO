@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_MachineDataService" Id="{750bcb15-9ee6-4d6c-96d1-f9d0481b4702}">
+    <Declaration><![CDATA[INTERFACE ITF_MachineDataService
+]]></Declaration>
+    <Method Name="SendStatus" Id="{c3de20f6-6b1b-4d41-aceb-a2d0399408c9}">
+      <Declaration><![CDATA[METHOD SendStatus : INT
+VAR_INPUT
+	Status : INT;
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

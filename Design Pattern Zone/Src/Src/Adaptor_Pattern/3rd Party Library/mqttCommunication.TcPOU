@@ -12,9 +12,8 @@ END_VAR
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
-    <Method Name="SendMessage" Id="{d9bb83be-ccfe-4574-afd2-a18756318aa3}">
-      <Declaration><![CDATA[{warning 'add method implementation '}
-METHOD SendMessage : BOOL
+    <Method Name="SendMQTTMessage" Id="{d9bb83be-ccfe-4574-afd2-a18756318aa3}">
+      <Declaration><![CDATA[METHOD SendMQTTMessage : BOOL
 ]]></Declaration>
       <Implementation>
         <ST><![CDATA[]]></ST>
@@ -23,7 +22,7 @@ METHOD SendMessage : BOOL
     <LineIds Name="mqttCommunication">
       <LineId Id="9" Count="0" />
     </LineIds>
-    <LineIds Name="mqttCommunication.SendMessage">
+    <LineIds Name="mqttCommunication.SendMQTTMessage">
       <LineId Id="4" Count="0" />
     </LineIds>
   </POU>

@@ -3,8 +3,8 @@
   <Itf Name="ITF_MQTTTool" Id="{fd375ca1-9267-486b-b188-2cebefbc230b}">
     <Declaration><![CDATA[INTERFACE ITF_MQTTTool
 ]]></Declaration>
-    <Method Name="SendMessage" Id="{d3655495-1523-4000-8737-af976150ac0b}">
-      <Declaration><![CDATA[METHOD SendMessage : BOOL
+    <Method Name="SendMQTTMessage" Id="{d3655495-1523-4000-8737-af976150ac0b}">
+      <Declaration><![CDATA[METHOD SendMQTTMessage : BOOL
 VAR_INPUT
 END_VAR
 ]]></Declaration>

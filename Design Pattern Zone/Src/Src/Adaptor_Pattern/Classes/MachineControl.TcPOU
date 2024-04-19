@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MachineControl" Id="{4b3360ea-25af-4380-9894-e3d9734fb15e}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK MachineControl
+VAR
+	_dataService : ITF_MachineDataService;
+	MyStatus : INT := 3;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Property Name="DataService" Id="{1c487fe0-2ce1-4d7c-bdba-697109a49bbf}">
+      <Declaration><![CDATA[PROPERTY DataService : ITF_MachineDataService]]></Declaration>
+      <Get Name="Get" Id="{7cb3e42e-3129-49ae-9d56-f3c6fa7ca50e}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[DataService := _dataService;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{6e16ea28-19fb-4271-835e-59da4c18f879}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_dataService := DataService;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Method Name="PushMachineStatus" Id="{1055d081-0745-4925-8a52-49dc70f23059}">
+      <Declaration><![CDATA[METHOD PushMachineStatus : INT
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[_dataService.SendStatus(MyStatus);]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="MachineControl">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="MachineControl.DataService.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="MachineControl.DataService.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="MachineControl.PushMachineStatus">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

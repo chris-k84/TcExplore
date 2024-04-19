@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="ADSDataService" Id="{b7572e9b-04d7-4be9-9c2f-3e8319bd29b7}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK ADSDataService IMPLEMENTS ITF_MachineDataService
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="SendStatus" Id="{899a0856-473c-40e4-9573-a1d93df990d4}">
+      <Declaration><![CDATA[METHOD SendStatus : INT
+VAR_INPUT
+	Status : INT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="ADSDataService">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="ADSDataService.SendStatus">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
