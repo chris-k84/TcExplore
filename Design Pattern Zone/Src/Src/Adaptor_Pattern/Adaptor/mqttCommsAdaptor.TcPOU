@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="mqttCommsAdaptor" Id="{eb7e5bdd-a928-420d-8cb3-fc3345cd5725}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK mqttCommsAdaptor IMPLEMENTS ITF_MachineDataService
+VAR
+	mqttComms : mqttCommunication;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="SendStatus" Id="{4d0e1f9b-a446-45ae-baf6-8f00a2e8b9bd}">
+      <Declaration><![CDATA[METHOD SendStatus : INT
+VAR_INPUT
+	Status	: INT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[mqttComms.SendMQTTMessage(Status := TO_STRING(Status)));]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="mqttCommsAdaptor">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="mqttCommsAdaptor.SendStatus">
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

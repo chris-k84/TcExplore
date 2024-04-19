@@ -6,6 +6,7 @@
     <Method Name="SendMQTTMessage" Id="{d3655495-1523-4000-8737-af976150ac0b}">
       <Declaration><![CDATA[METHOD SendMQTTMessage : BOOL
 VAR_INPUT
+	Status : STRING;
 END_VAR
 ]]></Declaration>
     </Method>

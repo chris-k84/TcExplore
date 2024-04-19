@@ -14,7 +14,9 @@ END_VAR
     </Implementation>
     <Method Name="SendMQTTMessage" Id="{d9bb83be-ccfe-4574-afd2-a18756318aa3}">
       <Declaration><![CDATA[METHOD SendMQTTMessage : BOOL
-]]></Declaration>
+VAR_INPUT
+	Status : STRING;
+END_VAR]]></Declaration>
       <Implementation>
         <ST><![CDATA[]]></ST>
       </Implementation>

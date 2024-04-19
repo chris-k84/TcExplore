@@ -24,6 +24,9 @@
     <Compile Include="3rd Party Library\mqttCommunication.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Adaptor\mqttCommsAdaptor.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Classes\ADSDataService.TcPOU">
       <SubType>Code</SubType>
     </Compile>
@@ -44,6 +47,7 @@
     <Folder Include="3rd Party Library" />
     <Folder Include="3rd Party Library\Interfaces" />
     <Folder Include="Classes" />
+    <Folder Include="Adaptor" />
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>

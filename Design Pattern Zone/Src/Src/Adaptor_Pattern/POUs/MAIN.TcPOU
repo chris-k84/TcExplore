@@ -4,7 +4,8 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	dataService : ADSDataService;
-	myMachine : MachineControl := (DataService := dataService);
+	newDataService : mqttCommsAdaptor;
+	myMachine : MachineControl := (DataService := newDataService);
 END_VAR
 ]]></Declaration>
     <Implementation>
