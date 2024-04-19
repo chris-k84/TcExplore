@@ -4,11 +4,12 @@
 
 This sample was created to show the Adaptor Pattern applied to TwinCAT, in this case we have a communication object written for a standard control class and our customer wants us to extend with an MQTT library.
 
-In this example we have a control logic class that takes an adscommunication class which has an interface for pushing data out via ads. the customer now requires the data to be routed out via mqtt.
+In this example we have a control logic class that takes an data communication class which has an interface for pushing data out via ads. The customer now requires the data to be routed out via mqtt. 
+They have a third party library that works well and accepts strings to send via MQTT. But the interface doesnt match that used by the current system.
 
-we could modify the control class and ads class, to match the interfaces, but this would break the SOLID design principals. 
+We could modify the control class and data class, to match the interfaces, but this would break the SOLID design principals. 
 
-So how do we use the mqtt third party library. one solution is to use the adpator pattern, simply create a class to adapt the interfaces so the existing classes can use it. 
+So how do we use the mqtt third party library. One solution is to use the adpator pattern, simply create a class to adapt the interfaces so the existing classes can use it. 
 
 You can find an explanation of the pattern here:
 
