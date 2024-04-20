@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="XtsStations" Id="{d5315d8a-1ca1-418d-8e57-21a3ecd9efda}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK XtsStations
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="StationMover" Id="{a72c11b4-4d04-46e2-b90d-6d348aace3f3}">
+      <Declaration><![CDATA[METHOD StationMover : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="XtsStations">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="XtsStations.StationMover">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

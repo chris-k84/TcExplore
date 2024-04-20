@@ -24,11 +24,24 @@
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="XTS Classes\XtsCAGroup.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XTS Classes\XtsHardware.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XTS Classes\XtsMover.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XTS Classes\XtsStations.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XTS Classes\XtsXPU.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DUTs" />
-    <Folder Include="GVLs" />
-    <Folder Include="VISUs" />
+    <Folder Include="XTS Classes" />
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>

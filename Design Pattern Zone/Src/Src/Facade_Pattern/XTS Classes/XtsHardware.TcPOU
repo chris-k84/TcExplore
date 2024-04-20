@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="XtsHardware" Id="{bacf700d-de35-4e0b-aeba-07a502dd8b3e}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK XtsHardware
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="CheckModuleVoltages" Id="{4672f55d-f08e-44da-ac15-11867e254a29}">
+      <Declaration><![CDATA[METHOD CheckModuleVoltages : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="GetTrackLength" Id="{c743714e-2a5a-4dcf-b1d5-677b958f5b53}">
+      <Declaration><![CDATA[METHOD GetTrackLength : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="XtsHardware">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="XtsHardware.CheckModuleVoltages">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="XtsHardware.GetTrackLength">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
