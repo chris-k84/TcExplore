@@ -17,10 +17,22 @@ END_VAR
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
+    <Method Name="Enable" Id="{56f32a08-95f5-4aad-9a51-234b3e576357}">
+      <Declaration><![CDATA[METHOD Enable : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
     <LineIds Name="XtsCAGroup">
       <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="XtsCAGroup.AddMoverToGroup">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="XtsCAGroup.Enable">
       <LineId Id="5" Count="0" />
     </LineIds>
   </POU>

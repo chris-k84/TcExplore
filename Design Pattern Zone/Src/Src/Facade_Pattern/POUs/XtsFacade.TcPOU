@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="XtsFacade" Id="{0fde9a4f-e82c-4e21-9129-4ed3d18c8355}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK XtsFacade
+VAR
+	group : XtsCAGroup;
+	hardware : XtsHardware;
+	movers : ARRAY[0..10] OF XtsMover;
+	stations : ARRAY[0..5] OF XtsStations;
+	xpu : XtsXPU;
+	i: INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="EnableXts" Id="{2ea368fd-3f36-41e7-9543-ced11222d830}">
+      <Declaration><![CDATA[METHOD EnableXts : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[FOR i := 1 TO 10 DO
+	movers[i].Enable();
+END_FOR
+
+group.Enable();]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="InitialiseXts" Id="{d0208558-6e71-4e3f-aa75-da36fa295b0d}">
+      <Declaration><![CDATA[METHOD InitialiseXts : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[FOR i := 0 TO 10 DO 
+	group.AddMoverToGroup();
+	xtsXpu.GetMoverInterface();
+END_FOR
+FOR i := 0 TO 5 DO
+	stations[i].StationMover()TcLcid.pa;
+END_FOR]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="XtsFacade">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="XtsFacade.EnableXts">
+      <LineId Id="5" Count="2" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="8" Count="0" />
+    </LineIds>
+    <LineIds Name="XtsFacade.InitialiseXts">
+      <LineId Id="5" Count="1" />
+      <LineId Id="8" Count="0" />
+      <LineId Id="7" Count="0" />
+      <LineId Id="9" Count="2" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
