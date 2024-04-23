@@ -35,7 +35,7 @@ END_VAR
       <Implementation>
         <ST><![CDATA[FOR i := 0 TO 10 DO 
 	group.AddMoverToGroup();
-	xtsXpu.GetMoverInterface();
+	xpu.GetMoverInterface();
 END_FOR
 FOR i := 0 TO 5 DO
 	stations[i].StationMover();
