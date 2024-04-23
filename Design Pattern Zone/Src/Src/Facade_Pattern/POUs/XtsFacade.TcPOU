@@ -19,7 +19,9 @@ END_VAR
       <Declaration><![CDATA[METHOD InitialiseXts : BOOL
 VAR_INPUT
 END_VAR
-]]></Declaration>
+VAR
+	InitCheck : BOOL;
+END_VAR]]></Declaration>
       <Implementation>
         <ST><![CDATA[CASE InitState OF
 	0: 
@@ -30,15 +32,24 @@ END_VAR
 		IF xpu.GetMoverInterface() THEN
 			InitState := 20;
 		END_IF
-	
+	20:
+		InitCheck := TRUE;
+		FOR i := 0 TO 5 DO
+			InitCheck := InitCheck AND stations[i].InitialiseStation();
+		END_FOR
+		IF InitCheck THEN
+			InitState := 30;
+		END_IF
+	30:
+		IF hardware.CheckModuleVoltages() THEN
+			InitState := 40;
+		END_IF
+	40:
+		InitialiseXts := true;
 END_CASE
 
-FOR i := 0 TO 5 DO
-	stations[i].StationMover(i);
-	stations[i].InitialiseStation();
-END_FOR
-hardware.CheckModuleVoltages();
-hardware.GetTrackLength();]]></ST>
+
+hardware.CheckModuleVoltages();]]></ST>
       </Implementation>
     </Method>
     <LineIds Name="XtsFacade">
@@ -50,12 +61,15 @@ hardware.GetTrackLength();]]></ST>
       <LineId Id="22" Count="1" />
       <LineId Id="25" Count="3" />
       <LineId Id="21" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="32" Count="0" />
+      <LineId Id="36" Count="8" />
       <LineId Id="20" Count="0" />
       <LineId Id="7" Count="0" />
-      <LineId Id="9" Count="1" />
-      <LineId Id="15" Count="0" />
       <LineId Id="11" Count="0" />
-      <LineId Id="16" Count="1" />
+      <LineId Id="16" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

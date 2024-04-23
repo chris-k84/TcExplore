@@ -3,6 +3,7 @@
   <POU Name="XtsStations" Id="{d5315d8a-1ca1-418d-8e57-21a3ecd9efda}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK XtsStations
 VAR
+	Status : STRING(80);
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -14,7 +15,8 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[InitialiseStation := TRUE;
+Status := 'Station Initialised';]]></ST>
       </Implementation>
     </Method>
     <Method Name="StationMover" Id="{a72c11b4-4d04-46e2-b90d-6d348aace3f3}">
@@ -32,6 +34,7 @@ END_VAR
     </LineIds>
     <LineIds Name="XtsStations.InitialiseStation">
       <LineId Id="5" Count="0" />
+      <LineId Id="7" Count="0" />
     </LineIds>
     <LineIds Name="XtsStations.StationMover">
       <LineId Id="5" Count="0" />

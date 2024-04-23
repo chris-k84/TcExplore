@@ -4,13 +4,18 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	myXts : XtsFacade;
+	SafetyReady: BOOL;
+	XtsReady: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[IF SafetyReady AND NOT XtsReady THEN
+	XtsReady := myXts.InitialiseXts();
+END_IF]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="2" Count="0" />
+      <LineId Id="7" Count="1" />
     </LineIds>
   </POU>
 </TcPlcObject>

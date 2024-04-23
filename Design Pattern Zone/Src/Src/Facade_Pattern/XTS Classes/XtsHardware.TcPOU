@@ -3,6 +3,7 @@
   <POU Name="XtsHardware" Id="{bacf700d-de35-4e0b-aeba-07a502dd8b3e}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK XtsHardware
 VAR
+	Status : STRING(80);
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -14,7 +15,8 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[Status := 'All Module Voltages Are OK';
+CheckModuleVoltages := true;]]></ST>
       </Implementation>
     </Method>
     <Method Name="GetTrackLength" Id="{c743714e-2a5a-4dcf-b1d5-677b958f5b53}">
@@ -31,6 +33,7 @@ END_VAR
     </LineIds>
     <LineIds Name="XtsHardware.CheckModuleVoltages">
       <LineId Id="5" Count="0" />
+      <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="XtsHardware.GetTrackLength">
       <LineId Id="5" Count="0" />
