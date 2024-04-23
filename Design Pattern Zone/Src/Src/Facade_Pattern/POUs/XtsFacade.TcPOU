@@ -38,7 +38,7 @@ END_VAR
 	xtsXpu.GetMoverInterface();
 END_FOR
 FOR i := 0 TO 5 DO
-	stations[i].StationMover()TcLcid.pa;
+	stations[i].StationMover();
 END_FOR]]></ST>
       </Implementation>
     </Method>
