@@ -3,6 +3,7 @@
   <POU Name="XtsXPU" Id="{a76d70c0-85a8-4201-b7ed-df139d53b29f}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK XtsXPU
 VAR
+	Status : STRING(80);
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -14,7 +15,8 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[Status := 'Interface To XPU initialised';
+GetMoverInterface := true;]]></ST>
       </Implementation>
     </Method>
     <LineIds Name="XtsXPU">
@@ -22,6 +24,7 @@ END_VAR
     </LineIds>
     <LineIds Name="XtsXPU.GetMoverInterface">
       <LineId Id="5" Count="0" />
+      <LineId Id="9" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
