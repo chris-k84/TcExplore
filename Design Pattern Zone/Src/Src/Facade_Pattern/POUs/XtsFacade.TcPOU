@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="XtsFacade" Id="{0fde9a4f-e82c-4e21-9129-4ed3d18c8355}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK XtsFacade
+VAR
+	group : XtsCAGroup;
+	hardware : XtsHardware;
+	movers : ARRAY[0..10] OF XtsMover;
+	stations : ARRAY[0..5] OF XtsStations;
+	xpu : XtsXPU;
+	i: INT;
+	InitState : INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="InitialiseXts" Id="{d0208558-6e71-4e3f-aa75-da36fa295b0d}">
+      <Declaration><![CDATA[METHOD InitialiseXts : BOOL
+VAR_INPUT
+END_VAR
+VAR
+	InitCheck : BOOL;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[CASE InitState OF
+	0: 
+		IF group.AddMoverToGroup() THEN
+			InitState := 10;
+		END_IF
+	10:
+		IF xpu.GetMoverInterface() THEN
+			InitState := 20;
+		END_IF
+	20:
+		InitCheck := TRUE;
+		FOR i := 0 TO 5 DO
+			InitCheck := InitCheck AND stations[i].InitialiseStation();
+		END_FOR
+		IF InitCheck THEN
+			InitState := 30;
+		END_IF
+	30:
+		IF hardware.CheckModuleVoltages() THEN
+			InitState := 40;
+		END_IF
+	40:
+		InitialiseXts := true;
+END_CASE
+
+
+hardware.CheckModuleVoltages();]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="XtsFacade">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="XtsFacade.InitialiseXts">
+      <LineId Id="18" Count="1" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="22" Count="1" />
+      <LineId Id="25" Count="3" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="32" Count="0" />
+      <LineId Id="36" Count="8" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="7" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="16" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

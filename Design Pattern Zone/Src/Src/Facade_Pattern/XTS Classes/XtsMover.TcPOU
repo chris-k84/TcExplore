@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="XtsMover" Id="{1fb5bd84-a3b2-48b8-baa6-4a91754a9048}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK XtsMover
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Disable" Id="{cf9f3eee-1dc6-4244-a951-8c14201d03a0}">
+      <Declaration><![CDATA[METHOD Disable : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Enable" Id="{7aed0b8f-bc77-4a99-a38a-4bc2ad677d35}">
+      <Declaration><![CDATA[METHOD Enable : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="MoveTo" Id="{c35c82b9-4c37-4510-8280-f515e355ba6f}">
+      <Declaration><![CDATA[METHOD MoveTo : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Reset" Id="{3b6bb063-5916-411c-8ff0-b290db583cee}">
+      <Declaration><![CDATA[METHOD Reset : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="XtsMover">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="XtsMover.Disable">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="XtsMover.Enable">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="XtsMover.MoveTo">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="XtsMover.Reset">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

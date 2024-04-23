@@ -27,6 +27,9 @@
 				<Task Id="10" Priority="27" CycleTime="100000" AmsPort="357" AdtTasks="true">
 					<Name>PlcTask7</Name>
 				</Task>
+				<Task Id="11" Priority="28" CycleTime="100000" AmsPort="358" AdtTasks="true">
+					<Name>PlcTask8</Name>
+				</Task>
 			</Tasks>
 		</System>
 		<Plc>
@@ -38,6 +41,7 @@
 			<Project File="State_Pattern.xti"/>
 			<Project File="Decorator_Pattern.xti"/>
 			<Project File="Adaptor_Pattern.xti"/>
+			<Project File="Facade_Pattern.xti"/>
 		</Plc>
 	</Project>
 </TcSmProject>

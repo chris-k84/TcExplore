@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="XtsXPU" Id="{a76d70c0-85a8-4201-b7ed-df139d53b29f}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK XtsXPU
+VAR
+	Status : STRING(80);
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="GetMoverInterface" Id="{52f53c6d-8f9b-4420-aa70-9b69f63ace23}">
+      <Declaration><![CDATA[METHOD GetMoverInterface : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Status := 'Interface To XPU initialised';
+GetMoverInterface := true;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="XtsXPU">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="XtsXPU.GetMoverInterface">
+      <LineId Id="5" Count="0" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
