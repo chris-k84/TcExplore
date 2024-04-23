@@ -9,6 +9,7 @@ VAR
 	stations : ARRAY[0..5] OF XtsStations;
 	xpu : XtsXPU;
 	i: INT;
+	InitState : INT;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -20,10 +21,18 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[FOR i := 0 TO 10 DO 
-	group.AddMoverToGroup();
-	xpu.GetMoverInterface();
-END_FOR
+        <ST><![CDATA[CASE InitState OF
+	0: 
+		IF group.AddMoverToGroup() THEN
+			InitState := 10;
+		END_IF
+	10:
+		IF xpu.GetMoverInterface() THEN
+			InitState := 20;
+		END_IF
+	
+END_CASE
+
 FOR i := 0 TO 5 DO
 	stations[i].StationMover(i);
 	stations[i].InitialiseStation();
@@ -36,8 +45,12 @@ hardware.GetTrackLength();]]></ST>
       <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="XtsFacade.InitialiseXts">
-      <LineId Id="5" Count="1" />
-      <LineId Id="8" Count="0" />
+      <LineId Id="18" Count="1" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="22" Count="1" />
+      <LineId Id="25" Count="3" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="20" Count="0" />
       <LineId Id="7" Count="0" />
       <LineId Id="9" Count="1" />
       <LineId Id="15" Count="0" />

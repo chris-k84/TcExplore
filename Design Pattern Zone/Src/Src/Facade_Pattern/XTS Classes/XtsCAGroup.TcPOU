@@ -15,7 +15,8 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[Status := 'Movers Added To Group';]]></ST>
+        <ST><![CDATA[Status := 'Movers Added To Group';
+AddMoverToGroup := true;]]></ST>
       </Implementation>
     </Method>
     <Method Name="Enable" Id="{56f32a08-95f5-4aad-9a51-234b3e576357}">
@@ -32,6 +33,7 @@ END_VAR
     </LineIds>
     <LineIds Name="XtsCAGroup.AddMoverToGroup">
       <LineId Id="5" Count="0" />
+      <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="XtsCAGroup.Enable">
       <LineId Id="5" Count="0" />
