@@ -2,11 +2,8 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="mqttCommunication" Id="{2ea2534d-2221-4e83-a860-df9cd3f5f013}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK mqttCommunication IMPLEMENTS ITF_MQTTTool
-VAR_INPUT
-END_VAR
-VAR_OUTPUT
-END_VAR
 VAR
+	_messageSent : string;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -18,7 +15,7 @@ VAR_INPUT
 	Status : STRING;
 END_VAR]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[_messageSent := Status;]]></ST>
       </Implementation>
     </Method>
     <LineIds Name="mqttCommunication">

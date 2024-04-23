@@ -3,6 +3,7 @@
   <POU Name="ADSDataService" Id="{b7572e9b-04d7-4be9-9c2f-3e8319bd29b7}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK ADSDataService IMPLEMENTS ITF_MachineDataService
 VAR
+	_messageSent : int;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -15,7 +16,7 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[_messageSent := Status;]]></ST>
       </Implementation>
     </Method>
     <LineIds Name="ADSDataService">

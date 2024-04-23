@@ -16,7 +16,7 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[mqttComms.SendMQTTMessage(Status := TO_STRING(Status)));]]></ST>
+        <ST><![CDATA[mqttComms.SendMQTTMessage(Status := TO_STRING(Status));]]></ST>
       </Implementation>
     </Method>
     <LineIds Name="mqttCommsAdaptor">
