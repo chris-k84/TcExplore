@@ -10,9 +10,13 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[IF RunStatusReport THEN
+	RunStatusReport := FALSE;
+	AxisBaseObject.Accept(statusStringVisitor);
+END_IF]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
+      <LineId Id="15" Count="2" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
