@@ -1,15 +1,23 @@
 <?xml version="1.0"?>
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.55" ClassName="CNestedPlcProjDef">
 	<Project GUID="{66F0295A-AACF-4EE0-BE7E-D5FEC7615C25}" Name="Visitor_Pattern" PrjFilePath="..\..\Visitor_Pattern\Visitor_Pattern.plcproj" TmcFilePath="..\..\Visitor_Pattern\Visitor_Pattern.tmc" ReloadTmc="true" AmsPort="860" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502240" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2">
+		<Instance Id="#x08502240" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{81E4D3DB-FC74-6347-6D15-E5227CE80ADE}">
 			<Name>Visitor_Pattern Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Contexts>
 				<Context>
-					<Id>1</Id>
-					<Name>Default</Name>
+					<Id>0</Id>
+					<Name>PlcTask</Name>
+					<ManualConfig>
+						<OTCID>#x020100c0</OTCID>
+					</ManualConfig>
+					<Priority>29</Priority>
+					<CycleTime>10000000</CycleTime>
 				</Context>
 			</Contexts>
+			<TaskPouOids>
+				<TaskPouOid Prio="29" OTCID="#x08502241"/>
+			</TaskPouOids>
 		</Instance>
 	</Project>
 </TcSmItem>

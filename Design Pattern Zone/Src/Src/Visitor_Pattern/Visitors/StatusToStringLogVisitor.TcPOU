@@ -14,11 +14,11 @@ END_VAR
 VAR_INPUT
 	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
 	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
-	StringLog : T_MaxString;
+	MyStringLog : Reference TO T_MaxString;
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[StringLog REF= MyStringLog;]]></ST>
       </Implementation>
     </Method>
     <Method Name="VisitBaseObject" Id="{153bcbe8-de52-4e13-9ec4-da3b21a98915}">
