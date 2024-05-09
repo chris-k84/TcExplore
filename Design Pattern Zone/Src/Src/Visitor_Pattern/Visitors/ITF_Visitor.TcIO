@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_Visitor" Id="{43d60605-6928-40db-819b-30d1104a5660}">
+    <Declaration><![CDATA[INTERFACE ITF_Visitor
+]]></Declaration>
+    <Method Name="VisitBaseObject" Id="{0a8d9862-8a42-4c31-9846-07c9a21e6996}">
+      <Declaration><![CDATA[METHOD VisitBaseObject : BOOL
+VAR_INPUT
+	BaseObject : ITF_Base;
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

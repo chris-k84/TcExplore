@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="BaseModuleToBeVisited" Id="{9c224321-3b67-448a-a299-36162a20404a}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK BaseModuleToBeVisited IMPLEMENTS ITF_Base
+VAR
+	_name : STRING;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Accept" Id="{0acaeaba-b5f6-4c03-a296-6f390c6c03c9}">
+      <Declaration><![CDATA[METHOD Accept : BOOL
+VAR_INPUT
+	Visitor : ITF_Visitor;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[Visitor.VisitBaseObject(this^);]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="FB_init" Id="{f9b3a16f-2d92-4a5d-91a6-71636c4aa458}">
+      <Declaration><![CDATA[METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	_name : STRING;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="GetErrorMessage" Id="{70271b55-1684-4672-aa47-71665e5e3716}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD GetErrorMessage : STRING
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="HasError" Id="{357c5fcb-ca55-45b3-b298-56d969f38857}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD HasError : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Property Name="Name" Id="{02d61ea3-f993-4099-9cfe-d42c0891d2e9}">
+      <Declaration><![CDATA[PROPERTY Name : STRING
+]]></Declaration>
+      <Get Name="Get" Id="{8d44a1f0-d5f7-47a7-8d7e-57d1008d888b}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[Name := _name;]]></ST>
+        </Implementation>
+      </Get>
+    </Property>
+    <LineIds Name="BaseModuleToBeVisited">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="BaseModuleToBeVisited.Accept">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="BaseModuleToBeVisited.FB_init">
+      <LineId Id="7" Count="0" />
+    </LineIds>
+    <LineIds Name="BaseModuleToBeVisited.GetErrorMessage">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="BaseModuleToBeVisited.HasError">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="BaseModuleToBeVisited.Name.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

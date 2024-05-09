@@ -1,13 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1">
-  <POU Name="MAIN" Id="{94e20353-7e7b-4773-9ab6-97fa33344c4a}">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MAIN" Id="{94e20353-7e7b-4773-9ab6-97fa33344c4a}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
+	AxisBaseObject : BaseModuleToBeVisited(Name := 'axis1');
+	Status : T_MaxString;
 END_VAR
-]]>
-    </Declaration>
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[
+]]></ST>
     </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="7" Count="0" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

@@ -18,17 +18,28 @@
     <LibraryReferences>{e5e1ae08-1b0c-4ed3-9861-f404bdc4d870}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Base Classes\BaseModuleToBeVisited.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Base Classes\ITF_Base.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Visitors\ITF_Visitor.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Visitors\StatusToStringLogVisitor.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DUTs" />
-    <Folder Include="GVLs" />
-    <Folder Include="VISUs" />
+    <Folder Include="Base Classes" />
+    <Folder Include="Visitors" />
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
@@ -48,8 +59,8 @@
   <ProjectExtensions>
     <PlcProjectOptions>
       <XmlArchive>
-  <Data>
-    <o xml:space="preserve" t="OptionKey">
+        <Data>
+          <o xml:space="preserve" t="OptionKey">
       <v n="Name">"&lt;ProjectRoot&gt;"</v>
       <d n="SubKeys" t="Hashtable" ckt="String" cvt="OptionKey">
         <v>{40450F57-0AA3-4216-96F3-5444ECB29763}</v>
@@ -70,13 +81,13 @@
       </d>
       <d n="Values" t="Hashtable" />
     </o>
-  </Data>
-  <TypeList>
-    <Type n="Hashtable">System.Collections.Hashtable</Type>
-    <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
-    <Type n="String">System.String</Type>
-  </TypeList>
-</XmlArchive>
+        </Data>
+        <TypeList>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+          <Type n="String">System.String</Type>
+        </TypeList>
+      </XmlArchive>
     </PlcProjectOptions>
   </ProjectExtensions>
 </Project>

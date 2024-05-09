@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="StatusToStringLogVisitor" Id="{eba75a34-823b-4e39-abb3-56acdb274577}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK StatusToStringLogVisitor IMPLEMENTS ITF_Visitor
+VAR
+	StringLog : reference to T_MaxString;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="FB_init" Id="{100c23b1-17ac-4e57-ba7c-e0a63aab2bbe}">
+      <Declaration><![CDATA[METHOD FB_init : BOOL
+VAR_INPUT
+	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
+	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
+	StringLog : T_MaxString;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="VisitBaseObject" Id="{153bcbe8-de52-4e13-9ec4-da3b21a98915}">
+      <Declaration><![CDATA[METHOD VisitBaseObject : BOOL
+VAR_INPUT
+	BaseObject : ITF_Base;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[StringLog := CONCAT(StringLog, '[');
+StringLog := CONCAT(StringLog, BaseObject.Name);
+StringLog := CONCAT(StringLog, ']');
+
+IF BaseObject.HasError THEN
+	StringLog := CONCAT(StringLog, ': Has Error ');
+	StringLog := CONCAT(StringLog, BaseObject.GetErrorMessage());
+	StringLog := CONCAT(StringLog, '. ');
+ELSE
+	StringLog := CONCAT(StringLog, ': Has No Error. ');
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="StatusToStringLogVisitor">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="StatusToStringLogVisitor.FB_init">
+      <LineId Id="7" Count="0" />
+    </LineIds>
+    <LineIds Name="StatusToStringLogVisitor.VisitBaseObject">
+      <LineId Id="4" Count="0" />
+      <LineId Id="7" Count="1" />
+      <LineId Id="10" Count="0" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="13" Count="3" />
+      <LineId Id="12" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

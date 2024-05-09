@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_Base" Id="{d2e822a2-05f4-4000-9414-c04259fce827}">
+    <Declaration><![CDATA[INTERFACE ITF_Base
+]]></Declaration>
+    <Method Name="GetErrorMessage" Id="{08153ef1-3ffd-40da-9aec-2cdfc1d0156c}">
+      <Declaration><![CDATA[METHOD GetErrorMessage : String
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="HasError" Id="{e2dbac31-257f-4615-87da-e71e467af487}">
+      <Declaration><![CDATA[METHOD HasError : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+    <Property Name="Name" Id="{01f2294e-8212-4079-a77a-6e90901a0484}">
+      <Declaration><![CDATA[PROPERTY Name : string]]></Declaration>
+      <Get Name="Get" Id="{65fdce36-0403-42cf-a9dd-c9d1b6eda0a2}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+    </Property>
+  </Itf>
+</TcPlcObject>
