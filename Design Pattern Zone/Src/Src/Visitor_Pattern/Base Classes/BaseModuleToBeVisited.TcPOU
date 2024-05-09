@@ -37,7 +37,7 @@ END_VAR
       <Declaration><![CDATA[METHOD GetErrorMessage : STRING
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[GetErrorMessage := _errorMessage;]]></ST>
       </Implementation>
     </Method>
     <Method Name="HasError" Id="{357c5fcb-ca55-45b3-b298-56d969f38857}">

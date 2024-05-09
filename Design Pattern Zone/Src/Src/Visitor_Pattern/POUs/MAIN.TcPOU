@@ -4,8 +4,9 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	AxisBaseObject : BaseModuleToBeVisited(MyName := 'axis1');
-	Status : T_MaxString;
+	Status : T_MaxString := '';
 	statusStringVisitor : StatusToStringLogVisitor(Status);
+	RunStatusReport: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
