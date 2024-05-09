@@ -31,7 +31,7 @@ END_VAR]]></Declaration>
 StringLog := CONCAT(StringLog, BaseObject.Name);
 StringLog := CONCAT(StringLog, ']');
 
-IF BaseObject.HasError THEN
+IF BaseObject.HasError() THEN
 	StringLog := CONCAT(StringLog, ': Has Error ');
 	StringLog := CONCAT(StringLog, BaseObject.GetErrorMessage());
 	StringLog := CONCAT(StringLog, '. ');

@@ -4,6 +4,8 @@
     <Declaration><![CDATA[FUNCTION_BLOCK BaseModuleToBeVisited IMPLEMENTS ITF_Base
 VAR
 	_name : STRING;
+	_hasError : BOOL;
+	_errorMessage : STRING;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -24,27 +26,25 @@ END_VAR
 VAR_INPUT
 	bInitRetains : BOOL; // if TRUE, the retain variables are initialized (warm start / cold start)
 	bInCopyCode : BOOL;  // if TRUE, the instance afterwards gets moved into the copy code (online change)
-	_name : STRING;
+	MyName : STRING;
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[_name := MyName;]]></ST>
       </Implementation>
     </Method>
     <Method Name="GetErrorMessage" Id="{70271b55-1684-4672-aa47-71665e5e3716}">
-      <Declaration><![CDATA[{warning 'add method implementation '}
-METHOD GetErrorMessage : STRING
+      <Declaration><![CDATA[METHOD GetErrorMessage : STRING
 ]]></Declaration>
       <Implementation>
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
     <Method Name="HasError" Id="{357c5fcb-ca55-45b3-b298-56d969f38857}">
-      <Declaration><![CDATA[{warning 'add method implementation '}
-METHOD HasError : BOOL
+      <Declaration><![CDATA[METHOD HasError : BOOL
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[HasError := _hasError;]]></ST>
       </Implementation>
     </Method>
     <Property Name="Name" Id="{02d61ea3-f993-4099-9cfe-d42c0891d2e9}">

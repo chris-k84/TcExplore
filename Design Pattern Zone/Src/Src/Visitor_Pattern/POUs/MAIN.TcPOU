@@ -3,16 +3,15 @@
   <POU Name="MAIN" Id="{94e20353-7e7b-4773-9ab6-97fa33344c4a}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
-	AxisBaseObject : BaseModuleToBeVisited(Name := 'axis1');
+	AxisBaseObject : BaseModuleToBeVisited(MyName := 'axis1');
 	Status : T_MaxString;
+	statusStringVisitor : StatusToStringLogVisitor(Status);
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-]]></ST>
+      <ST><![CDATA[]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
-      <LineId Id="7" Count="0" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
