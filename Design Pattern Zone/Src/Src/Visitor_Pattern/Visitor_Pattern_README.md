@@ -12,6 +12,8 @@ You can even have more than 1 method in the visitor interface and allow the visi
 
 Yes this means you are changing the base class, but you are only extending not changing, obeying the Open/Close Principal.
 
+In the sample we have a base class to be visited, that supports the ITF_Base interface, we then have our StatusToStringLogVisitor which has the ITF_Visitor interface. The Accept method of the base class accepts the ITF_Visitor interface as an input, all the accept method does is pass the objects own interface back to the visitor, which gives it access to the object, in this case the name, haserror and geterrormessage can be read. So the visitor can then present the information in any format we like. 
+
 You can find an explanation of the pattern here:
 
 *[PatternGuru - Visitor Pattern](https://refactoring.guru/design-patterns/visitor)*
