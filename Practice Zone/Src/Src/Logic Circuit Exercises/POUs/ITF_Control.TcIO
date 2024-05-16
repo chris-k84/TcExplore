@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_Control" Id="{fc73c7a9-2723-46ae-8509-a5372f653e2d}">
+    <Declaration><![CDATA[INTERFACE ITF_Control
+]]></Declaration>
+    <Method Name="GetSwitchS10" Id="{03a33c3c-e9f7-4db0-a255-92f5eb3f6b3a}">
+      <Declaration><![CDATA[METHOD GetSwitchS10 : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

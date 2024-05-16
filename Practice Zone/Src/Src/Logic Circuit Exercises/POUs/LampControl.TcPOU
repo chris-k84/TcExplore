@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="LampControl" Id="{df181268-03ef-4209-a1a2-ca82e29954b4}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK LampControl
+VAR
+	LampP1 AT%Q* : BOOL;
+	_Control : ITF_Control;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Property Name="Controller" Id="{2f384581-c577-4ad4-a428-bd18dc912aa5}">
+      <Declaration><![CDATA[PROPERTY Controller : ITF_Control]]></Declaration>
+      <Get Name="Get" Id="{27b2ebad-7020-4771-9e8e-50cc5ac97c22}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[Controller := _Control;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{1139ded0-5cb7-4cda-aad5-86cdb67580cc}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_Control := Controller;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Method Name="Cycle" Id="{71ab4db3-ea61-4310-a4f0-cec5f96e91d9}">
+      <Declaration><![CDATA[METHOD Cycle : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[LampP1 := _Control.GetSwitchS10();]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="LampControl">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="LampControl.Controller.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="LampControl.Controller.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="LampControl.Cycle">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

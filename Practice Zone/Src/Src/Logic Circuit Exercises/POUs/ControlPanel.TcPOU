@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="ControlPanel" Id="{17dd9de4-7ecd-4219-a507-c6444735506a}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK ControlPanel IMPLEMENTS ITF_Control
+VAR
+	SwitchS10 AT%i* : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="GetSwitchS10" Id="{b7f25da3-c922-4ed7-b522-093848a6ff2d}">
+      <Declaration><![CDATA[METHOD GetSwitchS10 : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[GetSwitchS10 := SwitchS10;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="ControlPanel">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="ControlPanel.GetSwitchS10">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
