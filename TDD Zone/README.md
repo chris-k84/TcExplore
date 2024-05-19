@@ -12,3 +12,9 @@ A lot of people have done topics concerning Unit Testing (UT) and Test Driven De
 ## The Goal
 
 The Goal of this repository is to provide a space to allow people to learn the TDD process. I am hoping those with experience will help those learning these practices. At least it will provide a place where those of us beginning this journey can compare and contrast the results of doing this.
+
+## How To Use
+
+The How to use file shows what to do and links to the already made samples, happy coding.
+
+**[How To Use The Zone](./How%20To%20Use%20The%20Zone.md)**
