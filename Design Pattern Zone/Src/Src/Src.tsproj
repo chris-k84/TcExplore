@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.55">
-	<Project ProjectGUID="{F2E572BC-CC36-4012-BBF9-6610F6B5F916}" TargetNetId="10.97.0.23.1.1" Target64Bit="true" ShowHideConfigurations="#x6">
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.56">
+	<Project ProjectGUID="{F2E572BC-CC36-4012-BBF9-6610F6B5F916}" Target64Bit="true" ShowHideConfigurations="#x6">
 		<System>
 			<Tasks>
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
@@ -33,6 +33,9 @@
 				<Task Id="12" Priority="29" CycleTime="100000" AmsPort="359" AdtTasks="true">
 					<Name>PlcTask9</Name>
 				</Task>
+				<Task Id="13" Priority="30" CycleTime="100000" AmsPort="360" AdtTasks="true">
+					<Name>PlcTask10</Name>
+				</Task>
 			</Tasks>
 		</System>
 		<Plc>
@@ -46,6 +49,7 @@
 			<Project File="Adaptor_Pattern.xti"/>
 			<Project File="Facade_Pattern.xti"/>
 			<Project File="Visitor_Pattern.xti"/>
+			<Project File="Command_Pattern.xti"/>
 		</Plc>
 	</Project>
 </TcSmProject>
