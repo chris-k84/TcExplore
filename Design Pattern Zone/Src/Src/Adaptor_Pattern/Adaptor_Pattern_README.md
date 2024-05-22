@@ -1,6 +1,6 @@
 # Adaptor Pattern
 
-## The Adaptor Pattern for 
+## The Adaptor Pattern for Communications
 
 This sample was created to show the Adaptor Pattern applied to TwinCAT, in this case we have a communication object written for a standard control class and our customer wants us to extend with an MQTT library.
 

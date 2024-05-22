@@ -1,6 +1,6 @@
 # Adaptor Pattern
 
-## The Adaptor Pattern for 
+## The Adaptor Pattern for XTS
 
 This sample was created to show the Facade Pattern applied to TwinCAT, in this case we have an XTS class implementation, XTS can be quite complex, requiring complex arrangements using the XTS IO Environment Variable class, various hardware classes, mover classes and collision avoidance classes. The objects can have complex interactions which can be difficult for those new to the system, but also a lot of it doesnt need to be different across systems, as such its a prime candidate for hiding functionality behind a simple interface provided by a Facade class.
 
