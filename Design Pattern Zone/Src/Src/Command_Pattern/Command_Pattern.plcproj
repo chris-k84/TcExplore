@@ -21,6 +21,9 @@
     <Compile Include="Commands\ITF_Command.TcIO">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Invoker\Invoker.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>

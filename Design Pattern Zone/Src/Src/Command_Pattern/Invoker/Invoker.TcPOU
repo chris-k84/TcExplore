@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Invoker" Id="{05faecee-4f77-45b5-8bf8-6e6b526dca0a}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK Invoker
+VAR
+	_myCommand : ITF_Command;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="ExecuteCommand" Id="{f3c441b2-4514-4069-9c99-bdad23bc48ad}">
+      <Declaration><![CDATA[METHOD ExecuteCommand : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[_myCommand.Execute();]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="SetCommand" Id="{05ebd954-05db-4e1d-b189-ad09bad64c01}">
+      <Declaration><![CDATA[METHOD SetCommand : BOOL
+VAR_INPUT
+	MyCommand : ITF_Command;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[_myCommand := MyCommand;
+SetCommand := true;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="Invoker">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="Invoker.ExecuteCommand">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="Invoker.SetCommand">
+      <LineId Id="5" Count="0" />
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
