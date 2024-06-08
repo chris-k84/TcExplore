@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_Axis" Id="{2df89702-c282-4841-830c-ce25d79f82ef}">
+    <Declaration><![CDATA[INTERFACE ITF_Axis
+]]></Declaration>
+    <Method Name="Disable" Id="{a4f88cbd-9ed2-48fd-a751-dc4233cd79ca}">
+      <Declaration><![CDATA[METHOD Disable : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="Enable" Id="{02b29d3d-6394-4e88-84dc-a7b3fe833014}">
+      <Declaration><![CDATA[METHOD Enable : BOOL
+VAR_INPUT
+	EnablePositive : BOOL;
+	EnableNegative : BOOL;
+	Override : LREAL;
+END_VAR
+]]></Declaration>
+    </Method>
+    <Method Name="MoveToPosition" Id="{6f9b8007-4996-43b3-b5f2-61eca671078b}">
+      <Declaration><![CDATA[METHOD MoveToPosition : BOOL
+VAR_INPUT
+	Position : LREAL;
+	Velocity : LREAL;
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>

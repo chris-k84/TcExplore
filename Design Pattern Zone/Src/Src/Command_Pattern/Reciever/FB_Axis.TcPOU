@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="FB_Axis" Id="{4af9d760-2be5-422f-b1a0-874998de53c5}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK PUBLIC FB_Axis IMPLEMENTS ITF_Axis
+VAR
+	testString : STRING;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Disable" Id="{61f52bb7-111d-4919-beb3-f9b352c00d02}">
+      <Declaration><![CDATA[METHOD Disable : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[ADSLOGSTR( msgCtrlMask := ADSLOG_MSGTYPE_ERROR OR ADSLOG_MSGTYPE_MSGBOX,
+			msgFmtStr :='',
+ 			strArg := 'Axis Disabling');]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Enable" Id="{69d6a0ec-a06c-4b17-93fb-ef1ac4c62c7a}">
+      <Declaration><![CDATA[METHOD Enable : BOOL
+VAR_INPUT
+	EnablePositive : BOOL;
+	EnableNegative : BOOL;
+	Override : LREAL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[testString := '';
+testString := CONCAT(testString, '[');
+testString := CONCAT(testString, EnablePositive);
+testString := CONCAT(testString, ']');
+testString := CONCAT(testString, '[');
+testString := CONCAT(testString, EnableNegative);
+testString := CONCAT(testString, ']');
+testString := CONCAT(testString, '[');
+testString := CONCAT(testString, Override);
+testString := CONCAT(testString, ']');
+
+ADSLOGSTR( msgCtrlMask := ADSLOG_MSGTYPE_ERROR OR ADSLOG_MSGTYPE_MSGBOX,
+			msgFmtStr :='Axis Enabling',
+ 			strArg := testString);]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="MoveToPosition" Id="{70cff655-1362-4500-8eab-04fe4ebf0588}">
+      <Declaration><![CDATA[METHOD MoveToPosition : BOOL
+VAR_INPUT
+	Position : LREAL;
+	Velocity : LREAL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[testString := '';
+testString := CONCAT(testString, '[');
+testString := CONCAT(testString, Position);
+testString := CONCAT(testString, ']');
+testString := CONCAT(testString, '[');
+testString := CONCAT(testString, Velocity);
+testString := CONCAT(testString, ']');
+
+ADSLOGSTR( msgCtrlMask := ADSLOG_MSGTYPE_ERROR OR ADSLOG_MSGTYPE_MSGBOX,
+			msgFmtStr :='Axis Moving',
+ 			strArg := testString);]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_Axis">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Axis.Disable">
+      <LineId Id="5" Count="2" />
+    </LineIds>
+    <LineIds Name="FB_Axis.Enable">
+      <LineId Id="21" Count="0" />
+      <LineId Id="12" Count="1" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="16" Count="1" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="19" Count="1" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="9" Count="1" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_Axis.MoveToPosition">
+      <LineId Id="8" Count="6" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="19" Count="1" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
