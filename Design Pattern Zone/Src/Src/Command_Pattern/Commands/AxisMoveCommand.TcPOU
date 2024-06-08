@@ -4,17 +4,20 @@
     <Declaration><![CDATA[FUNCTION_BLOCK AxisMoveCommand IMPLEMENTS ITF_Command
 VAR
 	_reciever : ITF_Axis;
+	_position : LREAL;
+	_velocity : LREAL;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
     <Method Name="Execute" Id="{b614749c-f6db-4941-9b5d-24cd04244641}">
-      <Declaration><![CDATA[{warning 'add method implementation '}
-METHOD Execute : BOOL
+      <Declaration><![CDATA[METHOD Execute : BOOL
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[IF _reciever <> 0 THEN
+	_reciever.MoveToPosition(Position := _position, Velocity := _velocity);
+END_IF]]></ST>
       </Implementation>
     </Method>
     <Property Name="MyAxis" Id="{31f54a33-00ef-4d7a-9c89-4638d26d502b}">
@@ -36,16 +39,66 @@ END_VAR
         </Implementation>
       </Set>
     </Property>
+    <Property Name="Position" Id="{26356e8c-188d-4c0c-82e1-df3d8758c5b8}">
+      <Declaration><![CDATA[PROPERTY Position : LREAL]]></Declaration>
+      <Get Name="Get" Id="{337f572a-26c6-4235-b2e2-119458aa2251}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[Position := _position;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{2ae4f3ac-6be1-4de8-9557-eb9422c565d6}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_position := Position;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="Velocity" Id="{4ccb7d0b-ce3a-4da2-ab60-337ede9c4be1}">
+      <Declaration><![CDATA[PROPERTY Velocity : LREAL]]></Declaration>
+      <Get Name="Get" Id="{efa7ef84-5a5d-48ee-8fee-4796a5f85932}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[Velocity := _velocity;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{2f85ea6b-0c0c-4bfc-a401-744e27d8cb46}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_velocity := Velocity;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
     <LineIds Name="AxisMoveCommand">
       <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="AxisMoveCommand.Execute">
-      <LineId Id="4" Count="0" />
+      <LineId Id="4" Count="2" />
     </LineIds>
     <LineIds Name="AxisMoveCommand.MyAxis.Get">
       <LineId Id="2" Count="0" />
     </LineIds>
     <LineIds Name="AxisMoveCommand.MyAxis.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="AxisMoveCommand.Position.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="AxisMoveCommand.Position.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="AxisMoveCommand.Velocity.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="AxisMoveCommand.Velocity.Set">
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>

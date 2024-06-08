@@ -4,17 +4,59 @@
     <Declaration><![CDATA[FUNCTION_BLOCK AxisEnableCommand IMPLEMENTS ITF_Command
 VAR
 	_reciever : ITF_Axis;
+	_enablePositive : BOOL;
+	_enableNegative : BOOL;
+	_override : LREAL;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
+    <Property Name="EnableNegative" Id="{e367881b-27c6-43fd-a42f-75245023436a}">
+      <Declaration><![CDATA[PROPERTY EnableNegative : BOOL]]></Declaration>
+      <Get Name="Get" Id="{6cfd4f03-765a-48b0-8a14-275dcedde5b1}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[EnableNegative := _enableNegative;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{10307e02-2128-4003-8e7e-9f3f500818da}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_enableNegative := EnableNegative;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="EnablePositive" Id="{1414c6a6-41c1-4103-8379-f7a955188301}">
+      <Declaration><![CDATA[PROPERTY EnablePositive : BOOL]]></Declaration>
+      <Get Name="Get" Id="{f8385533-f994-403f-89c3-62bbb6083e1a}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[EnablePositive := _enablePositive;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{9d26a645-4518-4587-9b86-3560fbbbecd9}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_enablePositive := EnablePositive;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
     <Method Name="Execute" Id="{a6736136-4204-4350-9dc3-76fdcacf942b}">
-      <Declaration><![CDATA[{warning 'add method implementation '}
-METHOD Execute : BOOL
+      <Declaration><![CDATA[METHOD Execute : BOOL
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[IF _reciever <> 0 THEN
+	_reciever.Enable(_enablePositive, _enableNegative, _override);
+END_IF]]></ST>
       </Implementation>
     </Method>
     <Property Name="MyAxis" Id="{362773b8-da3e-467a-b800-830386770a4d}">
@@ -36,16 +78,53 @@ END_VAR
         </Implementation>
       </Set>
     </Property>
+    <Property Name="Override" Id="{76f0da25-981c-41d3-8af3-ed58297bd546}">
+      <Declaration><![CDATA[PROPERTY Override : LREAL]]></Declaration>
+      <Get Name="Get" Id="{7996272d-127d-47cb-b54b-38dff577c055}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[Override := _override;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{40d7c903-4434-45e6-8755-32109945bb06}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_override := Override;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
     <LineIds Name="AxisEnableCommand">
       <LineId Id="9" Count="0" />
     </LineIds>
+    <LineIds Name="AxisEnableCommand.EnableNegative.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="AxisEnableCommand.EnableNegative.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="AxisEnableCommand.EnablePositive.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="AxisEnableCommand.EnablePositive.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
     <LineIds Name="AxisEnableCommand.Execute">
-      <LineId Id="4" Count="0" />
+      <LineId Id="4" Count="2" />
     </LineIds>
     <LineIds Name="AxisEnableCommand.MyAxis.Get">
       <LineId Id="2" Count="0" />
     </LineIds>
     <LineIds Name="AxisEnableCommand.MyAxis.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="AxisEnableCommand.Override.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="AxisEnableCommand.Override.Set">
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
