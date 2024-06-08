@@ -11,6 +11,9 @@ VAR
 	DisableButton : Invoker;
 	MoveButton : Invoker;
 	Initialised: BOOL;
+	Enable: BOOL;
+	Disable: BOOL;
+	MoveAxis: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -21,14 +24,37 @@ END_VAR
 	Initialised := TRUE;
 END_IF
 
-]]></ST>
+IF Enable THEN
+	IF EnableButton.ExecuteCommand() THEN
+		Enable := FALSE;
+	END_IF
+END_IF
+
+IF Disable THEN
+	IF DisableButton.ExecuteCommand() THEN
+		Disable := FALSE;
+	END_IF
+END_IF
+
+IF MoveAxis THEN
+	IF MoveButton.ExecuteCommand() THEN
+		MoveAxis := FALSE;
+	END_IF
+END_IF]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="2" Count="0" />
       <LineId Id="16" Count="2" />
       <LineId Id="13" Count="1" />
-      <LineId Id="20" Count="0" />
-      <LineId Id="19" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="26" Count="1" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="29" Count="4" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="35" Count="4" />
+      <LineId Id="34" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

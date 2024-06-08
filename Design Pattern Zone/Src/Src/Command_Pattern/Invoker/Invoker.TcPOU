@@ -15,7 +15,8 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[_myCommand.Execute();]]></ST>
+        <ST><![CDATA[_myCommand.Execute();
+ExecuteCommand := true;]]></ST>
       </Implementation>
     </Method>
     <Method Name="SetCommand" Id="{05ebd954-05db-4e1d-b189-ad09bad64c01}">
@@ -34,6 +35,7 @@ SetCommand := true;]]></ST>
     </LineIds>
     <LineIds Name="Invoker.ExecuteCommand">
       <LineId Id="5" Count="0" />
+      <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="Invoker.SetCommand">
       <LineId Id="5" Count="0" />
