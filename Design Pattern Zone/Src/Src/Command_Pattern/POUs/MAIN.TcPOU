@@ -1,13 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1">
-  <POU Name="MAIN" Id="{c1f1d386-8cc3-46ed-9ed3-aea6bd0dd0b2}">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="MAIN" Id="{c1f1d386-8cc3-46ed-9ed3-aea6bd0dd0b2}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
+	Axis1 : FB_Axis;
+	DisableCmd : AxisDisableCommand := (MyAxis := Axis1);
+	EnableCmd : AxisEnableCommand := (MyAxis := Axis1);
+	MoveCmd : AxisMoveCommand := (MyAxis := Axis1);
+	EnableButton : Invoker;
+	DisableButton : Invoker;
+	MoveButton : Invoker;
+	Initialised: BOOL;
 END_VAR
-]]>
-    </Declaration>
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[IF NOT Initialised THEN
+	EnableButton.SetCommand(MyCommand := EnableCmd);
+	DisableButton.SetCommand(MyCommand := DisableCmd);
+	MoveButton.SetCommand(MyCommand := MoveCmd);
+	Initialised := TRUE;
+END_IF
+
+]]></ST>
     </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="16" Count="2" />
+      <LineId Id="13" Count="1" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="19" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>
