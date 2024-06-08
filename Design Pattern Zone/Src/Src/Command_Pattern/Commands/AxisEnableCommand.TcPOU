@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="AxisEnableCommand" Id="{ae9910ac-db5f-4311-ac9c-6542f482a03c}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK AxisEnableCommand IMPLEMENTS ITF_Command
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Execute" Id="{a6736136-4204-4350-9dc3-76fdcacf942b}">
+      <Declaration><![CDATA[{warning 'add method implementation '}
+METHOD Execute : BOOL
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="AxisEnableCommand">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="AxisEnableCommand.Execute">
+      <LineId Id="4" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

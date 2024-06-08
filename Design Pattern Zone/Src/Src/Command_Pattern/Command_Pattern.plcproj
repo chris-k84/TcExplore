@@ -18,6 +18,15 @@
     <LibraryReferences>{e748a2a5-aaf7-47cb-a919-b5ac81607f5f}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Commands\AxisDisableCommand.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\AxisEnableCommand.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\AxisMoveCommand.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Commands\ITF_Command.TcIO">
       <SubType>Code</SubType>
     </Compile>
@@ -28,6 +37,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\MAIN.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reciever\FB_Axis.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Reciever\ITF_Axis.TcIO">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -45,6 +60,9 @@
     <PlaceholderReference Include="Tc2_System">
       <DefaultResolution>Tc2_System, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_System</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_Utilities">
+      <DefaultResolution>Tc2_Utilities, * (Beckhoff Automation GmbH)</DefaultResolution>
     </PlaceholderReference>
     <PlaceholderReference Include="Tc3_Module">
       <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
