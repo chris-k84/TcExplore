@@ -3,24 +3,49 @@
   <POU Name="AxisDisableCommand" Id="{2a2d0b49-8a40-4eea-91a3-a3f65d5fce60}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK AxisDisableCommand IMPLEMENTS ITF_Command
 VAR
+	_reciever : ITF_Axis;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
     <Method Name="Execute" Id="{35963484-04dd-45ff-b5c9-11e500c894f5}">
-      <Declaration><![CDATA[{warning 'add method implementation '}
-METHOD Execute : BOOL
+      <Declaration><![CDATA[METHOD Execute : BOOL
 ]]></Declaration>
       <Implementation>
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
+    <Property Name="MyAxis" Id="{6aea7d67-8728-4386-8103-41e2ec5c1ac4}">
+      <Declaration><![CDATA[PROPERTY MyAxis : ITF_Axis]]></Declaration>
+      <Get Name="Get" Id="{21692bf5-9bd1-4638-ac6d-f67ad0833ce2}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[MyAxis := _reciever;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{54c2ea0c-2829-4de2-bfc7-e3ecd11a0c13}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_reciever := MyAxis;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
     <LineIds Name="AxisDisableCommand">
       <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="AxisDisableCommand.Execute">
       <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="AxisDisableCommand.MyAxis.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="AxisDisableCommand.MyAxis.Set">
+      <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

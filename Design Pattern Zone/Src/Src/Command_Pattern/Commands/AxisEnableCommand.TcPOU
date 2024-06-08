@@ -3,6 +3,7 @@
   <POU Name="AxisEnableCommand" Id="{ae9910ac-db5f-4311-ac9c-6542f482a03c}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK AxisEnableCommand IMPLEMENTS ITF_Command
 VAR
+	_reciever : ITF_Axis;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -16,11 +17,36 @@ METHOD Execute : BOOL
         <ST><![CDATA[]]></ST>
       </Implementation>
     </Method>
+    <Property Name="MyAxis" Id="{362773b8-da3e-467a-b800-830386770a4d}">
+      <Declaration><![CDATA[PROPERTY MyAxis : ITF_Axis]]></Declaration>
+      <Get Name="Get" Id="{98523638-f33b-431f-b801-6021b48f8b47}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[MyAxis := _reciever;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{028808ea-e8d2-4dad-a858-4e566e5cf4f0}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_reciever := MyAxis;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
     <LineIds Name="AxisEnableCommand">
       <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="AxisEnableCommand.Execute">
       <LineId Id="4" Count="0" />
+    </LineIds>
+    <LineIds Name="AxisEnableCommand.MyAxis.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="AxisEnableCommand.MyAxis.Set">
+      <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>
