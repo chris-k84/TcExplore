@@ -39,3 +39,5 @@ Here is the list of resources identified to help those learning software develop
 2. **[Clean Agile](https://www.amazon.co.uk/Clean-Agile-Basics-Robert-Martin/dp/0135781868)** - book
 
 3. **[Modern Software Engineering](https://www.amazon.co.uk/Modern-Software-Engineering-Really-Better/dp/0137314914)** - book
+
+4. **[Software Development Pearls](https://www.amazon.co.uk/Software-Development-Pearls-Lessons-Experience/dp/0137487770)** - Book/Audiobook
