@@ -18,10 +18,19 @@
     <LibraryReferences>{2ee4c9f0-11a4-401d-9b1d-04addef5329c}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\ITF_Clone.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ITF_Cloneable.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\MAIN.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Prototypes\CloneBase.TcPOU">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

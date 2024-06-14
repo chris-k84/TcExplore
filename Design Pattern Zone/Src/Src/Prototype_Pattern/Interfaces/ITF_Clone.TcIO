@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_Clone" Id="{e61a57fe-4e8a-4d90-95ef-46051e43beee}">
+    <Declaration><![CDATA[INTERFACE ITF_Clone
+]]></Declaration>
+    <Method Name="Clone" Id="{c3ef475b-c348-431b-881c-5199508ebca8}">
+      <Declaration><![CDATA[METHOD Clone : ITF_Cloneable
+VAR_INPUT
+END_VAR
+]]></Declaration>
+    </Method>
+  </Itf>
+</TcPlcObject>
