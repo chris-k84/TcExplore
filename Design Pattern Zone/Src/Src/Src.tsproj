@@ -36,6 +36,9 @@
 				<Task Id="13" Priority="30" CycleTime="100000" AmsPort="360" AdtTasks="true">
 					<Name>PlcTask10</Name>
 				</Task>
+				<Task Id="14" Priority="31" CycleTime="100000" AmsPort="361" AdtTasks="true">
+					<Name>PlcTask11</Name>
+				</Task>
 			</Tasks>
 		</System>
 		<Plc>
@@ -50,6 +53,18 @@
 			<Project File="Facade_Pattern.xti"/>
 			<Project File="Visitor_Pattern.xti"/>
 			<Project File="Command_Pattern.xti"/>
+			<Project GUID="{A6589EEC-3EED-429C-B2D3-4453CCE2BCF8}" Name="Prototype_Pattern" PrjFilePath="Prototype_Pattern\Prototype_Pattern.plcproj" TmcFilePath="Prototype_Pattern\Prototype_Pattern.tmc" ReloadTmc="true" AmsPort="862" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x085022c0" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2">
+					<Name>Prototype_Pattern Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Contexts>
+						<Context>
+							<Id>1</Id>
+							<Name>Default</Name>
+						</Context>
+					</Contexts>
+				</Instance>
+			</Project>
 		</Plc>
 	</Project>
 </TcSmProject>
