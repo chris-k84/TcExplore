@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <Itf Name="ITF_RecipePoint" Id="{1866ebbc-50c5-4461-ad2a-153ef9874a5f}">
+    <Declaration><![CDATA[INTERFACE ITF_RecipePoint
+]]></Declaration>
+    <Property Name="XPoint" Id="{700da9f2-6fc1-48a6-90d7-eea346a5254e}">
+      <Declaration><![CDATA[PROPERTY XPoint : LREAL]]></Declaration>
+      <Get Name="Get" Id="{85550aac-052d-4724-97d4-844878d5df24}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{fc48860d-0e30-4910-a19a-bff95f055aad}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+    <Property Name="YPoint" Id="{5b4c59bc-56cc-4bba-acfd-7719c7e1cfd9}">
+      <Declaration><![CDATA[PROPERTY YPoint : LREAL]]></Declaration>
+      <Get Name="Get" Id="{7b31a356-ad3f-4257-963a-7183f9b79d83}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{3c20c273-5fee-4866-96f6-79b15d7ac46e}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+    <Property Name="ZPoint" Id="{0b447f40-a7fd-4596-aebd-d873c3c8a94a}">
+      <Declaration><![CDATA[PROPERTY ZPoint : LREAL]]></Declaration>
+      <Get Name="Get" Id="{86f9edb5-bd54-4a3e-966a-9eef22b70afe}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Get>
+      <Set Name="Set" Id="{77e01db1-650d-40da-a21e-30e4dec3916d}">
+        <Declaration><![CDATA[]]></Declaration>
+      </Set>
+    </Property>
+  </Itf>
+</TcPlcObject>

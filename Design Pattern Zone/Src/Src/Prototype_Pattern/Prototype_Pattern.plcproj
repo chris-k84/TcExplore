@@ -18,7 +18,13 @@
     <LibraryReferences>{2ee4c9f0-11a4-401d-9b1d-04addef5329c}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Classes\RecipeRunner.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Interfaces\ITF_Cloneable.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ITF_RecipePoint.TcIO">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="PlcTask.TcTTO">
