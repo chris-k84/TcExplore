@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
-  <Itf Name="ITF_Cloneable" Id="{1579f0de-9b92-4cb7-95ba-2182905524ff}">
+  <Itf Name="ITF_Cloneable" Id="{fb834b62-92a6-4712-860d-b7759ffea125}">
     <Declaration><![CDATA[INTERFACE ITF_Cloneable
 ]]></Declaration>
   </Itf>

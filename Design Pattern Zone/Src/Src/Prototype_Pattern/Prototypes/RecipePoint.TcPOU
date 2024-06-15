@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="RecipePoint" Id="{3eda2ed6-bc47-4b03-a989-037736a4b2eb}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK RecipePoint EXTENDS CloneBase
+VAR
+	_xPoint : LREAL;
+	_yPoint : LREAL;
+	_zPoint : lreal;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="Clone" Id="{8bf2e023-210c-4502-b623-bdb8bb439c13}">
+      <Declaration><![CDATA[METHOD  Clone : ITF_Cloneable
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <CFC>
+          <XmlArchive>
+            <Data>
+              <o xml:space="preserve" t="CFCImplementationObject">
+                <o n="Items" t="CFCItemList">
+                  <l2 n="InnerList" />
+                </o>
+                <n n="ParameterInitializationMethodGenerator" />
+                <o n="RoutingPathTable" t="CFCRoutingPathTable">
+                  <d2 n="InnerDictionary" />
+                </o>
+                <v n="AutoSizeCanvas">true</v>
+                <v n="CanvasWidth">0</v>
+                <v n="CanvasHeight">0</v>
+              </o>
+            </Data>
+            <TypeList>
+              <Type n="Boolean">System.Boolean</Type>
+              <Type n="CFCImplementationObject">{32d3375e-c010-41e2-9e43-b2fbf4f2b374}</Type>
+              <Type n="CFCItemList">{cd57ba20-558b-4b98-96c1-73c6000c3087}</Type>
+              <Type n="CFCRoutingPathTable">{4b8bcc79-5980-4868-b49e-005a8148859b}</Type>
+              <Type n="Int32">System.Int32</Type>
+            </TypeList>
+          </XmlArchive>
+        </CFC>
+      </Implementation>
+    </Method>
+    <Property Name="XPoint" Id="{a521519f-84e6-4226-9b89-a54fb8a053a5}">
+      <Declaration><![CDATA[PROPERTY XPoint : LREAL]]></Declaration>
+      <Get Name="Get" Id="{96f679df-201d-4579-80df-b346712a248d}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[XPoint := _xPoint;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{4ce9243b-c38f-4bfe-a6a0-f048e04a911b}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_xPoint := XPoint;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="YPoint" Id="{816fed2d-d424-4096-bff3-b7ee3f3ff902}">
+      <Declaration><![CDATA[PROPERTY YPoint : LREAL]]></Declaration>
+      <Get Name="Get" Id="{f8abfc37-a4bf-41f8-9291-ae2127796fe0}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[YPoint := _yPoint;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{117420c9-2524-4279-971f-6d10eb673264}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_yPoint := YPoint;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <Property Name="ZPoint" Id="{c971eefa-6099-42cc-a012-ffa7e14ad24a}">
+      <Declaration><![CDATA[PROPERTY ZPoint : LREAL]]></Declaration>
+      <Get Name="Get" Id="{759898a3-f624-4f3b-8067-dd58eed2ecad}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[ZPoint := _zPoint;]]></ST>
+        </Implementation>
+      </Get>
+      <Set Name="Set" Id="{9308dfef-db0f-4510-97bc-978a503d188c}">
+        <Declaration><![CDATA[VAR
+END_VAR
+]]></Declaration>
+        <Implementation>
+          <ST><![CDATA[_zPoint := ZPoint;]]></ST>
+        </Implementation>
+      </Set>
+    </Property>
+    <LineIds Name="RecipePoint">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="RecipePoint.XPoint.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="RecipePoint.XPoint.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="RecipePoint.YPoint.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="RecipePoint.YPoint.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="RecipePoint.ZPoint.Get">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="RecipePoint.ZPoint.Set">
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
