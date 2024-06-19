@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="RecipePoint" Id="{3eda2ed6-bc47-4b03-a989-037736a4b2eb}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK RecipePoint EXTENDS CloneBase
+    <Declaration><![CDATA[{attribute 'enable_dynamic_creation'}
+FUNCTION_BLOCK RecipePoint EXTENDS CloneBase IMPLEMENTS ITF_RecipePoint
 VAR
 	_xPoint : LREAL;
 	_yPoint : LREAL;

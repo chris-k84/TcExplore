@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="CloneBase" Id="{213c3136-1102-4fd3-b410-62405f190958}" SpecialFunc="None">
-    <Declaration><![CDATA[{attribute 'enable_dynamic_creation'}
-FUNCTION_BLOCK ABSTRACT CloneBase IMPLEMENTS ITF_Cloneable
+    <Declaration><![CDATA[FUNCTION_BLOCK ABSTRACT CloneBase IMPLEMENTS ITF_Cloneable
 VAR
 END_VAR
 ]]></Declaration>

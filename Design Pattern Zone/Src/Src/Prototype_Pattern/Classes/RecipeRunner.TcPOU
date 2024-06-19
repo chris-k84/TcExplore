@@ -5,7 +5,8 @@
 VAR
 	SetPoint : ARRAY[0..9] OF ITF_RecipePoint;
 	NumberOfPoints : INT;
-	BasePoint : RecipePoint := (XPoint := 0.0, YPoint := 0.0, ZPoint := 0.0);
+	BasePoint : RecipePoint := (XPoint := 19.0, YPoint := 23.0, ZPoint := 2.1);
+	i: INT;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -15,9 +16,13 @@ END_VAR
       <Declaration><![CDATA[METHOD AddRecipe : BOOL
 VAR_INPUT
 END_VAR
+VAR
+	temp : POINTER TO RecipePoint;
+END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[]]></ST>
+        <ST><![CDATA[temp := __NEW(RecipePoint);
+SetPoint[NumberOfPoints] := temp^;]]></ST>
       </Implementation>
     </Method>
     <Method Name="Cycle" Id="{8390455a-4f90-48fa-b6f6-f2311414a969}">
@@ -28,7 +33,7 @@ END_VAR
       <Implementation>
         <ST><![CDATA[FOR i := 0 TO NumberOfPoints DO
 	IF SetPoint[i] <> 0 THEN
-		
+		//go to position of point;
 	END_IF
 END_FOR]]></ST>
       </Implementation>
@@ -37,6 +42,7 @@ END_FOR]]></ST>
       <LineId Id="9" Count="0" />
     </LineIds>
     <LineIds Name="RecipeRunner.AddRecipe">
+      <LineId Id="12" Count="0" />
       <LineId Id="5" Count="0" />
     </LineIds>
     <LineIds Name="RecipeRunner.Cycle">
