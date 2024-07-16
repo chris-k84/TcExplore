@@ -2,7 +2,7 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="RecipePoint" Id="{3eda2ed6-bc47-4b03-a989-037736a4b2eb}" SpecialFunc="None">
     <Declaration><![CDATA[{attribute 'enable_dynamic_creation'}
-FUNCTION_BLOCK RecipePoint EXTENDS CloneBase IMPLEMENTS ITF_RecipePoint
+FUNCTION_BLOCK RecipePoint IMPLEMENTS ITF_Cloneable, ITF_RecipePoint
 VAR
 	_xPoint : LREAL;
 	_yPoint : LREAL;
@@ -12,37 +12,20 @@ END_VAR
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
-    <Method Name="Clone" Id="{8bf2e023-210c-4502-b623-bdb8bb439c13}">
-      <Declaration><![CDATA[METHOD  Clone : ITF_Cloneable
-VAR_INPUT
+    <Method Name="Clone" Id="{8f922948-88a8-4ac9-a3e2-c1b2b5520d90}">
+      <Declaration><![CDATA[METHOD  Clone : ITF_RecipePoint
+VAR
+	pFB : POINTER TO RecipePoint;
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <CFC>
-          <XmlArchive>
-            <Data>
-              <o xml:space="preserve" t="CFCImplementationObject">
-                <o n="Items" t="CFCItemList">
-                  <l2 n="InnerList" />
-                </o>
-                <n n="ParameterInitializationMethodGenerator" />
-                <o n="RoutingPathTable" t="CFCRoutingPathTable">
-                  <d2 n="InnerDictionary" />
-                </o>
-                <v n="AutoSizeCanvas">true</v>
-                <v n="CanvasWidth">0</v>
-                <v n="CanvasHeight">0</v>
-              </o>
-            </Data>
-            <TypeList>
-              <Type n="Boolean">System.Boolean</Type>
-              <Type n="CFCImplementationObject">{32d3375e-c010-41e2-9e43-b2fbf4f2b374}</Type>
-              <Type n="CFCItemList">{cd57ba20-558b-4b98-96c1-73c6000c3087}</Type>
-              <Type n="CFCRoutingPathTable">{4b8bcc79-5980-4868-b49e-005a8148859b}</Type>
-              <Type n="Int32">System.Int32</Type>
-            </TypeList>
-          </XmlArchive>
-        </CFC>
+        <ST><![CDATA[pFB := __NEW(RecipePoint);
+Clone := pFB^;
+Clone.XPoint := _xPoint;
+Clone.YPoint := _yPoint;
+Clone.ZPoint := _zPoint;
+
+]]></ST>
       </Implementation>
     </Method>
     <Property Name="XPoint" Id="{a521519f-84e6-4226-9b89-a54fb8a053a5}">
@@ -104,6 +87,13 @@ END_VAR
     </Property>
     <LineIds Name="RecipePoint">
       <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="RecipePoint.Clone">
+      <LineId Id="5" Count="0" />
+      <LineId Id="8" Count="0" />
+      <LineId Id="10" Count="2" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="7" Count="0" />
     </LineIds>
     <LineIds Name="RecipePoint.XPoint.Get">
       <LineId Id="2" Count="0" />

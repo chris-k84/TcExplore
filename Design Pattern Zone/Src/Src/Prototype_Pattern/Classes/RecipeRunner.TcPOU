@@ -7,22 +7,23 @@ VAR
 	NumberOfPoints : INT;
 	BasePoint : RecipePoint := (XPoint := 19.0, YPoint := 23.0, ZPoint := 2.1);
 	i: INT;
+	TargetXPos : LREAL;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[]]></ST>
     </Implementation>
-    <Method Name="AddRecipe" Id="{9ca0c855-cbb9-4dbd-bc81-bb9a9178075c}">
-      <Declaration><![CDATA[METHOD AddRecipe : BOOL
+    <Method Name="AddRecipePoint" Id="{9ca0c855-cbb9-4dbd-bc81-bb9a9178075c}">
+      <Declaration><![CDATA[METHOD AddRecipePoint : BOOL
 VAR_INPUT
-END_VAR
-VAR
-	temp : POINTER TO RecipePoint;
+	point : ITF_RecipePoint;
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[temp := __NEW(RecipePoint);
-SetPoint[NumberOfPoints] := temp^;]]></ST>
+        <ST><![CDATA[IF point <> 0 AND NumberOfPoints < 10 THEN
+	SetPoint[NumberOfPoints] := point;
+	NumberOfPoints := NumberOfPoints + 1;
+END_IF]]></ST>
       </Implementation>
     </Method>
     <Method Name="Cycle" Id="{8390455a-4f90-48fa-b6f6-f2311414a969}">
@@ -33,22 +34,31 @@ END_VAR
       <Implementation>
         <ST><![CDATA[FOR i := 0 TO NumberOfPoints DO
 	IF SetPoint[i] <> 0 THEN
-		//go to position of point;
+		TargetXPos := SetPoint[i].XPoint;
 	END_IF
-END_FOR]]></ST>
+END_FOR
+
+
+
+]]></ST>
       </Implementation>
     </Method>
     <LineIds Name="RecipeRunner">
       <LineId Id="9" Count="0" />
     </LineIds>
-    <LineIds Name="RecipeRunner.AddRecipe">
-      <LineId Id="12" Count="0" />
-      <LineId Id="5" Count="0" />
+    <LineIds Name="RecipeRunner.AddRecipePoint">
+      <LineId Id="24" Count="1" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="26" Count="0" />
     </LineIds>
     <LineIds Name="RecipeRunner.Cycle">
       <LineId Id="5" Count="1" />
       <LineId Id="8" Count="1" />
       <LineId Id="7" Count="0" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="13" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

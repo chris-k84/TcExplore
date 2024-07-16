@@ -54,15 +54,23 @@
 			<Project File="Visitor_Pattern.xti"/>
 			<Project File="Command_Pattern.xti"/>
 			<Project GUID="{A6589EEC-3EED-429C-B2D3-4453CCE2BCF8}" Name="Prototype_Pattern" PrjFilePath="Prototype_Pattern\Prototype_Pattern.plcproj" TmcFilePath="Prototype_Pattern\Prototype_Pattern.tmc" ReloadTmc="true" AmsPort="862" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x085022c0" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2">
+				<Instance Id="#x085022c0" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Prototype_Pattern\Prototype_Pattern.tmc" TmcHash="{992C94F8-3716-3888-89A9-ED5FF4FD8440}">
 					<Name>Prototype_Pattern Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Contexts>
 						<Context>
-							<Id>1</Id>
-							<Name>Default</Name>
+							<Id>0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x020100e0</OTCID>
+							</ManualConfig>
+							<Priority>31</Priority>
+							<CycleTime>10000000</CycleTime>
 						</Context>
 					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="31" OTCID="#x085022c1"/>
+					</TaskPouOids>
 				</Instance>
 			</Project>
 		</Plc>

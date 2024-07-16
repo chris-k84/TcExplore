@@ -4,20 +4,25 @@
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	runner : RecipeRunner;
-	AddPoint: BOOL;
+	recipePt : RecipePoint := (XPoint := 10.0, YPoint := 1.0, ZPoint := 2.0);
+	CreatePoint: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF AddPoint THEN
-	AddPoint := FALSE;
-	runner.AddRecipe();
-END_IF]]></ST>
+      <ST><![CDATA[IF CreatePoint THEN
+	CreatePoint := FALSE;
+	runner.AddRecipePoint(recipePt.Clone());
+END_IF
+
+]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
-      <LineId Id="2" Count="0" />
-      <LineId Id="7" Count="0" />
-      <LineId Id="10" Count="0" />
-      <LineId Id="8" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="16" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

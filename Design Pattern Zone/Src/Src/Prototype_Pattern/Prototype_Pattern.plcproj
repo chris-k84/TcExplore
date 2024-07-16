@@ -33,9 +33,6 @@
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Prototypes\CloneBase.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Prototypes\RecipePoint.TcPOU">
       <SubType>Code</SubType>
     </Compile>
