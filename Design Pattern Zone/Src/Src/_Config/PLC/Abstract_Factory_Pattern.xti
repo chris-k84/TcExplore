@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.56" ClassName="CNestedPlcProjDef">
 	<Project GUID="{115BF93E-F425-458E-9078-FA33CD7B28D8}" Name="Abstract_Factory_Pattern" PrjFilePath="..\..\Abstract_Factory_Pattern\Abstract_Factory_Pattern.plcproj" TmcFilePath="..\..\Abstract_Factory_Pattern\Abstract_Factory_Pattern.tmc" ReloadTmc="true" AmsPort="853" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502080" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Abstract_Factory_Pattern\Abstract_Factory_Pattern.tmc" TmcHash="{6AAE073C-89C4-7F70-1E7F-60DEAB44C30E}">
+		<Instance Id="#x08502080" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="Abstract_Factory_Pattern\Abstract_Factory_Pattern.tmc" TmcHash="{6D49E685-89DE-A201-DD75-E28160D8603B}">
 			<Name>Abstract_Factory_Pattern Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Contexts>

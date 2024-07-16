@@ -6,7 +6,7 @@
     <ProjectGuid>{a6589eec-3eed-429c-b2d3-4453cce2bcf8}</ProjectGuid>
     <SubObjectsSortedByName>True</SubObjectsSortedByName>
     <DownloadApplicationInfo>true</DownloadApplicationInfo>
-    <WriteProductVersion>true</WriteProductVersion>
+    <WriteProductVersion>false</WriteProductVersion>
     <GenerateTpy>false</GenerateTpy>
     <Name>Prototype_Pattern</Name>
     <ProgramVersion>3.1.4024.0</ProgramVersion>
@@ -16,6 +16,8 @@
     <Implicit_KindOfTask>{9236af2e-1c2c-412f-b926-621cae89e3b8}</Implicit_KindOfTask>
     <Implicit_Jitter_Distribution>{a92a4fd2-1b02-49ab-93eb-ade247d53ffd}</Implicit_Jitter_Distribution>
     <LibraryReferences>{2ee4c9f0-11a4-401d-9b1d-04addef5329c}</LibraryReferences>
+    <Released>false</Released>
+    <CombineIds>true</CombineIds>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Classes\RecipeRunner.TcPOU">

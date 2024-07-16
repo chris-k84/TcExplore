@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="MAIN" Id="{ebbfd306-c532-47e5-921a-7f084e972e56}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
 	runner : RecipeRunner;
 	recipePt : RecipePoint := (XPoint := 10.0, YPoint := 1.0, ZPoint := 2.0);
 	CreatePoint: BOOL;
+	newXPos : LREAL;
+	runRecipe: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF CreatePoint THEN
 	CreatePoint := FALSE;
-	runner.AddRecipePoint(recipePt.Clone());
+	runner.AddRecipePoint(recipePt.Clone(xPoint := newXPos,yPoint := 0.0, zPoint := 0.0));
 END_IF
 
-]]></ST>
+IF runRecipe THEN
+	IF runner.RunRecipe() THEN
+		runRecipe := FALSE;
+	END_IF
+END_IF
+
+runner.Cycle();]]></ST>
     </Implementation>
-    <LineIds Name="MAIN">
-      <LineId Id="18" Count="0" />
-      <LineId Id="20" Count="0" />
-      <LineId Id="23" Count="0" />
-      <LineId Id="21" Count="0" />
-      <LineId Id="17" Count="0" />
-      <LineId Id="16" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
