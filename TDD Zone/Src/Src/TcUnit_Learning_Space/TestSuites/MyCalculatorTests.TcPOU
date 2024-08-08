@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
   <POU Name="MyCalculatorTests" Id="{e1a3d36a-7d44-45ec-aa78-a22fd6fcc456}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK MyCalculatorTests EXTENDS FB_TestSuite
 VAR_INPUT
@@ -18,7 +18,7 @@ TwoPositiveIntegers();]]></ST>
 VAR
 	myCalc : MyCalculatorClass;
     Result : UINT;
-    ExpectedSum : UINT := 4;
+    ExpectedSum : UINT := -1;
 END_VAR
 ]]></Declaration>
       <Implementation>
@@ -53,19 +53,5 @@ AssertEquals(Expected := ExpectedSum,
 TEST_FINISHED();]]></ST>
       </Implementation>
     </Method>
-    <LineIds Name="MyCalculatorTests">
-      <LineId Id="9" Count="0" />
-      <LineId Id="17" Count="0" />
-    </LineIds>
-    <LineIds Name="MyCalculatorTests.DivideByZeroTest">
-      <LineId Id="11" Count="2" />
-      <LineId Id="19" Count="0" />
-      <LineId Id="15" Count="3" />
-      <LineId Id="5" Count="0" />
-    </LineIds>
-    <LineIds Name="MyCalculatorTests.TwoPositiveIntegers">
-      <LineId Id="6" Count="7" />
-      <LineId Id="5" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
