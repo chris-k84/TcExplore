@@ -13,9 +13,11 @@ END_VAR
       <Declaration><![CDATA[{attribute 'analysis' := '-33'} // inhibit unused variable warning
 METHOD  RunTest]]></Declaration>
       <Implementation>
-        <ST><![CDATA[AssertEquals_INT(Expected := -1,
-				Actual := myCalculator.Divide(2,0),
-				Message := 'Calculator did not reject a divide by zero');]]></ST>
+        <ST><![CDATA[IF NOT TestCompleted THEN
+	 AssertEquals_INT(Expected := -1,
+						Actual := myCalculator.Divide(2,0),
+						Message := 'Calculator did not reject a divide by zero');
+END_IF]]></ST>
       </Implementation>
     </Method>
   </POU>
