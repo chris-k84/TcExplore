@@ -18,17 +18,26 @@
     <LibraryReferences>{529b2501-ef2d-4787-a2f0-9342e3f674c8}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Classes\MyCalculatorClass.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="TestSuites\MyCalculatorTestSuite.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\DivideByZeroTest.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DUTs" />
-    <Folder Include="GVLs" />
-    <Folder Include="VISUs" />
+    <Folder Include="Classes" />
+    <Folder Include="Tests" />
+    <Folder Include="TestSuites" />
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>

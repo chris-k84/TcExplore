@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
   <POU Name="MAIN" Id="{3b11b508-effe-484a-b35c-e70da4aed0e0}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
@@ -27,19 +27,11 @@ CASE fbTestSuite.P_Testcase OF
 		fbTestSuite.M_Testcase('CalculatorClassShouldDivideTwoValidNumbers',T#1S,'','',1);
 			 
 	1:
-		fbTestSuite.P_Assert.M_Equals_INT(-1, MyCalculator.Divide(4,0), 'Divide METHOD did NOT reject 0 divisor');
+		fbTestSuite.P_Assert.M_Equals_INT(-1, MyCalculator.Divide(4,0), 'Divide Method did not reject 0 divisor');
 		fbTestSuite.M_Testcase('CalculatorClassShouldProhibitADivideByZero',T#1S,'','',E_Testcase.Done);
 
 	E_Testcase.Done:;	 
 END_CASE]]></ST>
     </Implementation>
-    <LineIds Name="MAIN">
-      <LineId Id="10" Count="2" />
-      <LineId Id="29" Count="4" />
-      <LineId Id="28" Count="0" />
-      <LineId Id="13" Count="8" />
-      <LineId Id="26" Count="1" />
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <POU Name="DivideByZeroTest" Id="{6d510bb9-0ba0-463e-b837-efc63b9c7804}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK DivideByZeroTest EXTENDS T_UnitTestBase
+VAR
+	myCalculator : MyCalculatorClass;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="RunTest" Id="{472809bb-7450-4b58-abe6-58c34a41ec22}">
+      <Declaration><![CDATA[{attribute 'analysis' := '-33'} // inhibit unused variable warning
+METHOD  RunTest]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[AssertEquals_INT(Expected := -1,
+				Actual := myCalculator.Divide(2,0),
+				Message := 'Calculator did not reject a divide by zero');]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

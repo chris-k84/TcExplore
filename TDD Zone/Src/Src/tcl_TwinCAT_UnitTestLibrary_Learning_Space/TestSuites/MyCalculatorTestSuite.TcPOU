@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <POU Name="MyCalculatorTestSuite" Id="{978c53fb-e274-41e2-85d0-07d6e20d6a57}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK MyCalculatorTestSuite
+VAR
+	_DivideByZeroTest : DivideByZeroTest;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[_DivideByZeroTest.RunTest();]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
