@@ -5,12 +5,24 @@
 VAR
 	_DivideByZeroTest : DivideByZeroTest;
 	_DivideByTwoTest : DivideByTwoTest;
+	Tests : INT;
 END_VAR
 
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[_DivideByZeroTest.RunTest();
-_DivideByTwoTest.RunTest();
+      <ST><![CDATA[CASE Tests OF
+	0:
+		_DivideByTwoTest.RunTest();
+		IF _DivideByTwoTest.TestCompleted THEN
+			Tests := 1;
+		END_IF
+	1:
+		_DivideByZeroTest.RunTest();
+		IF _DivideByZeroTest.TestCompleted THEN
+			Tests := 2;
+		END_IF
+	2:		
+END_CASE
 
 ]]></ST>
     </Implementation>
