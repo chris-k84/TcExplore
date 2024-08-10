@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.59" ClassName="CNestedPlcProjDef">
-	<Project Disabled="true" GUID="{58B0701E-067D-4AE4-8E1F-41033906F537}" Name="TcUnit_Learning_Space" PrjFilePath="..\..\TcUnit_Learning_Space\TcUnit_Learning_Space.plcproj" TmcFilePath="..\..\TcUnit_Learning_Space\TcUnit_Learning_Space.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+	<Project GUID="{58B0701E-067D-4AE4-8E1F-41033906F537}" Name="TcUnit_Learning_Space" PrjFilePath="..\..\TcUnit_Learning_Space\TcUnit_Learning_Space.plcproj" TmcFilePath="..\..\TcUnit_Learning_Space\TcUnit_Learning_Space.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
 		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="TcUnit_Learning_Space\TcUnit_Learning_Space.tmc" TmcHash="{22A070F7-2645-AA0D-9393-A86BE1C8CCFE}">
 			<Name>TcUnit_Learning_Space Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>

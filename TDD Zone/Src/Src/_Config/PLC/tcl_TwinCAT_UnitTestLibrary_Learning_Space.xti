@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.59" ClassName="CNestedPlcProjDef">
 	<Project GUID="{72E2BC61-6AB9-49C3-BCE6-ADDF44BF2FE6}" Name="tcl_TwinCAT_UnitTestLibrary_Learning_Space" PrjFilePath="..\..\tcl_TwinCAT_UnitTestLibrary_Learning_Space\tcl_TwinCAT_UnitTestLibrary_Learning_Space.plcproj" TmcFilePath="..\..\tcl_TwinCAT_UnitTestLibrary_Learning_Space\tcl_TwinCAT_UnitTestLibrary_Learning_Space.tmc" ReloadTmc="true" AmsPort="853" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502080" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tcl_TwinCAT_UnitTestLibrary_Learning_Space\tcl_TwinCAT_UnitTestLibrary_Learning_Space.tmc" TmcHash="{A6D2C3B9-7508-1D53-8159-E41F6676FB9C}">
+		<Instance Id="#x08502080" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="tcl_TwinCAT_UnitTestLibrary_Learning_Space\tcl_TwinCAT_UnitTestLibrary_Learning_Space.tmc" TmcHash="{E66C560E-46F3-AF40-193D-692516D25964}">
 			<Name>tcl_TwinCAT_UnitTestLibrary_Learning_Space Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Contexts>

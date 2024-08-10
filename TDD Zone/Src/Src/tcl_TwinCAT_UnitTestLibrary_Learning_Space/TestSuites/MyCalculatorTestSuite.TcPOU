@@ -4,10 +4,15 @@
     <Declaration><![CDATA[FUNCTION_BLOCK MyCalculatorTestSuite
 VAR
 	_DivideByZeroTest : DivideByZeroTest;
+	_DivideByTwoTest : DivideByTwoTest;
 END_VAR
+
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[_DivideByZeroTest.RunTest();]]></ST>
+      <ST><![CDATA[_DivideByZeroTest.RunTest();
+_DivideByTwoTest.RunTest();
+
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

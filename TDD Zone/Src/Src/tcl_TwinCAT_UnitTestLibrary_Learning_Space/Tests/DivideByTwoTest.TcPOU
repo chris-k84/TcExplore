@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <POU Name="DivideByTwoTest" Id="{c2705d1b-5c96-4aeb-abc3-2665bff497e5}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK DivideByTwoTest EXTENDS T_UnitTestBase
+VAR
+	myCalculator : MyCalculatorClass;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="RunTest" Id="{36dfd466-aa38-4007-bdbc-ca8d8d25bb1b}">
+      <Declaration><![CDATA[{attribute 'analysis' := '-33'} // inhibit unused variable warning
+METHOD  RunTest
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF NOT TestCompleted THEN
+	 AssertEquals_INT(Expected := 1,
+						Actual := myCalculator.Divide(2,2),
+						Message := 'Calculator failed correct division by two');
+END_IF]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>

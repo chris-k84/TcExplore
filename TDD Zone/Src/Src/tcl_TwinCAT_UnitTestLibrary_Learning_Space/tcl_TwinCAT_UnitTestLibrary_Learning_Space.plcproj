@@ -30,6 +30,9 @@
     <Compile Include="TestSuites\MyCalculatorTestSuite.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Tests\DivideByTwoTest.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Tests\DivideByZeroTest.TcPOU">
       <SubType>Code</SubType>
     </Compile>
